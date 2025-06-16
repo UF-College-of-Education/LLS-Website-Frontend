@@ -1,8 +1,6 @@
 import heart from "../assets/icons/Header_Heart.png";
-
+import headerBackground from "../assets/Header-Background_red.png";
 const Header = () => {
-  let mainpage: boolean;
-  mainpage = window.location.pathname === "/";
   let islogin: boolean = false;
   // Check if currentUser is in localStorage
   if (localStorage.getItem("currentUser") !== null) {
@@ -16,12 +14,7 @@ const Header = () => {
   return (
     <div>
       <header
-        className={`inset-x-0 top-0 z-50 w-full bg-repeat-x ${
-          window.location.pathname.startsWith("/parent/")
-            ? "bg-[url(src/assets/Header-Background_blue.png)]"
-            : "bg-[url(src/assets/Header-Background_red.png)]"
-        }`}
-      >
+        className="inset-x-0 top-0 z-50 w-full bg-repeat-x " style={{ backgroundImage: `url(${headerBackground})` }}   >
         <nav className="p-4 md:p-6 lg:px-8 flex flex-wrap justify-between items-center">
           <div className="flex items-center flex-wrap">
             <a href="/course" className="flex-shrink-0">
