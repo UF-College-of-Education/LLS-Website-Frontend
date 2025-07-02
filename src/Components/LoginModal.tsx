@@ -100,13 +100,14 @@ export default function LoginModal({ isOpen, onClose, onLoginSuccessRedirectTo =
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
+        credentials: "include", // Include cookies in the request
             });  const data = await res.json();
       if (!res.ok || !data.success) {
         throw new Error(data.message || `Error: ${res.status}`);
       }
 
       console.log("Login successful:", data);
-      authLogin(data.user,data.token);
+      authLogin(data.user);
       setIsSuccess(true);
       setIsLoading(false);
 

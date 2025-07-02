@@ -19,13 +19,11 @@ import FutureUncertainty from '../Module1/Part2/FutureUncertainty';
 import DistressingEmotions from '../Module1/Part2/DistressingEmotions';
 import Conclusion from '../Module1/Part2/Conclusion';
 
-import { useAuth } from '../auth/AuthContext';
 
 //Part 1 Modules
 
 
 const Module2 = () => {
-  const {token} = useAuth();
   const sections = [
     { id: 'introduction2', title: 'Introduction', sub:false},
     { id: 'connecting-meeting', title: 'Connecting to Meaning', sub:false},
@@ -112,7 +110,6 @@ const Module2 = () => {
 fetch(`${API_BASE}/update_progress.php`, {
       method: "POST",
       headers:{
-        "Authorization": `Bearer ${token}`, // Use token for authorization
         "Content-Type": "application/json" // Ensure the server knows we're sending JSON
       },
       body: JSON.stringify({
@@ -142,12 +139,10 @@ fetch(`${API_BASE}/update_progress.php`, {
   }, [sections]);
 
   useEffect(() => {
-    if(!token) return;
     const email = JSON.parse(localStorage.getItem("currentUser") || "{}").email;
     const API_BASE = import.meta.env.VITE_API_BASE_URL;
 fetch(`${API_BASE}/get_progress.php`,
       {headers:{
-        "Authorization": `Bearer ${token}`, // Use token for authorization
         "Content-Type": "application/json" // Ensure the server knows we're sending JSON
       }})
       .then(res => res.json())
@@ -157,7 +152,7 @@ fetch(`${API_BASE}/get_progress.php`,
           handleSectionChange(lastSection.section_code);
         }
       });
-  }, [token]);
+  }, []);
   
 
   return (

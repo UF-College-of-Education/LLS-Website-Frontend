@@ -1,6 +1,5 @@
 
 import React, { useEffect, useState } from 'react';
-import { useAuth } from '../auth/AuthContext';
 import { AreaChart, Area,LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, BarChart, Bar, Cell } from 'recharts'
 interface User {
   created_at: string; // ISO date string
@@ -33,14 +32,12 @@ const Dashboard: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
-  const {token} = useAuth();
 
   useEffect(() => {
     // Fetch user data from API
     const API_BASE = import.meta.env.VITE_API_BASE_URL;
 fetch(`${API_BASE}/get_user_stats.php`,{
       headers:{
-        "Authorization": `Bearer ${token}`, // Use token for authorization
         "Content-Type": "application/json" // Ensure the server knows we're sending JSON
       }
     })
@@ -81,7 +78,6 @@ useEffect(() => {
 const response = await fetch(`${API_BASE}/get_section_average_time.php`,
               {
                 headers:{
-                  "Authorization": `Bearer ${token}`, // Use token for authorization
                   "Content-Type": "application/json" // Ensure the server knows we're sending JSON
                 }
               }

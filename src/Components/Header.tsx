@@ -1,15 +1,49 @@
 import heart from "../assets/icons/Header_Heart.png";
 import headerBackground from "../assets/Header-Background_red.png";
+import { useState,useEffect } from "react";
+import { useAuth } from "../auth/AuthContext";
 const Header = () => {
-  let islogin: boolean = false;
-  // Check if currentUser is in localStorage
-  if (localStorage.getItem("currentUser") !== null) {
-    islogin = true;
-  }
+  const { logout } = useAuth(); // Use the logout function from AuthContext
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // Use state for login status
 
-  function deleteUser() {
-    localStorage.removeItem("currentUser");
-  }
+  useEffect(() => {
+    // Update isLoggedIn based on localStorage
+    setIsLoggedIn(localStorage.getItem("currentUser") !== null);
+  }, []);
+
+  const handleLogout = async (e: React.MouseEvent<HTMLAnchorElement>) => { // Use async and add event type
+    e.preventDefault(); // Prevent the default link behavior
+    try {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/logout.php`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (response.ok) {
+        // Logout successful on the server, now clear local storage and update state
+        logout(); // Call the logout function from AuthContext
+        setIsLoggedIn(false); // Update the state
+      } else {
+        console.error("Logout failed:", response.status);
+      }
+    } catch (error) {
+      console.error("Logout error:", error);
+    }
+  };
+  // let islogin: boolean = false;
+  // // Check if currentUser is in localStorage
+  // if (localStorage.getItem("currentUser") !== null) {
+  //   islogin = true;
+  // }
+
+  // function deleteUser() {
+  //   fetch(`${import.meta.env.VITE_API_BASE_URL}/logout.php`, {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     }})};
 
   return (
     <div>
@@ -28,12 +62,12 @@ const Header = () => {
               Healthy Communication Practice
             </span>
           </div>
-          {!islogin ? null : (
+          {!isLoggedIn ? null : (
             <div className="mt-4 md:mt-0">
               <a href="" className="relative group">
                 <span
                   className="text-white text-sm md:text-lg lg:text-xl hover:text-white font-[--font-open-sans] font-bold"
-                  onClick={() => deleteUser()}
+                  onClick={handleLogout}
                 >
                   👤 Hi, {JSON.parse(localStorage.getItem("currentUser") || "{}").name || "Guest"}
                 </span>

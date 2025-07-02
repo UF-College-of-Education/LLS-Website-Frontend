@@ -61,11 +61,17 @@ const Homepage = () => {
                 alt=""
               />
             </div>
-            <p className="text-black text-xs md:text-sm">
-              Question: Mandatory login to go into the course??
-            </p>
             <div>
-              <Button name="Go to Course" link="/parts" arrow={true} />
+            {/* {islogin ? <Button name="Go to Course" link="/parts" arrow={true} /> : (
+            <div><Button name="Go to Course" link="/parts" arrow={true} onClick={handleOpenLoginModal} />
+              <LoginModal
+                isOpen={isLoginModalOpen}
+                onClose={handleCloseLoginModal}
+                onLoginSuccessRedirectTo="/parts"
+              ></LoginModal>
+            </div>
+          )} */}
+          <Button name="Go to Course" link="/parts" arrow={true} />
             </div>
           </div>
         </div>

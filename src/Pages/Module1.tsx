@@ -18,11 +18,9 @@ import Marcos_Story_Chapter2 from '../Module1/Part1/Marcos_Story_Chapter2';
 import Marcos_Story_Chapter3 from '../Module1/Part1/Marcos_Story_Chapter3';
 import Communication_with_doctors from '../Module1/Part1/Communication_with_doctors';
 import Resonding_to_James from '../Module1/Part1/Responding_to_James';
-import { useAuth } from '../auth/AuthContext';
 
 const Module1 = () => {
 
-  const {token} = useAuth();
   const sections = [
     { id: 'introduction1', title: 'Introduction', sub:false},
     { id: 'critical-eliteracy', title: 'Critical eHealth Literacy', sub:false },
@@ -113,10 +111,8 @@ fetch(`${API_BASE}/update_progress.php`, {
       method: "POST",
       
         headers:{
-          "Authorization": `Bearer ${token}`, // Use token for authorization
           "Content-Type": "application/json" // Ensure the server knows we're sending JSON
         },
-      
       body: JSON.stringify({
         email: userEmail,
         section_code: sections[currentIndex].id,
@@ -144,12 +140,10 @@ fetch(`${API_BASE}/update_progress.php`, {
   }, [sections]);
 
   useEffect(() => {
-    if (!token) return; // Ensure token is available before making the request
     const email = JSON.parse(localStorage.getItem("currentUser") || "{}").email;
     const API_BASE = import.meta.env.VITE_API_BASE_URL;
 fetch(`${API_BASE}/get_progress.php`,
       {headers:{
-        "Authorization": `Bearer ${token}`, // Use token for authorization
         "Content-Type": "application/json" // Ensure the server knows we're sending JSON
       }}
     )
@@ -160,7 +154,7 @@ fetch(`${API_BASE}/get_progress.php`,
           handleSectionChange(lastSection.section_code);
         }
       });
-  }, [token]);
+  }, []);
   
 
   return (

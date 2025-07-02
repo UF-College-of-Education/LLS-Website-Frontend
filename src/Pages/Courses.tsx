@@ -2,23 +2,19 @@ import sam from "../assets/sam.png"
 import sam2 from "../assets/sam2.png"
 import alarm from "../assets/icons/alarm.png"
 import { useState, useEffect } from 'react'
-import { useAuth } from "../auth/AuthContext"
 
 const Courses = () => {
   const email = JSON.parse(localStorage.getItem("currentUser") || "{}").email;
   const [isPart1Completed, setIsPart1Completed] = useState(false);
   const [isPart2Completed, setIsPart2Completed] = useState(false);
 
-  const {token} = useAuth(); // Get the token from the auth context
 
   useEffect(() => {
-    if(!token) return;
     const fetchProgress = async () => {
       const API_BASE = import.meta.env.VITE_API_BASE_URL;
       const res = await fetch(`${API_BASE}/get_part_status.php`,
         {
           headers:{
-            "Authorization": `Bearer ${token}`, // Use token for authorization
             "Content-Type": "application/json" // Ensure the server knows we're sending JSON
           }
         }
@@ -34,24 +30,29 @@ const Courses = () => {
       console.log(isPart1Completed, isPart2Completed);
     };
     fetchProgress();
-  }, [token]);
+  }, []);
 
   const handleGoToPart = async (part: number) => {
     const API_BASE = import.meta.env.VITE_API_BASE_URL;
-      const res = await fetch(`${API_BASE}/get_progress.php`,
-      {
-        headers:{
-          "Authorization": `Bearer ${token}`, // Use token for authorization
-          "Content-Type": "application/json" // Ensure the server knows we're sending JSON
-        }
+      try {
+        const res = await fetch(`${API_BASE}/get_progress.php`,
+          {
+            headers:{
+              "Content-Type": "application/json" // Ensure the server knows we're sending JSON
+            }
+          }
+        );
+        const data = await res.json();
+        console.log(data, "dataaaaaaa");
+        const last = data.find((d: any) => d.part_id === part && d.is_completed === 0);
+        console.log(last, "lastssafa");
+        const section = last ? last.section_code : 'introduction';
+        window.location.href = `/part${part}#${section}`;
+      } catch (error) {
+        console.error("Error fetching progress:", error);
+        window.location.href = `/part${part}#introduction${part}`;
+        
       }
-    );
-    const data = await res.json();
-    console.log(data, "dataaaaaaa");
-    const last = data.find((d: any) => d.part_id === part && d.is_completed === 0);
-    console.log(last, "lastssafa");
-    const section = last ? last.section_code : 'introduction';
-    window.location.href = `/part${part}#${section}`;
   };
 
   
