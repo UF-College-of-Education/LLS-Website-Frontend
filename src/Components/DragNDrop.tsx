@@ -156,7 +156,7 @@ export default function MarcoLetterActivity() {
     const checkAnswers = () => {
       ReactGA.event({
         category: "Activity",
-        action: "Check Answer Clicked",
+        action: "StrategiesActivityAttempts",
         label: "strategies_activity"
       });
         const results: Record<string, boolean> = {};
