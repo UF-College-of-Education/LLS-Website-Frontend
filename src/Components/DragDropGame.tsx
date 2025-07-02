@@ -3,6 +3,7 @@ import { DndProvider, useDrag, useDrop } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import { CheckCircle, XCircle, RotateCcw } from 'lucide-react';
 import AvatarFeedback from './AvatarFeedback';
+import ReactGA from "react-ga4";
 
 const ItemTypes = {
   TEXT: 'text',
@@ -169,6 +170,11 @@ export default function MarcoLetterActivity() {
   };
 
   const checkAnswers = () => {
+    ReactGA.event({
+      category: "Activity",
+      action: "Check Answer Clicked",
+      label: "James_activity"
+    });
     const results: Record<string, boolean> = {};
     questions.forEach(question => {
       const userAnswer = droppedAnswers[question.id];

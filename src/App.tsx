@@ -11,10 +11,12 @@ import { AuthProvider } from './auth/AuthContext';
 import Dashboard from './Pages/Dashboard';
 import LandngPage from './Pages/LandngPage';
 import Module2 from './Pages/Module2';
+import ReactGA from "react-ga4";
 
 
 
 function App() {
+  ReactGA.initialize("G-G-XD10D86398"); 
   return (
     <div className="bg-white w-screen min-h-screen flex flex-col m-0">
       <AuthProvider>
