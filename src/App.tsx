@@ -16,7 +16,7 @@ import ReactGA from "react-ga4";
 
 
 function App() {
-  ReactGA.initialize("G-G-XD10D86398"); 
+  ReactGA.initialize("G-XD10D86398"); 
   return (
     <div className="bg-white w-screen min-h-screen flex flex-col m-0">
       <AuthProvider>
