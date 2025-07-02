@@ -1,4 +1,11 @@
-import React, { createContext, useState, useContext, useEffect, ReactNode} from 'react';
+import React, {
+  createContext,
+  useState,
+  useContext,
+  useEffect,
+  ReactNode,
+  FC,
+} from 'react';
 
 interface User {
   email: string;
@@ -7,32 +14,34 @@ interface User {
 
 interface AuthContextType {
   user: User | null;
-  login: (userData: User, ) => void; 
+  login: (userData: User) => void;
   logout: () => void;
-  isLoading: boolean; // To check if loading user from storage
+  isLoading: boolean;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+export const AuthProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
-  const [isLoading, setIsLoading] = useState(true); 
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Try to load user from localStorage on initial app load
-    try {
-      const storedUser = localStorage.getItem('currentUser');
-      if (storedUser ) {
-        setUser(JSON.parse(storedUser));
+    // Load user from localStorage on initial app load
+    const loadUser = () => {
+      try {
+        const storedUser = localStorage.getItem('currentUser');
+        if (storedUser) setUser(JSON.parse(storedUser));
+      } catch (error) {
+        console.error('Failed to parse user from localStorage', error);
+        localStorage.removeItem('currentUser');
+      } finally {
+        setIsLoading(false);
       }
-    } catch (error) {
-      console.error("Failed to parse user from localStorage", error);
-      localStorage.removeItem('currentUser'); // Clear corrupted data
-    }
-    setIsLoading(false); // Done loading
+    };
+    loadUser();
   }, []);
 
-  const login = (userData: User,) => {
+  const login = (userData: User) => {
     setUser(userData);
     localStorage.setItem('currentUser', JSON.stringify(userData));
   };
@@ -43,7 +52,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   };
 
   return (
-    <AuthContext.Provider value={{ user,  login, logout, isLoading }}>
+    <AuthContext.Provider value={{ user, login, logout, isLoading }}>
       {children}
     </AuthContext.Provider>
   );
@@ -51,7 +60,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
 export const useAuth = (): AuthContextType => {
   const context = useContext(AuthContext);
-  if (context === undefined) {
+  if (!context) {
     throw new Error('useAuth must be used within an AuthProvider');
   }
   return context;
