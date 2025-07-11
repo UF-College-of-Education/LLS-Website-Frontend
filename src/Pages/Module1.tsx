@@ -24,15 +24,15 @@ const Module1 = () => {
   const sections = [
     { id: 'introduction1', title: 'Introduction', sub:false},
     { id: 'critical-eliteracy', title: 'Critical eHealth Literacy', sub:false },
-    {id: 'marcosStory-chapter1', title: 'Marcos Story Chapter 1', sub:true},
-    {id:'hope-activity', title: 'Hope Activity', sub:true},
+    {id: 'marcosStory-chapter1', title: "James' Story Chapter 1", sub:true},
+    {id:'hope-activity', title: 'HOPE Activity', sub:true},
     { id: 'communicative-literacy', title: 'Communicative eHealth Literacy' },
-    {id: 'marcosStory-chapter2', title: 'Marcos Story Chapter 2', sub:true},
-    {id: 'responding-to-james', title: 'Responding to James son', sub:true},
+    {id: 'marcosStory-chapter2', title: "James' Story Chapter 2", sub:true},
+    {id: 'responding-to-james', title: "Responding to James' son", sub:true},
     { id: 'clinical-literacy', title: 'Clinical eHealth Literacy' },
-    {id:'marcosStory-chapter3', title: 'Marcos Story Chapter 3', sub:true},
+    {id:'marcosStory-chapter3', title: "James' Story Chapter 3", sub:true},
     {id:'communication-with-doctors', title: 'Communication with Doctors', sub:false},
-    {id:'paces-introduction', title: 'PACES Introduction', sub:false},
+    // {id:'paces-introduction', title: 'PACES Introduction', sub:false},
     {id:  'p-present' , title: 'P: Present Information', sub:true},
     {id: 'p-ask', title: 'A: Ask Questions', sub:true},
     {id: 'p-clarify', title: 'C: Check Understanding', sub:true},
@@ -102,23 +102,40 @@ const Module1 = () => {
     }
   };
 
-  const handleNext = () => {
+  const handleNext = async() => {
     const currentIndex = sections.findIndex((section) => section.id === currentSection);
     const userEmail = JSON.parse(localStorage.getItem("currentUser") || "{}").email;
 
+    try {
+      
     const API_BASE = import.meta.env.VITE_API_BASE_URL;
-fetch(`${API_BASE}/update_progress.php`, {
+const response = await fetch(`${API_BASE}/update_progress.php`, {
       method: "POST",
       
         headers:{
-          "Content-Type": "application/json" // Ensure the server knows we're sending JSON
+          "Content-Type": "application/json", // Ensure the server knows we're sending JSON
         },
+        credentials: 'include',
       body: JSON.stringify({
         email: userEmail,
         section_code: sections[currentIndex].id,
         complete: true
       }),
     });
+    if (!response.ok) {
+      console.error("Failed to update progress:", response.statusText);
+    } else {
+      console.log("Progress updated for section:", sections[currentIndex].id);
+    }
+
+    // Wait 5 seconds (5000 ms)
+    // await new Promise((resolve) => setTimeout(resolve, 5000));
+      
+    } catch (error) {
+      console.error("Error in handleNext:", error);
+      
+    }
+
     if (currentIndex == sections.length - 1){
       window.location.href = '/parts';
     } else if (currentIndex < sections.length - 1) {
@@ -140,20 +157,26 @@ fetch(`${API_BASE}/update_progress.php`, {
   }, [sections]);
 
   useEffect(() => {
-    const email = JSON.parse(localStorage.getItem("currentUser") || "{}").email;
-    const API_BASE = import.meta.env.VITE_API_BASE_URL;
-fetch(`${API_BASE}/get_progress.php`,
-      {headers:{
-        "Content-Type": "application/json" // Ensure the server knows we're sending JSON
-      }}
-    )
-      .then(res => res.json())
-      .then(data => {
-        const lastSection = data.find(d => d.part_id === 1 && !d.is_completed);
+    const fetchProgress = async () => {
+      try {
+        const email = JSON.parse(localStorage.getItem("currentUser") || "{}").email;
+        const API_BASE = import.meta.env.VITE_API_BASE_URL;
+        const response = await fetch(`${API_BASE}/get_progress.php`, {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          credentials: 'include',
+        });
+        const data = await response.json();
+        const lastSection = data.find((d: any) => d.part_id === 1 && !d.is_completed);
         if (lastSection) {
           handleSectionChange(lastSection.section_code);
         }
-      });
+      } catch (error) {
+        console.error("Failed to fetch progress:", error);
+      }
+    };
+    fetchProgress();
   }, []);
   
 

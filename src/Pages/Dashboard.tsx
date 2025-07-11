@@ -94,6 +94,7 @@ const response = await fetch(`${API_BASE}/get_section_average_time.php`,
             const chartData = apiData.map(item => ({
                 ...item,
                 section_id: `Section ${item.section_id}`,
+                average_time_minutes: +(item.average_time_seconds / 60).toFixed(2),
             }));
             setData2(chartData);
         } catch (err) {
@@ -203,10 +204,10 @@ const response = await fetch(`${API_BASE}/get_section_average_time.php`,
           >
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="section_id" />
-            <YAxis label={{ value: 'Average Time (seconds)', angle: -90, position: 'insideLeft' }} allowDecimals={true} />
-            <Tooltip formatter={(value: number) => `${value.toFixed(2)} seconds`} />
+            <YAxis label={{ value: 'Average Time (minutes)', angle: -90, position: 'insideLeft' }} allowDecimals={true} />
+            <Tooltip formatter={(value: number) => `${value.toFixed(2)} minutes`} />
             <Legend />
-            <Bar dataKey="average_time_seconds" name="Avg. Completion Time">
+            <Bar dataKey="average_time_minutes" name="Avg. Completion Time">
               {data2.map((entry, index) => (
                 <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
               ))}

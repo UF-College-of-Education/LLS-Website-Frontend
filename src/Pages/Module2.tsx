@@ -27,19 +27,21 @@ const Module2 = () => {
   const sections = [
     { id: 'introduction2', title: 'Introduction', sub:false},
     { id: 'connecting-meeting', title: 'Connecting to Meaning', sub:false},
-    {id: 'caregivers-stories1', title: 'Caregivers Stories', sub:true},
+    {id: 'caregivers-stories1', title: "Caregivers' Stories", sub:true},
     {id:'reflection-activity1', title: 'Reflection Activity 1', sub:true},
     { id: 'strengthening-family', title: 'Strengthening Family Bonds', sub:false},
-    {id: 'caregivers-stories2', title: 'Caregivers Stories', sub:true},
+    {id: 'caregivers-stories2', title: "Caregivers' Stories", sub:true},
     { id: 'reflection-activity2', title: 'Reflection Activity 2', sub:true},
     {id:'challenges-communication', title: 'Challenges and Communication Skills', sub:false},
-    {id:'caregivers-stories3', title: 'Caregivers Stories', sub:true},
+    {id:'caregivers-stories3', title: "Caregivers' Stories", sub:true},
     {id:'strategies-activity', title: 'Strategies Activity', sub:true},
     {id:  'practicing-skills' , title: 'Practicing Skills', sub:false},
     {id: 'relational-intimacy', title: 'Relational Intimacy', sub:true},
     {id: 'future-uncertainty', title: 'Futere Uncertainty and Mortality', sub:true},
     {id: 'distressing-emotions', title: 'Distressing Emotions and Concerns', sub:true}, 
     {id: 'conclusion', title: 'Conclusion', sub:false},
+    {id: 'resources', title: 'Resources', sub:false},
+    {id: 'acknowledgements', title: 'Acknowledgements', sub:false},
   ];
 
   const [currentSection, setCurrentSection] = useState(sections[0].id);
@@ -77,6 +79,10 @@ const Module2 = () => {
         return <DistressingEmotions />;
       case 'conclusion':
         return <Conclusion />;
+      case 'resources':
+        return <p>resources goes here</p>;
+      case 'acknowledgements':
+        return <p>Acknowledgements goes here</p>;
       default:
         return <p>Select a section from the sidebar.</p>;
     }
@@ -110,8 +116,9 @@ const Module2 = () => {
 fetch(`${API_BASE}/update_progress.php`, {
       method: "POST",
       headers:{
-        "Content-Type": "application/json" // Ensure the server knows we're sending JSON
+        "Content-Type": "application/json", // Ensure the server knows we're sending JSON
       },
+      credentials: 'include',
       body: JSON.stringify({
         email: userEmail,
         section_code: sections[currentIndex].id,
@@ -143,8 +150,9 @@ fetch(`${API_BASE}/update_progress.php`, {
     const API_BASE = import.meta.env.VITE_API_BASE_URL;
 fetch(`${API_BASE}/get_progress.php`,
       {headers:{
-        "Content-Type": "application/json" // Ensure the server knows we're sending JSON
-      }})
+        "Content-Type": "application/json", // Ensure the server knows we're sending JSON
+      },
+      credentials: 'include'})
       .then(res => res.json())
       .then(data => {
         const lastSection = data.find(d => d.part_id === 2 && !d.is_completed);

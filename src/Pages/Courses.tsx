@@ -15,8 +15,9 @@ const Courses = () => {
       const res = await fetch(`${API_BASE}/get_part_status.php`,
         {
           headers:{
-            "Content-Type": "application/json" // Ensure the server knows we're sending JSON
-          }
+            "Content-Type": "application/json", // Ensure the server knows we're sending JSON
+            },
+  credentials: 'include'
         }
       );
       const data = await res.json();
@@ -38,8 +39,9 @@ const Courses = () => {
         const res = await fetch(`${API_BASE}/get_progress.php`,
           {
             headers:{
-              "Content-Type": "application/json" // Ensure the server knows we're sending JSON
-            }
+              "Content-Type": "application/json",// Ensure the server knows we're sending JSON
+              },
+  credentials: 'include',
           }
         );
         const data = await res.json();
