@@ -37,7 +37,7 @@ const Module2 = () => {
     {id:'strategies-activity', title: 'Strategies Activity', sub:true},
     {id:  'practicing-skills' , title: 'Practicing Skills', sub:false},
     {id: 'relational-intimacy', title: 'Relational Intimacy', sub:true},
-    {id: 'future-uncertainty', title: 'Futere Uncertainty and Mortality', sub:true},
+    {id: 'future-uncertainty', title: 'Future Uncertainty and Mortality', sub:true},
     {id: 'distressing-emotions', title: 'Distressing Emotions and Concerns', sub:true}, 
     {id: 'conclusion', title: 'Conclusion', sub:false},
     {id: 'resources', title: 'Resources', sub:false},
@@ -167,7 +167,7 @@ fetch(`${API_BASE}/get_progress.php`,
     <div className='flex flex-col'>
       <ModuleHead leftButtonText="Previous" headingText="Part II: Facilitating Open and Supportive Communication in the Family" rightButtonText='Next' subHeadingText={sections.find(section => section.id === currentSection)?.title || ''} 
       onPrevious={handlePrevious} onNext={handleNext}/>
-      <Breadcrumb paths={[{ name: 'Home', link: '/' },{ name: 'Part 2', link: '/part2' }]} />
+      <Breadcrumb paths={[{ name: 'Home', link: '/parts' },{ name: 'Part 2', link: '/part2' }]} />
       {/* Main Content */}
       <div className="flex flex-col md:flex-row p-[10px]">
         {/* Sidebar */}

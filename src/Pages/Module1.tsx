@@ -24,13 +24,13 @@ const Module1 = () => {
   const sections = [
     { id: 'introduction1', title: 'Introduction', sub:false},
     { id: 'critical-eliteracy', title: 'Critical eHealth Literacy', sub:false },
-    {id: 'marcosStory-chapter1', title: "James' Story Chapter 1", sub:true},
+    {id: 'jamesStory-chapter1', title: "James' Story Chapter 1", sub:true},
     {id:'hope-activity', title: 'HOPE Activity', sub:true},
     { id: 'communicative-literacy', title: 'Communicative eHealth Literacy' },
-    {id: 'marcosStory-chapter2', title: "James' Story Chapter 2", sub:true},
+    {id: 'jamesStory-chapter2', title: "James' Story Chapter 2", sub:true},
     {id: 'responding-to-james', title: "Responding to James' son", sub:true},
     { id: 'clinical-literacy', title: 'Clinical eHealth Literacy' },
-    {id:'marcosStory-chapter3', title: "James' Story Chapter 3", sub:true},
+    {id:'jamesStory-chapter3', title: "James' Story Chapter 3", sub:true},
     {id:'communication-with-doctors', title: 'Communication with Doctors', sub:false},
     // {id:'paces-introduction', title: 'PACES Introduction', sub:false},
     {id:  'p-present' , title: 'P: Present Information', sub:true},
@@ -49,24 +49,22 @@ const Module1 = () => {
         return <Introduction />;
       case 'critical-eliteracy':
         return <Critical_eHealth_Literacy />;
-      case 'marcosStory-chapter1':
+      case 'jamesStory-chapter1':
         return <Marcos_Story_Chapter1 />;
       case 'hope-activity':
         return <HOPE_Activity />
       case 'communicative-literacy':
           return <Communicative_eHealth />;
-      case 'marcosStory-chapter2':
+      case 'jamesStory-chapter2':
           return <Marcos_Story_Chapter2 />;
       case 'responding-to-james':
         return <Resonding_to_James />;
       case 'critical-literacy':
         return <Critical_ehealth_Informal />;
-      case 'marcosStory-chapter3':
+      case 'jamesStory-chapter3':
         return <Marcos_Story_Chapter3 />
       case 'communication-with-doctors':
         return <Communication_with_doctors />
-      case 'paces-introduction':
-          return <FindingInfo />;
       case 'p-present':
         return <FindingInfo />;
       case 'p-ask':
@@ -184,7 +182,7 @@ const response = await fetch(`${API_BASE}/update_progress.php`, {
     <div className='flex flex-col'>
       <ModuleHead leftButtonText="Previous" headingText="Part 1: Navigating Cancer Information in Online and Clinical Settings" rightButtonText='Next' subHeadingText={sections.find(section => section.id === currentSection)?.title || ''} 
       onPrevious={handlePrevious} onNext={handleNext}/>
-      <Breadcrumb paths={[{ name: 'Home', link: '/' },{ name: 'Part 1', link: '/part1' }]} />
+      <Breadcrumb paths={[{ name: 'Home', link: '/parts' },{ name: 'Part 1', link: '/part1' }]} />
       {/* Main Content */}
       <div className="flex flex-col md:flex-row p-[10px]">
         {/* Sidebar */}

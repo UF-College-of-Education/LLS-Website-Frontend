@@ -18,6 +18,11 @@ interface SectionTimeData {
     section_id: string | number; // Can be number or string from API
     average_time_seconds: number;
   }
+type AvgAttempt = {
+    section_id: number;
+    activity_title: string;
+    avg_attempts: number;
+  };
   
   // Define an array of colors for the bars
 const COLORS = ['#0088FE', '#00C49F', '#FfBB28', '#FF8042', '#8884D8' , '#82CA9D', '#FFC0CB', '#A0522D', '#D2691E', '#FF6347', '#4682B4', '#6A5ACD', '#20B2AA', '#FF4500', '#2E8B57', '#8B4513'];
@@ -107,6 +112,19 @@ const response = await fetch(`${API_BASE}/get_section_average_time.php`,
 
     fetchSectionAverageTime();
 }, []);
+
+ const [data3, setData3] = useState<AvgAttempt[]>([]);
+
+ useEffect(() => {
+  const fetchAvgAttempts = async () => {
+    const API_BASE = import.meta.env.VITE_API_BASE_URL;
+const res = await fetch(`${API_BASE}/get_avg_attempts.php`,{
+  headers:{
+    "Content-Type": "application/json" 
+  }}).then(res => res.json())
+      .then(setData3);
+  }; fetchAvgAttempts()}, []);
+
 
   if (data.length === 0) {
     return <p>Loading chart data or no data available...</p>; // Provide feedback during loading or if no data
@@ -214,6 +232,17 @@ const response = await fetch(`${API_BASE}/get_section_average_time.php`,
             </Bar>
           </BarChart>
         </ResponsiveContainer>
+
+        <ResponsiveContainer width="100%" height={300}>
+      <AreaChart data={data3} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
+        <CartesianGrid strokeDasharray="3 3" />
+        <XAxis dataKey="activity_title" />
+        <YAxis />
+        <Tooltip />
+        <Legend />
+        <Area type="monotone" dataKey="avg_attempts" stroke="#8884d8" fill="#8884d8" />
+      </AreaChart>
+    </ResponsiveContainer>
     </div>
     </div>
   );

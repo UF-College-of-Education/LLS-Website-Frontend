@@ -29,6 +29,15 @@ const LandingPage: React.FC = () => {
     }
   }, [location]);
 
+  const handleScrollToResources = () => {
+    const section = document.getElementById("child");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+
+
   return (
     <div className="font-sans text-black">
       {/* Hero Section */}
@@ -41,7 +50,7 @@ const LandingPage: React.FC = () => {
             Effective conversations can transform cancer journeys. Learn, share, support – start with us today.
           </p>
           <div className="flex flex-col md:flex-row justify-start gap-4">
-            <button className="bg-[#F1685E] text-white px-7 py-3 rounded-full font-bold text-sm">
+            <button className="bg-[#F1685E] text-white px-7 py-3 rounded-full font-bold text-sm" onClick={handleScrollToResources}>
               Explore Resources
             </button>
             <button className="bg-white text-[#8C2B1D] px-7 py-3 rounded-full font-bold text-sm">
@@ -114,7 +123,7 @@ const LandingPage: React.FC = () => {
           </p>
           <a
             className="text-md font-semibold inline-flex underline decoration-red-600 underline-offset-6 items-center gap-1"
-            href="#"
+            href="https://healthycommunicationpractice.org/" target="_blank" rel="noopener noreferrer"
           >
             Learn more about Navigating Cancer Information in Online and Clinical Settings →
           </a>

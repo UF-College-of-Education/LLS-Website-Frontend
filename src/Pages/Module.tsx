@@ -6,7 +6,7 @@ import Button from '../Components/Button';
 
 const Module = () => {
   const breadcrumbPaths = [
-    { name: 'Home', link: '/' },
+    { name: 'Home', link: '/parts' },
     { name: 'Modules', link: '/modules' },
     { name: 'Module 1', link: '/module1' },
   ];

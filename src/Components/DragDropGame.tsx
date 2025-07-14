@@ -151,6 +151,22 @@ export default function MarcoLetterActivity() {
   const [feedback, setFeedback] = useState('Hi this is Anna, Your helper for this activity, lets see how you do!');
   const [emotion, setEmotion] = useState<'correct' | 'wrong'>('correct');
 
+  const API_BASE = import.meta.env.VITE_API_BASE_URL;
+  async function recordAttempt(user_email: string, is_successful: boolean) {
+    const response =await fetch(`${API_BASE}/record_attempt.php`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        email: user_email,
+        section_code: 10,
+        is_successful: is_successful ? '1' : '0',
+      }),
+    });
+    const data = await response.json();
+    return data.attempt_number;
+  }
+  
+
   const handleDrop = (questionId: string, text: string) => {
     // Remove the text from any previous location
     const newAnswers = { ...droppedAnswers };
@@ -169,7 +185,7 @@ export default function MarcoLetterActivity() {
     setCheckedAnswers({});
   };
 
-  const checkAnswers = () => {
+  const checkAnswers = async() => {
     ReactGA.event({
       category: "Activity",
       action: "Check Answer Clicked",
@@ -183,9 +199,11 @@ export default function MarcoLetterActivity() {
     setCheckedAnswers(results);
     setShowResults(true);
     if(Object.values(results).filter(Boolean).length === questions.length){
+      await recordAttempt(JSON.parse(localStorage.getItem("currentUser") || "{}").email, true);
        setFeedback("Excellent! You've correctly identified all the communication elements in James's message.")
        setEmotion('correct');
       }else{
+        await recordAttempt(JSON.parse(localStorage.getItem("currentUser") || "{}").email, false);
        setFeedback("Good effort! Review the incorrect answers and try again to improve your understanding.")
        setEmotion('wrong');}
   };
