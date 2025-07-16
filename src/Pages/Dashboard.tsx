@@ -99,7 +99,7 @@ const response = await fetch(`${API_BASE}/get_section_average_time.php`,
             const chartData = apiData.map(item => ({
                 ...item,
                 section_id: `Section ${item.section_id}`,
-                average_time_minutes: +(item.average_time_seconds / 60).toFixed(2),
+                average_time_minutes: +(item.average_time_seconds / 3600).toFixed(2),
             }));
             setData2(chartData);
         } catch (err) {
@@ -232,7 +232,7 @@ const res = await fetch(`${API_BASE}/get_avg_attempts.php`,{
             </Bar>
           </BarChart>
         </ResponsiveContainer>
-
+        <h2 className=" font-(family-name:--font-bree) font-extrabold tracking-wide  text-[30px] text-[#CE2C37] mt-5">Avg Attempts Taken on each Activity section</h2>
         <ResponsiveContainer width="100%" height={300}>
       <AreaChart data={data3} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
         <CartesianGrid strokeDasharray="3 3" />
