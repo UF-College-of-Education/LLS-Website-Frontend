@@ -37,10 +37,11 @@ function App() {
       <AuthProvider>
         <Routes>
           <Route path="/" element={<LandngPage />} />
+          <Route path="/team" element={<Team />} />
             <Route element={<MainLayout />}>
             <Route path="/course" element={<Homepage />} />
             <Route path="/parts" element={<Courses />} />
-            <Route path="/team" element={<Team />} />
+            
             <Route path="/part1" element={<Module1 />} />
             <Route path="/part2" element={<Module2 />} />
             <Route path="/register" element={<Register />} />
