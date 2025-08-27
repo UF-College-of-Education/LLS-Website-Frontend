@@ -10,7 +10,7 @@ import img3 from "../assets/Container-14.png";
 import heart from "../assets/icons/Header_Heart.png";
 import { CircleCheckBig, Award, Brain, Heart, Users, Target,Quote, Star,Zap, BookOpen, Video, Activity, Clock } from 'lucide-react';
 
-const LandingPage: React.FC = () => {
+const LandngPage: React.FC = () => {
   const benefits = [
     {
       icon: CircleCheckBig,
@@ -598,4 +598,4 @@ goal of the program is to <u>enhance caregivers’ health with communication ski
   );
 };
 
-export default LandingPage;
+export default LandngPage;

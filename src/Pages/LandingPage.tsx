@@ -1,0 +1,1328 @@
+import React, { useEffect,useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import {  CircleCheckBig, Monitor, Stethoscope,  Award, Brain, ArrowRight, Play, Heart, Users, Target,Quote, Star,Zap, BookOpen, Video, Activity, Clock } from 'lucide-react';
+import heart from "../assets/icons/Header_Heart.png";
+import hero1 from "../assets/sam.png";
+import hero2 from "../assets/sam2.png";
+import hero3 from "../assets/sam3.jpg";
+
+
+
+const LandingPage: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const benefits = [
+    {
+      icon: CircleCheckBig,
+      text: "Evidence-Based Skills",
+      gradient: "from-blue-500 to-blue-600",
+      delay: "0ms"
+    },
+    {
+      icon: Award,
+      text: "Proven Effectiveness",
+      gradient: "from-green-500 to-green-600",
+      delay: "150ms"
+    },
+    {
+      icon: Brain,
+      text: "Improved Mental Health",
+      gradient: "from-purple-500 to-purple-600",
+      delay: "300ms"
+    },
+    {
+      icon: Heart,
+      text: "Improved Communication Skills",
+      gradient: "from-pink-500 to-pink-600",
+      delay: "450ms"
+    },
+    {
+      icon: Users,
+      text: "Enhanced Care Ability",
+      gradient: "from-indigo-500 to-indigo-600",
+      delay: "600ms"
+    },
+    {
+      icon: Target,
+      text: "Targeted Guidance",
+      gradient: "from-orange-500 to-orange-600",
+      delay: "750ms"
+    }
+  ];
+  const features = [
+    {
+      title: "Memorable Communication Models",
+      description: "Evidence-based, theory-driven communication models introduced by experts",
+      icon: BookOpen,
+      image: "https://v3.fal.media/files/zebra/0SCwIzBoWa2mr0HAjxChs.jpeg",
+      gradient: "from-blue-500 to-blue-600",
+      delay: "0ms",
+      featured: true
+    },
+    {
+      title: "Expert Videos",
+      description: "Learn from experts in caregiving, healthcare, and family communication",
+      icon: Video,
+      image: "https://v3.fal.media/files/zebra/0SCwIzBoWa2mr0HAjxChs.jpeg",
+      gradient: "from-purple-500 to-purple-600",
+      delay: "100ms",
+      featured: false
+    },
+    {
+      title: "Authentic Caregiver Narratives",
+      description: "Real caregivers' stories captured through extensive research",
+      icon: Users,
+      image: "https://v3.fal.media/files/zebra/0SCwIzBoWa2mr0HAjxChs.jpeg",
+      gradient: "from-green-500 to-green-600",
+      delay: "200ms",
+      featured: false
+    },
+    {
+      title: "Interactive Activities",
+      description: "Writing prompts, drag and drop quizzes, and interactive videos",
+      icon: Activity,
+      image: "https://v3.fal.media/files/zebra/0SCwIzBoWa2mr0HAjxChs.jpeg",
+      gradient: "from-pink-500 to-pink-600",
+      delay: "300ms",
+      featured: false
+    },
+    {
+      title: "Flexible and Convenient",
+      description: "Work at your own pace with asynchronous learning",
+      icon: Clock,
+      image: "https://v3.fal.media/files/zebra/0SCwIzBoWa2mr0HAjxChs.jpeg",
+      gradient: "from-orange-500 to-orange-600",
+      delay: "400ms",
+      featured: false
+    }
+  ];
+  const caregiverTypes = [
+    {
+      id: 1,
+      title: "Adult-Child Caregiver of Parent",
+      icon: Users,
+      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
+      delay: "500ms",
+      comingSoon: false
+    },
+    {
+      id: 2,
+      title: "Spouse Caregiver",
+      icon: Heart,
+      image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
+      delay: "700ms",
+      comingSoon: false
+    },
+    {
+      id: 3,
+      title: "Parent Caregiver of Adolescent or Young Adult (AYA)",
+      icon: Brain,
+      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
+      delay: "900ms",
+      comingSoon: true
+    }
+  ];
+  const location = useLocation();
+
+  useEffect(() => {
+    setIsVisible(true);
+    const hash = location.hash;
+    if (hash) {
+      try {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      } catch (e) {
+        console.log("invalid hash to scroll to", hash);
+      }
+    }
+  }, [location]);
+
+  const handleScrollToResources = () => {
+    const section = document.getElementById("child");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  return(
+    <div className="font-sans text-black">
+        {/* Navigation Bar */}
+      <nav className="bg-[#8C2B1D] shadow-md fixed w-full z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+        <div className="flex-shrink-0">
+          <img src={heart} alt="Logo" className="h-8" />
+        </div>
+        <div className="hidden md:flex space-x-6 items-center">
+          <a href="/team" className="text-white hover:text-gray-900 font-bold">
+            Team
+          </a>
+          <a href="#evidence" className="text-white hover:text-gray-900 font-bold">
+            Evidence
+          </a>
+          <a href="#sponsors" className="text-white hover:text-gray-900 font-bold">
+            Sponsors
+          </a>
+          <button className="bg-[#F1685E] text-[#8C2B1D] px-4 py-2 rounded-full font-bold text-sm">
+            Donate
+          </button>
+        </div>
+        <div className="md:hidden flex items-center">
+          <button
+            className="text-gray-700 hover:text-gray-900 focus:outline-none"
+            onClick={() => {
+          const menu = document.getElementById("mobile-menu");
+          if (menu) menu.classList.toggle("hidden");
+            }}
+          >
+            <svg
+          className="h-6 w-6"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+            >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M4 6h16M4 12h16m-7 6h7"
+          />
+            </svg>
+          </button>
+        </div>
+          </div>
+        </div>
+        <div id="mobile-menu" className="hidden md:hidden bg-white shadow-md">
+          <a href="#team" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+        Team
+          </a>
+          <a href="#evidence" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+        Evidence
+          </a>
+          <a href="#sponsors" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+        Sponsors
+          </a>
+          <button className="block w-full text-left px-4 py-2 bg-[#F1685E] text-white rounded font-bold">
+        Donate
+          </button>
+        </div>
+      </nav>
+
+        {/* Hero Section */}
+        <section className="min-h-screen flex items-center justify-center overflow-hidden bg-[#FFFFFF]">
+            {/* Main content */}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                <div className="grid lg:grid-cols-2 gap-12 items-center">
+                {/* Left column - Text content */}
+                <div className="space-y-8 transform transition-all duration-1000 translate-x-0 opacity-100">
+                    <div className="space-y-6">
+                    {/* Badge */}
+                    <div className="inline-flex items-center px-4 py-2 bg-[#FFF6F6] backdrop-blur-sm rounded-full text-pink-300 text-sm font-medium">
+                        <Heart className="w-4 h-4 mr-2 text-pink-300" />
+                        Evidence-Based Caregiver Support
+                    </div>
+
+                    {/* Main heading */}
+                    <h1 className="text-6xl md:text-8xl font-bold leading-tight">
+                        <span className="block text-[#8C2B1D] ">Healthy</span>
+                        <span className="block bg-gradient-to-r from-pink-300 to-yellow-300 bg-clip-text text-transparent">
+                        Communication
+                        </span>
+                        <span className="block text-[#8C2B1D]">Practice</span>
+                    </h1>
+
+                    {/* Description */}
+                    <p className="text-lg text-black leading-relaxed max-w-2xl">
+                        a self-paced, online program using real caregivers’ narratives to empower family caregivers to develop communication skills that can promote their caregiving ability and mental well-being.
+                         The goal of the program is to <u>enhance caregivers’ health with communication skills support.</u> 
+                    </p>
+                    </div>
+
+                    {/* CTA buttons */}
+                    <div className="flex flex-col sm:flex-row gap-4">
+                    <button className="group bg-white text-[#8C2B1D] px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                        Explore Resources
+                        <ArrowRight className="inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                    </button>
+                    <button className="group flex items-center px-8 py-4 text-black border-2 border-white/30 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300">
+                        <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-300" />
+                        Watch Demo
+                    </button>
+                    </div>
+
+                    {/* Stats */}
+                    <div className="grid grid-cols-3 gap-6 pt-8">
+                    <div className="text-center transform transition-all duration-1000 delay-0 translate-y-0 opacity-100">
+                        <Users className="w-8 h-8 text-pink-300 mx-auto mb-2" />
+                        <div className="text-2xl font-bold text-black">10,000+</div>
+                        <div className="text-sm text-[#8C2B1D]">Caregivers Helped</div>
+                    </div>
+                    <div className="text-center transform transition-all duration-1000 delay-200 translate-y-0 opacity-100">
+                        <Heart className="w-8 h-8 text-pink-300 mx-auto mb-2" />
+                        <div className="text-2xl font-bold text-black">95%</div>
+                        <div className="text-sm text-[#8C2B1D]">Satisfaction Rate</div>
+                    </div>
+                    <div className="text-center transform transition-all duration-1000 delay-400 translate-y-0 opacity-100">
+                        <Star className="w-8 h-8 text-pink-300 mx-auto mb-2" />
+                        <div className="text-2xl font-bold text-black">4.9/5</div>
+                        <div className="text-sm text-[#8C2B1D]">Average Rating</div>
+                    </div>
+                    </div>
+                </div>
+
+                {/* Right column - Visual content */}
+                <div className="relative transform transition-all duration-3000 delay-300 translate-x-0 opacity-100">
+                    <div className="relative">
+                    {/* Main image container */}
+                    <div className="relative w-full h-96 rounded-3xl overflow-hidden shadow-2xl">
+                        <img 
+                        src={hero1} 
+                        alt="Caregivers supporting their loved ones" 
+                        className="w-full h-full object-cover transition-all duration-1000" 
+                        />
+                        <img 
+                        src={hero2} 
+                        alt="Caregivers supporting their loved ones" 
+                        className="w-full h-full object-cover transition-all duration-1000" 
+                        />
+                        <img 
+                        src={hero3} 
+                        alt="Caregivers supporting their loved ones" 
+                        className="w-full h-full object-cover transition-all duration-1000" 
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    </div>
+
+                    {/* Live support badge */}
+                    <div className="absolute -top-4 -right-4 bg-white/95 backdrop-blur-sm p-4 rounded-2xl shadow-lg animate-bounce">
+                        <div className="flex items-center space-x-2">
+                        <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                        <span className="text-sm font-medium text-gray-700">Expert Course Content</span>
+                        </div>
+                    </div>
+
+                    {/* Profile avatars */}
+                    <div className="absolute top-1/2 -right-8 transform -translate-y-1/2 space-y-4">
+                        <div className="w-16 h-16 rounded-full overflow-hidden border-4 border-white shadow-lg transform transition-all duration-500 hover:scale-110 ring-4 ring-pink-300">
+                        <img 
+                            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" 
+                            alt="Caregiver 1" 
+                            className="w-full h-full object-cover" 
+                        />
+                        </div>
+                        <div className="w-16 h-16 rounded-full overflow-hidden border-4 border-white shadow-lg transform transition-all duration-500 hover:scale-110">
+                        <img 
+                            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" 
+                            alt="Caregiver 2" 
+                            className="w-full h-full object-cover" 
+                        />
+                        </div>
+                        <div className="w-16 h-16 rounded-full overflow-hidden border-4 border-white shadow-lg transform transition-all duration-500 hover:scale-110">
+                        <img 
+                            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" 
+                            alt="Caregiver 3" 
+                            className="w-full h-full object-cover" 
+                        />
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+    </section>
+
+    {/* Why Section*/}
+    <section className="bg-[#FFF6F6] py-16 px-8 md:px-16 flex flex-col md:flex-row justify-around items-center">
+            <div className="w-full md:w-1/3 mr-4 my-auto">
+            <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+          <Heart className="w-4 h-4 mr-2" />
+          Why It Matters
+        </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+          Why Caregivers Need the{" "}
+          <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            Healthy Communication Practice
+          </span>
+        </h2>
+        <p className="my-8 text-sm text-gray-600">
+                Caregiving communication skills promote better care and health outcomes for family caregivers and for the loved ones they care for. Healthy Communication Practice takes an evidence-based skills approach to helping caregivers communicate in their caregiving role. 
+              </p>
+              <p className="mb-8 text-sm text-gray-600">This program has proven effectiveness in enhancing caregivers’ mental well-being while increasing communication skills. It is grounded in rigorous research conducted by leading caregiving experts and developed in partnership with renowned health organizations and family caregivers. </p>
+            <p className="mb-8 text-sm text-gray-600">We offer multiple programs targeted to family caregivers’ distinct needs based on the disease type (e.g., blood cancer, dementia) & relationship (e.g., spouse, parent).</p>
+            </div>
+            
+            <div className="relative transform transition-all duration-1000 translate-x-0 opacity-100">
+          <div className="grid grid-cols-3 gap-16 max-w-full mx-auto">
+            {benefits.map((benefit, index) => {
+              const IconComponent = benefit.icon;
+              
+              return (
+                <div
+                  key={index}
+                  className="relative group cursor-pointer transform transition-all duration-500 hover:scale-110 translate-y-0 opacity-100"
+                  style={{ transitionDelay: benefit.delay }}
+                >
+                  <div className={`w-32 h-32 rounded-full bg-gradient-to-br ${benefit.gradient} flex items-center justify-center shadow-lg group-hover:shadow-2xl transition-all duration-300 relative overflow-hidden`}>
+                    {/* Hover overlay */}
+                    <div className="absolute inset-0 bg-white/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-500"></div>
+                    
+                    {/* Content */}
+                    <div className="relative text-center">
+                      <IconComponent className="w-8 h-8 text-white mx-auto mb-2 group-hover:scale-110 transition-transform duration-300" />
+                      <div className="text-white text-xs font-semibold leading-tight px-2">
+                        {benefit.text}
+                      </div>
+                    </div>
+                    
+                    {/* Border animation */}
+                    <div className="absolute inset-0 rounded-full border-2 border-white/30 scale-100 group-hover:scale-125 opacity-100 group-hover:opacity-0 transition-all duration-500"></div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+          
+          {/* Decorative SVG lines */}
+          <svg 
+            className="absolute inset-0 w-full h-full pointer-events-none" 
+            style={{ zIndex: -1 }}
+          >
+            <defs>
+              <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#3B82F6" stopOpacity="0.3" />
+                <stop offset="100%" stopColor="#EC4899" stopOpacity="0.3" />
+              </linearGradient>
+            </defs>
+            <path 
+              d="M 80 80 Q 200 120 320 80" 
+              stroke="url(#lineGradient)" 
+              strokeWidth="2" 
+              fill="none" 
+              className="animate-pulse"
+            />
+            <path 
+              d="M 80 240 Q 200 200 320 240" 
+              stroke="url(#lineGradient)" 
+              strokeWidth="2" 
+              fill="none" 
+              className="animate-pulse"
+              style={{ animationDelay: '0.5s' }}
+            />
+          </svg>
+        </div>
+      </section>
+
+    {/* Testimonial Section*/}
+    <div className="py-10 bg-gradient-to-br from-blue-50 to-purple-50">
+          <div className="relative max-w-4xl mx-auto transform transition-all duration-1000 translate-y-0 opacity-100 scale-100">
+            <div className="relative bg-white rounded-3xl shadow-2xl p-8 md:p-12 overflow-hidden group hover:shadow-3xl transition-all duration-500">
+              
+              {/* Decorative background circles */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-700"></div>
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-pink-100 to-yellow-100 rounded-full translate-y-12 -translate-x-12 group-hover:scale-150 transition-transform duration-700"></div>
+              
+              {/* Quote icon */}
+              <div className="relative mb-4">
+                <div className="inline-flex items-center justify-center w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <Quote className="w-4 h-4 text-white" />
+                </div>
+              </div>
+              
+              {/* Testimonial text */}
+              <div className="relative z-10 mb-8">
+                <blockquote className="text-lg md:text-xl text-gray-800 leading-relaxed font-medium italic">
+                  "Appreciate you taking the time to [create] Healthy Communication Practice. No one really understands what caregivers go through until they are thrust into the position. It is challenging and can break you in ways you never expected. Thank you for shining a light and helping with coping mechanisms."
+                </blockquote>
+              </div>
+              
+              {/* Author and rating */}
+              <div className="relative z-10 flex items-center justify-between">
+                <div>
+                  <div className="text-md font-semibold text-gray-900">
+                    - Family Caregiver
+                  </div>
+                </div>
+                
+                {/* 5-star rating */}
+                <div className="flex space-x-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star 
+                      key={i}
+                      className="w-5 h-5 text-yellow-400 fill-current transition-all duration-300"
+                      style={{ transitionDelay: `${500 + i * 100}ms` }}
+                    />
+                  ))}
+                </div>
+              </div>
+              
+              {/* Animated border on hover */}
+              <div className="absolute inset-0 rounded-3xl border-2 border-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-0.5">
+                <div className="w-full h-full bg-white rounded-3xl"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    {/*Evidence Section*/}
+    <section className="py-10 bg-gradient-to-br from-white to-gray-50 relative ">
+          
+    
+          <div className=" z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              {/* Left Column - Text Content */}
+              <div className="space-y-18 transform transition-all duration-1000 translate-x-0 opacity-100">
+                <div className="space-y-16">
+                  {/* Badge */}
+                  <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 rounded-full text-sm font-medium">
+                    <Zap className="w-4 h-4 mr-2" />
+                    Evidence-Based Approach
+                  </div>
+    
+                  {/* Heading */}
+                  <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+                    An Evidence-Based,{' '}
+                    <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                      Narrative Learning Approach
+                    </span>{' '}
+                    to Promoting Caregiver's Well-Being
+                  </h2>
+    
+                  {/* Description paragraphs */}
+                  <p className="text-xl text-gray-700 leading-relaxed">
+                    To teach the skills in a memorable and relatable way, Healthy Communication Practice uses evidence-based, theory-driven communication models that are introduced by experts in caregiving, healthcare and family communication, mental health, and the disease context.
+                  </p>
+    
+                  <p className="text-lg text-gray-600 leading-relaxed">
+                    Users will watch caregivers model communication skills in challenging care conversations using real caregivers' narratives captured through extensive research so that caregivers can relate to the stories, promoting their skill development.
+                  </p>
+                </div>
+    
+                {/* Highlighted box */}
+                <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-2xl border border-blue-100">
+                  <p className="text-gray-700 leading-relaxed">
+                    This program has been developed in partnership with education and instructional design experts to ensure caregivers become engaged via interactive activities like writing prompts, drag and drop quizzes, and interactive videos. Caregivers can work on their own and at their own pace.
+                  </p>
+                </div>
+              </div>
+    
+              {/* Right Column - Feature Grid */}
+              <div className="relative transform transition-all duration-1000 delay-300 translate-x-0 opacity-100">
+                <div className="grid grid-cols-2 gap-16">
+                  {features.slice(0, 4).map((feature, index) => {
+                    const IconComponent = feature.icon;
+                    const isFeatured = index === 0; // First item is featured
+    
+                    return (
+                      <div
+                        key={index}
+                        className={`relative group cursor-pointer transform transition-all duration-500 translate-y-0 opacity-100 ${
+                          isFeatured ? 'scale-105 z-10' : 'hover:scale-105'
+                        }`}
+                        style={{ transitionDelay: feature.delay }}
+                      >
+                        <div className={`relative overflow-hidden rounded-2xl shadow-lg group-hover:shadow-2xl transition-all duration-300 ${
+                          isFeatured ? 'ring-4 ring-blue-300 shadow-2xl' : ''
+                        }`}>
+                          <div className="aspect-square bg-gradient-to-br from-gray-100 to-gray-200">
+                            <img
+                              src={feature.image}
+                              alt={feature.title}
+                              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            />
+                          </div>
+                          <div className={`absolute inset-0 bg-gradient-to-t ${feature.gradient} opacity-80 group-hover:opacity-90 transition-opacity duration-300`}></div>
+                          <div className="absolute inset-0 p-4 flex flex-col justify-end text-white">
+                            <IconComponent className={`w-8 h-8 mb-2 transition-transform duration-300 ${
+                              isFeatured ? 'scale-110' : 'group-hover:scale-110'
+                            }`} />
+                            <h3 className="font-bold text-sm leading-tight mb-1">
+                              {feature.title}
+                            </h3>
+                            <p className="text-xs opacity-90 leading-tight">
+                              {feature.description}
+                            </p>
+                          </div>
+                          {isFeatured && (
+                            <div className="absolute top-2 right-2 w-3 h-3 bg-white rounded-full animate-pulse"></div>
+                          )}
+                        </div>
+                      </div>
+                    );
+                  })}
+    
+                  {/* Fifth item spans both columns */}
+                  <div
+                    className="col-span-2 relative group cursor-pointer transform transition-all duration-500 hover:scale-105 translate-y-0 opacity-100"
+                    style={{ transitionDelay: features[4]?.delay }}
+                  >
+                    <div className="relative overflow-hidden rounded-2xl shadow-lg group-hover:shadow-2xl transition-all duration-300">
+                      <div className="aspect-[2/1] bg-gradient-to-br from-gray-100 to-gray-200">
+                        <img
+                          src={features[4]?.image}
+                          alt={features[4]?.title}
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        />
+                      </div>
+                      <div className={`absolute inset-0 bg-gradient-to-t ${features[4]?.gradient} opacity-80 group-hover:opacity-90 transition-opacity duration-300`}></div>
+                      <div className="absolute inset-0 p-4 flex flex-col justify-end text-white">
+                        <Clock className="w-8 h-8 mb-2 transition-transform duration-300 group-hover:scale-110" />
+                        <h3 className="font-bold text-sm leading-tight mb-1">
+                          {features[4]?.title}
+                        </h3>
+                        <p className="text-xs opacity-90 leading-tight">
+                          {features[4]?.description}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+                {/* Bottom info card */}
+                <div className="mt-8 p-6 bg-white rounded-2xl shadow-lg border border-gray-100">
+                  <div className="flex items-start space-x-4">
+                    <div className="p-3 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600">
+                      <BookOpen className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                        Memorable Communication Models
+                      </h4>
+                      <p className="text-gray-600 leading-relaxed">
+                        Evidence-based, theory-driven communication models introduced by experts
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+
+    {/* COntext Section */}
+     <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+      {/* Background pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_2px_2px,_theme(colors.blue.500)_2px,_transparent_0)] bg-[size:60px_60px]"></div>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header section */}
+        <div className="text-center mb-16 transform transition-all duration-1000 translate-y-0 opacity-100">
+          <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 rounded-full text-sm font-medium mb-6">
+            <CircleCheckBig className="w-4 h-4 mr-2" />
+            Key Caregiving Contexts
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
+            Communication Skills in{" "}
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Key Caregiving Contexts
+            </span>
+          </h2>
+          <p className="text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto">
+            The Healthy Communication Practice program teaches communication skills that will help caregivers 
+            navigate complex and important care conversations in online, clinical, and family contexts.
+          </p>
+        </div>
+
+        {/* Three context cards */}
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          {/* Online Context Card */}
+          <div className="group relative transform transition-all duration-700 hover:scale-105 translate-y-0 opacity-100">
+            <div className="bg-blue-50 p-8 rounded-3xl shadow-lg group-hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl shadow-lg mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Monitor className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Online Context</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Sharing cancer information with clinicians and family members
+              </p>
+              <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300">
+                <ArrowRight className="w-5 h-5 text-gray-400" />
+              </div>
+            </div>
+          </div>
+
+          {/* Clinical Context Card */}
+          <div className="group relative transform transition-all duration-700 hover:scale-105 translate-y-0 opacity-100" style={{ transitionDelay: '200ms' }}>
+            <div className="bg-green-50 p-8 rounded-3xl shadow-lg group-hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-green-500 to-emerald-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl shadow-lg mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Stethoscope className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Clinical Context</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Talking with your loved one's doctors in clinical settings
+              </p>
+              <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300">
+                <ArrowRight className="w-5 h-5 text-gray-400" />
+              </div>
+            </div>
+          </div>
+
+          {/* Family Context Card */}
+          <div className="group relative transform transition-all duration-700 hover:scale-105 translate-y-0 opacity-100" style={{ transitionDelay: '400ms' }}>
+            <div className="bg-purple-50 p-8 rounded-3xl shadow-lg group-hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl shadow-lg mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Users className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Family Context</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Facilitating open, supportive communication with family
+              </p>
+              <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300">
+                <ArrowRight className="w-5 h-5 text-gray-400" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Program Structure Section */}
+        <div className="transform transition-all duration-1000 delay-500 translate-y-0 opacity-100">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">Program Structure</h3>
+            <p className="text-lg text-gray-600">
+              The program is divided into two parts, with each part taking about 45 minutes to complete:
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Part I */}
+            <div className="group relative cursor-pointer transform transition-all duration-500 hover:scale-102">
+              <div className="bg-white p-8 rounded-3xl shadow-lg group-hover:shadow-2xl transition-all duration-300 border-2 border-transparent">
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white font-bold text-lg">
+                      1
+                    </div>
+                    <div>
+                      <h4 className="text-2xl font-bold text-gray-900">Part I</h4>
+                      <div className="flex items-center text-gray-500 text-sm">
+                        <Clock className="w-4 h-4 mr-1" />
+                        45 minutes
+                      </div>
+                    </div>
+                  </div>
+                  <ArrowRight className="w-6 h-6 text-gray-400 transform transition-transform duration-300 group-hover:translate-x-1" />
+                </div>
+                
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  Foundation communication skills and online information sharing
+                </p>
+
+                <div className="grid grid-cols-2 gap-3 transition-all duration-500 opacity-70 max-h-20 overflow-hidden">
+                  {[
+                    { text: "Communication Models", delay: "0ms" },
+                    { text: "Online Information Skills", delay: "100ms" },
+                    { text: "Expert Guidance", delay: "200ms" },
+                    { text: "Interactive Exercises", delay: "300ms" }
+                  ].map((item, index) => (
+                    <div 
+                      key={index}
+                      className="flex items-center space-x-2 text-sm text-gray-600 transform transition-all duration-300 translate-x-2 opacity-70"
+                      style={{ transitionDelay: item.delay }}
+                    >
+                      <CircleCheckBig className="w-4 h-4 text-green-500 flex-shrink-0" />
+                      <span>{item.text}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Part II */}
+            <div className="group relative cursor-pointer transform transition-all duration-500 hover:scale-102">
+              <div className="bg-white p-8 rounded-3xl shadow-lg group-hover:shadow-2xl transition-all duration-300 border-2 border-transparent">
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-lg">
+                      2
+                    </div>
+                    <div>
+                      <h4 className="text-2xl font-bold text-gray-900">Part II</h4>
+                      <div className="flex items-center text-gray-500 text-sm">
+                        <Clock className="w-4 h-4 mr-1" />
+                        45 minutes
+                      </div>
+                    </div>
+                  </div>
+                  <ArrowRight className="w-6 h-6 text-gray-400 transform transition-transform duration-300 group-hover:translate-x-1" />
+                </div>
+                
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  Advanced skills for clinical and family conversations
+                </p>
+
+                <div className="grid grid-cols-2 gap-3 transition-all duration-500 opacity-70 max-h-20 overflow-hidden">
+                  {[
+                    { text: "Clinical Communication", delay: "0ms" },
+                    { text: "Family Conversations", delay: "100ms" },
+                    { text: "Challenging Situations", delay: "200ms" },
+                    { text: "Practice Scenarios", delay: "300ms" }
+                  ].map((item, index) => (
+                    <div 
+                      key={index}
+                      className="flex items-center space-x-2 text-sm text-gray-600 transform transition-all duration-300 translate-x-2 opacity-70"
+                      style={{ transitionDelay: item.delay }}
+                    >
+                      <CircleCheckBig className="w-4 h-4 text-green-500 flex-shrink-0" />
+                      <span>{item.text}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/*Testimonial-2 Section*/}
+    <div className="py-10 bg-gradient-to-br from-blue-50 to-purple-50">
+          <div className="relative max-w-4xl mx-auto transform transition-all duration-1000 translate-y-0 opacity-100 scale-100">
+            <div className="relative bg-white rounded-3xl shadow-2xl p-8 md:p-12 overflow-hidden group hover:shadow-3xl transition-all duration-500">
+              
+              {/* Decorative background circles */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-700"></div>
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-pink-100 to-yellow-100 rounded-full translate-y-12 -translate-x-12 group-hover:scale-150 transition-transform duration-700"></div>
+              
+              {/* Quote icon */}
+              <div className="relative mb-4">
+                <div className="inline-flex items-center justify-center w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <Quote className="w-4 h-4 text-white" />
+                </div>
+              </div>
+              
+              {/* Testimonial text */}
+              <div className="relative mb-8">
+                <blockquote className="text-lg md:text-xl text-gray-800 leading-relaxed font-medium italic">
+                  "Appreciate you taking the time to [create] Healthy Communication Practice. No one really understands what caregivers go through until they are thrust into the position. It is challenging and can break you in ways you never expected. Thank you for shining a light and helping with coping mechanisms."
+                </blockquote>
+              </div>
+              
+              {/* Author and rating */}
+              <div className="relative flex items-center justify-between">
+                <div>
+                  <div className="text-md font-semibold text-gray-900">
+                    - Family Caregiver
+                  </div>
+                </div>
+                
+                {/* 5-star rating */}
+                <div className="flex space-x-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star 
+                      key={i}
+                      className="w-5 h-5 text-yellow-400 fill-current transition-all duration-300"
+                      style={{ transitionDelay: `${500 + i * 100}ms` }}
+                    />
+                  ))}
+                </div>
+              </div>
+              
+              {/* Animated border on hover */}
+              <div className="absolute inset-0 rounded-3xl border-2 border-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-0.5">
+                <div className="w-full h-full bg-white rounded-3xl"></div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+    {/*HCP Section */}
+    <section className="py-20 bg-gradient-to-br from-red-600 to-red-700 relative overflow-hidden">
+      {/* Background patterns and effects */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_1px_1px,_white_1px,_transparent_0)] bg-[size:40px_40px]"></div>
+      </div>
+      <div className="absolute top-20 right-10 w-32 h-32 bg-white/20 rounded-full blur-2xl animate-pulse"></div>
+      <div className="absolute bottom-20 left-10 w-40 h-40 bg-white/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Left column - Text content */}
+          <div className="space-y-8 transform transition-all duration-1000 translate-x-0 opacity-100">
+            <div className="inline-flex items-center px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full text-white font-medium">
+              <Heart className="w-5 h-5 mr-2" />
+              LLS Partnership
+            </div>
+
+            <div className="space-y-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+                Healthy Communication Practice for Blood Cancer Caregiving
+              </h2>
+              
+              <p className="text-xl text-white/90 leading-relaxed">
+                Each year nearly 200,000 people will be diagnosed with a leukemia, lymphoma or myeloma 
+                (Blood Cancer United, 2025). Blood cancers can be chronic (with no cure) or acute and 
+                require immediate life-changing treatment that can extend for years.
+              </p>
+
+              <div className="text-lg text-white/80 leading-relaxed">
+                A blood cancer diagnosis can also occur across the lifespan, requiring families to care 
+                for a child, spouse, or aging parent. With support from The Leukemia & Lymphoma Society (LLS), 
+                we offer three options to support different types of family caregivers of a loved one living 
+                with a blood cancer.
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                Learn More
+                <ArrowRight className="inline-block ml-2 w-5 h-5" />
+              </button>
+              <button className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300">
+                View Research
+              </button>
+            </div>
+          </div>
+
+          {/* Right column - Caregiver type circles */}
+          <div className="relative transform transition-all duration-1000 delay-300 translate-x-0 opacity-100">
+            <div className="grid grid-cols-2 gap-8 max-w-md mx-auto">
+              {caregiverTypes.map((caregiver, index) => {
+                const IconComponent = caregiver.icon;
+                const isThirdItem = index === 2;
+                
+                return (
+                  <div 
+                    key={caregiver.id}
+                    className={`relative group cursor-pointer transform transition-all duration-500 translate-y-0 opacity-100 hover:scale-110 ${
+                      isThirdItem ? 'col-span-2 justify-self-center' : ''
+                    }`}
+                    style={{ transitionDelay: caregiver.delay }}
+                  >
+                    <div className="relative w-40 h-40 rounded-full bg-white/95 backdrop-blur-sm flex items-center justify-center shadow-2xl group-hover:shadow-3xl transition-all duration-300 overflow-hidden">
+                      {/* Background image */}
+                      <div className="absolute inset-0 rounded-full overflow-hidden">
+                        <img 
+                          src={caregiver.image}
+                          alt={caregiver.title}
+                          className="w-full h-full object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-300"
+                        />
+                      </div>
+
+                      {/* Gradient overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-red-500 to-red-600 opacity-10 group-hover:opacity-20 transition-opacity duration-300 rounded-full"></div>
+
+                      {/* Content */}
+                      <div className="relative z-10 text-center p-4">
+                        <IconComponent className="w-8 h-8 text-gray-700 mx-auto mb-2 group-hover:scale-110 transition-transform duration-300" />
+                        <div className="text-gray-900 text-sm font-bold leading-tight">
+                          {caregiver.title}
+                        </div>
+                        {caregiver.comingSoon && (
+                          <div className="text-xs text-gray-500 mt-1 font-medium">
+                            *Coming Soon
+                          </div>
+                        )}
+                      </div>
+
+                      {/* Border ring effect */}
+                      <div className="absolute inset-0 rounded-full border-2 border-white/50 scale-100 group-hover:scale-125 opacity-100 group-hover:opacity-0 transition-all duration-500"></div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Decorative SVG lines */}
+            <svg 
+              className="absolute inset-0 w-full h-full pointer-events-none" 
+              style={{ zIndex: -1 }}
+            >
+              <defs>
+                <linearGradient 
+                  id="lineGradient" 
+                  x1="0%" 
+                  y1="0%" 
+                  x2="100%" 
+                  y2="100%"
+                >
+                  <stop offset="0%" stopColor="white" stopOpacity="0.3" />
+                  <stop offset="100%" stopColor="white" stopOpacity="0.1" />
+                </linearGradient>
+              </defs>
+              <path 
+                d="M 80 80 Q 200 120 320 80" 
+                stroke="url(#lineGradient)" 
+                strokeWidth="2" 
+                fill="none" 
+                className="animate-draw-line"
+              />
+              <path 
+                d="M 80 240 Q 200 200 320 240" 
+                stroke="url(#lineGradient)" 
+                strokeWidth="2" 
+                fill="none" 
+                className="animate-draw-line"
+                style={{ animationDelay: '0.5s' }}
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <style jsx>{`
+        @keyframes fade-in {
+          from {
+            opacity: 0;
+            transform: translateY(10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes draw-line {
+          from {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+          }
+          to {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 0;
+          }
+        }
+
+        .animate-fade-in {
+          animation: fade-in 0.3s ease-out;
+        }
+
+        .animate-draw-line {
+          stroke-dasharray: 1000;
+          stroke-dashoffset: 1000;
+          animation: draw-line 2s ease-out forwards;
+        }
+      `}</style>
+    </section>
+
+    {/*Dementia Section*/}
+    <div className="transform transition-transform duration-100 ease-out">
+      <section className="py-20 bg-gradient-to-br from-purple-600 to-purple-700 relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_1px_1px,_white_1px,_transparent_0)] bg-[size:40px_40px]"></div>
+        </div>
+
+        {/* Animated Background Elements */}
+        <div className="absolute top-20 right-10 w-32 h-32 bg-white/20 rounded-full blur-2xl animate-pulse"></div>
+        <div className="absolute bottom-20 left-10 w-40 h-40 bg-white/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
+
+        {/* Main Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            
+            {/* Left Column - Text Content */}
+            <div className={`space-y-8 transform transition-all duration-1000 ${
+              isVisible ? 'translate-x-0 opacity-100' : 'translate-x-[-50px] opacity-0'
+            }`}>
+              
+              {/* Partnership Badge */}
+              <div className="inline-flex items-center px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full text-white font-medium">
+                <Heart className="w-5 h-5 mr-2" />
+                FDOH Partnership
+              </div>
+
+              {/* Main Content */}
+              <div className="space-y-6">
+                <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+                  Healthy Communication Practice for Dementia Caregiving
+                </h2>
+                
+                <p className="text-xl text-white/90 leading-relaxed">
+                  Alzheimer's disease and related dementias affect nearly 7 million people over the age of 65—a number that is expected to double over the next 40 years (Alzheimer's Association, 2025).
+                </p>
+                
+                <div className="text-lg text-white/80 leading-relaxed">
+                  Dementia caregiving continuously increases as the disease progresses, and caregivers become increasingly relied on during medical appointments. With support from the Florida Department of Health (FDOH) Ed & Ethel Moore Alzheimer's Disease Research Grant Program, we offer two options to support different types of family caregivers of a loved one with dementia.
+                </div>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <button className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                  Learn More
+                  <ArrowRight className="inline-block ml-2 w-5 h-5" />
+                </button>
+                <button className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300">
+                  View Research
+                </button>
+              </div>
+            </div>
+
+            {/* Right Column - Interactive Cards */}
+          <div className="relative transform transition-all duration-1000 delay-300 translate-x-0 opacity-100">
+            <div className="grid grid-cols-2 gap-8 max-w-md mx-auto">
+              {caregiverTypes.map((caregiver, index) => {
+                const IconComponent = caregiver.icon;
+                const isThirdItem = index === 2;
+                
+                return (
+                  <div 
+                    key={caregiver.id}
+                    className={`relative group cursor-pointer transform transition-all duration-500 translate-y-0 opacity-100 hover:scale-110 ${
+                      isThirdItem ? 'col-span-2 justify-self-center' : ''
+                    }`}
+                    style={{ transitionDelay: caregiver.delay }}
+                  >
+                    <div className="relative w-40 h-40 rounded-full bg-white/95 backdrop-blur-sm flex items-center justify-center shadow-2xl group-hover:shadow-3xl transition-all duration-300 overflow-hidden">
+                      {/* Background image */}
+                      <div className="absolute inset-0 rounded-full overflow-hidden">
+                        <img 
+                          src={caregiver.image}
+                          alt={caregiver.title}
+                          className="w-full h-full object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-300"
+                        />
+                      </div>
+
+                      {/* Gradient overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-red-500 to-red-600 opacity-10 group-hover:opacity-20 transition-opacity duration-300 rounded-full"></div>
+
+                      {/* Content */}
+                      <div className="relative z-10 text-center p-4">
+                        <IconComponent className="w-8 h-8 text-gray-700 mx-auto mb-2 group-hover:scale-110 transition-transform duration-300" />
+                        <div className="text-gray-900 text-sm font-bold leading-tight">
+                          {caregiver.title}
+                        </div>
+                        {caregiver.comingSoon && (
+                          <div className="text-xs text-gray-500 mt-1 font-medium">
+                            *Coming Soon
+                          </div>
+                        )}
+                      </div>
+
+                      {/* Border ring effect */}
+                      <div className="absolute inset-0 rounded-full border-2 border-white/50 scale-100 group-hover:scale-125 opacity-100 group-hover:opacity-0 transition-all duration-500"></div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Decorative SVG lines */}
+            <svg 
+              className="absolute inset-0 w-full h-full pointer-events-none" 
+              style={{ zIndex: -1 }}
+            >
+              <defs>
+                <linearGradient 
+                  id="lineGradient" 
+                  x1="0%" 
+                  y1="0%" 
+                  x2="100%" 
+                  y2="100%"
+                >
+                  <stop offset="0%" stopColor="white" stopOpacity="0.3" />
+                  <stop offset="100%" stopColor="white" stopOpacity="0.1" />
+                </linearGradient>
+              </defs>
+              <path 
+                d="M 80 80 Q 200 120 320 80" 
+                stroke="url(#lineGradient)" 
+                strokeWidth="2" 
+                fill="none" 
+                className="animate-draw-line"
+              />
+              <path 
+                d="M 80 240 Q 200 200 320 240" 
+                stroke="url(#lineGradient)" 
+                strokeWidth="2" 
+                fill="none" 
+                className="animate-draw-line"
+                style={{ animationDelay: '0.5s' }}
+              />
+            </svg>
+          </div>
+            
+          </div>
+        </div>
+
+        <style jsx>{`
+          @keyframes fade-in {
+            from {
+              opacity: 0;
+              transform: translateY(10px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+
+          @keyframes draw-line {
+            from {
+              stroke-dasharray: 1000;
+              stroke-dashoffset: 1000;
+            }
+            to {
+              stroke-dasharray: 1000;
+              stroke-dashoffset: 0;
+            }
+          }
+
+          .animate-fade-in {
+            animation: fade-in 0.3s ease-out;
+          }
+
+          .animate-draw-line {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: draw-line 2s ease-out forwards;
+          }
+        `}</style>
+      </section>
+    </div>
+
+    {/* Breast Cancer Section */}
+    <div className="transform transition-transform duration-100 ease-out">
+      <section className="py-20 bg-gradient-to-br from-pink-600 to-pink-700 relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_1px_1px,_white_1px,_transparent_0)] bg-[size:40px_40px]"></div>
+        </div>
+
+        {/* Animated Background Elements */}
+        <div className="absolute top-20 right-10 w-32 h-32 bg-white/20 rounded-full blur-2xl animate-pulse"></div>
+        <div className="absolute bottom-20 left-10 w-40 h-40 bg-white/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
+
+        {/* Main Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            
+            {/* Left Column - Text Content */}
+            <div className={`space-y-8 transform transition-all duration-1000 ${
+              isVisible ? 'translate-x-0 opacity-100' : 'translate-x-[-50px] opacity-0'
+            }`}>
+              
+              {/* Partnership Badge */}
+              <div className="inline-flex items-center px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full text-white font-medium">
+                <Heart className="w-5 h-5 mr-2" />
+                UF Health & NIA Partnership
+              </div>
+
+              {/* Main Content */}
+              <div className="space-y-6">
+                <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+                  Healthy Communication Practice for Breast Cancer Caregiving
+                </h2>
+                
+                <p className="text-xl text-white/90 leading-relaxed">
+                  Today more than 4 million women are living with breast cancer (National Cancer Institute, 2025). Daughters often provide caregiving to their mothers and increasingly are young adults daughters (aged 18-39).
+                </p>
+                
+                <div className="text-lg text-white/80 leading-relaxed">
+                  These daughters are the most at risk for distress and burden and also describe needing helping communicating in their caregiving role (Fenton et al., 2021). With support from the University of Health Cancer Center and National Institute on Aging (NIA) we offer two options to support both caregiving daughters and their mothers living with breast cancer.
+                </div>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <button className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                  Learn More
+                  <ArrowRight className="inline-block ml-2 w-5 h-5" />
+                </button>
+                <button className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300">
+                  View Research
+                </button>
+              </div>
+            </div>
+
+            {/* Right Column - Interactive Cards */}
+            <div className="relative transform transition-all duration-1000 delay-300 translate-x-0 opacity-100">
+            <div className="grid grid-cols-2 gap-8 max-w-md mx-auto">
+              {caregiverTypes.map((caregiver, index) => {
+                const IconComponent = caregiver.icon;
+                const isThirdItem = index === 2;
+                
+                return (
+                  <div 
+                    key={caregiver.id}
+                    className={`relative group cursor-pointer transform transition-all duration-500 translate-y-0 opacity-100 hover:scale-110 ${
+                      isThirdItem ? 'col-span-2 justify-self-center' : ''
+                    }`}
+                    style={{ transitionDelay: caregiver.delay }}
+                  >
+                    <div className="relative w-40 h-40 rounded-full bg-white/95 backdrop-blur-sm flex items-center justify-center shadow-2xl group-hover:shadow-3xl transition-all duration-300 overflow-hidden">
+                      {/* Background image */}
+                      <div className="absolute inset-0 rounded-full overflow-hidden">
+                        <img 
+                          src={caregiver.image}
+                          alt={caregiver.title}
+                          className="w-full h-full object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-300"
+                        />
+                      </div>
+
+                      {/* Gradient overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-red-500 to-red-600 opacity-10 group-hover:opacity-20 transition-opacity duration-300 rounded-full"></div>
+
+                      {/* Content */}
+                      <div className="relative z-10 text-center p-4">
+                        <IconComponent className="w-8 h-8 text-gray-700 mx-auto mb-2 group-hover:scale-110 transition-transform duration-300" />
+                        <div className="text-gray-900 text-sm font-bold leading-tight">
+                          {caregiver.title}
+                        </div>
+                        {caregiver.comingSoon && (
+                          <div className="text-xs text-gray-500 mt-1 font-medium">
+                            *Coming Soon
+                          </div>
+                        )}
+                      </div>
+
+                      {/* Border ring effect */}
+                      <div className="absolute inset-0 rounded-full border-2 border-white/50 scale-100 group-hover:scale-125 opacity-100 group-hover:opacity-0 transition-all duration-500"></div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Decorative SVG lines */}
+            <svg 
+              className="absolute inset-0 w-full h-full pointer-events-none" 
+              style={{ zIndex: -1 }}
+            >
+              <defs>
+                <linearGradient 
+                  id="lineGradient" 
+                  x1="0%" 
+                  y1="0%" 
+                  x2="100%" 
+                  y2="100%"
+                >
+                  <stop offset="0%" stopColor="white" stopOpacity="0.3" />
+                  <stop offset="100%" stopColor="white" stopOpacity="0.1" />
+                </linearGradient>
+              </defs>
+              <path 
+                d="M 80 80 Q 200 120 320 80" 
+                stroke="url(#lineGradient)" 
+                strokeWidth="2" 
+                fill="none" 
+                className="animate-draw-line"
+              />
+              <path 
+                d="M 80 240 Q 200 200 320 240" 
+                stroke="url(#lineGradient)" 
+                strokeWidth="2" 
+                fill="none" 
+                className="animate-draw-line"
+                style={{ animationDelay: '0.5s' }}
+              />
+            </svg>
+          </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    </div>
+
+  );
+
+};
+export default LandingPage;

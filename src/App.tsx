@@ -13,6 +13,7 @@ import LandngPage from './Pages/LandngPage';
 import Module2 from './Pages/Module2';
 import ReactGA from "react-ga4";
 import { useEffect } from 'react';
+import LandingPage from './Pages/LandingPage';
 
 
 const MainLayout: React.FC = () => (
@@ -37,6 +38,7 @@ function App() {
       <AuthProvider>
         <Routes>
           <Route path="/" element={<LandngPage />} />
+          <Route path='/home' element={<LandingPage />} />
           <Route path="/team" element={<Team />} />
             <Route element={<MainLayout />}>
             <Route path="/course" element={<Homepage />} />
