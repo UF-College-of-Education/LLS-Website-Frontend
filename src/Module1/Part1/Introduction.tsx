@@ -1,6 +1,6 @@
 import React from 'react';
 import downloadbtn from "../../assets/icons/baseline-get_app-24p.png";
-import samplevideo from "../../assets/SampleVideo.mp4";
+import samplevideo from "../../assets/Part1_Videos/01_introduction.mp4";
 import playButton from "../../assets/icons/Video_playButton.png";
 
 const Introduction = () => {
