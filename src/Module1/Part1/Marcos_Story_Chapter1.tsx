@@ -6,6 +6,7 @@ import samplevideo from "../../assets/SampleVideo.mp4"
 import playButton from "../../assets/icons/Video_playButton.png"
 
 const Marcos_Story_Chapter1 = () => {
+    const STYLES = { videoIframeContainer: { padding: '56.25% 0 0 0', position: 'relative', }, videoIframe: { position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' } }
   return (
     <div className='w-full flex flex-col items-start'>
         <div className='w-full flex flex-col items-start mb-5'>
@@ -78,7 +79,7 @@ const Marcos_Story_Chapter1 = () => {
         <div className='w-full flex flex-col items-start'>
             <span className='font-bold mb-3'> Dr. Samantha Paige:</span>
             <span className="mb-3">Dr. Samantha Paige is a health behavioral scientist who studies how to improve the ways that people access and communication about online health information to make informed health decisions.  .</span>
-            <div className="relative w-full pt-[56.25%] bg-white">
+            {/* <div className="relative w-full pt-[56.25%] bg-white">
                 <div
                     id="playButtonOverlay"
                     className="absolute top-0 left-0 w-full h-full flex justify-center items-center cursor-pointer z-20"
@@ -100,7 +101,17 @@ const Marcos_Story_Chapter1 = () => {
                     <source src={samplevideo} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
-        </div>
+        </div> */}
+            <div style={{padding: '56.25% 0 0 0', position: 'relative'}}>
+              <iframe
+                title="vimeo-player"
+                src="https://vimeo.com/1114355536/7ac8c2ccef"
+                width="640"
+                height="360"
+                allowFullScreen
+                style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}}
+              />
+            </div>
             <div className='flex flex-row justify-end w-full mt-2 '>
                 <span>Download Transcript</span>
                 <img src={downloadbtn} alt='download button'  className='ml-1'/>

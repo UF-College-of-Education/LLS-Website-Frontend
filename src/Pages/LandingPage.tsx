@@ -3,9 +3,15 @@ import { useLocation } from 'react-router-dom';
 import {  CircleCheckBig, Monitor, Stethoscope,  Award, Brain, ArrowRight, Play, Heart, Users, Target,Quote, Star,Zap, BookOpen, Video, Activity, Clock, Mail, Phone, MapPin } from 'lucide-react';
 import heart from "../assets/icons/Header_Heart.png";
 import hero1 from "../assets/sam.png";
-import hero2 from "../assets/sam2.png";
-import hero3 from "../assets/sam3.jpg";
-import hero4 from "../assets/sam4.png";
+import hero2 from "../assets/LLS Screenshots/caa.jpg";
+import hero21 from "../assets/LLS Screenshots/aab.jpg"
+import hero22 from "../assets/LLS Screenshots/bba.jpg"
+import hero23 from "../assets/LLS Screenshots/baa.jpg"
+import hero24 from "../assets/LLS Screenshots/abb.jpg"
+import hero3 from "../assets/LLS Screenshots/bab.jpg";
+import hero4 from "../assets/LLS Screenshots/aaa.jpg";
+import hero5 from "../assets/LLS Screenshots/abc.jpg"
+import HeroCarousel from '../Components/HeroCarousel';
 
 
 
@@ -55,7 +61,7 @@ const LandingPage: React.FC = () => {
       title: "Memorable Communication Models",
       description: "Evidence-based, theory-driven communication models introduced by experts",
       icon: BookOpen,
-      image: "https://v3.fal.media/files/zebra/0SCwIzBoWa2mr0HAjxChs.jpeg",
+      image: hero2,
       gradient: "from-black to-gray-900",
       iconcolor:"#1A5EE2",
       delay: "0ms",
@@ -65,7 +71,7 @@ const LandingPage: React.FC = () => {
       title: "Expert Videos",
       description: "Learn from experts in caregiving, healthcare, and family communication",
       icon: Video,
-      image: "https://v3.fal.media/files/zebra/0SCwIzBoWa2mr0HAjxChs.jpeg",
+      image: hero21,
       gradient: "from-black to-gray-900",
       iconcolor:"#00A63E",
       delay: "100ms",
@@ -75,7 +81,7 @@ const LandingPage: React.FC = () => {
       title: "Authentic Caregiver Narratives",
       description: "Real caregivers' stories captured through extensive research",
       icon: Users,
-      image: "https://v3.fal.media/files/zebra/0SCwIzBoWa2mr0HAjxChs.jpeg",
+      image: hero22,
       gradient: "from-black to-gray-900",
       iconcolor:"#F6339A",
       delay: "200ms",
@@ -85,7 +91,7 @@ const LandingPage: React.FC = () => {
       title: "Interactive Activities",
       description: "Writing prompts, drag and drop quizzes, and interactive videos",
       icon: Activity,
-      image: "https://v3.fal.media/files/zebra/0SCwIzBoWa2mr0HAjxChs.jpeg",
+      image: hero23,
       gradient: "from-black to-gray-900",
       iconcolor:"#9810FA",
       delay: "300ms",
@@ -95,7 +101,7 @@ const LandingPage: React.FC = () => {
       title: "Flexible and Convenient",
       description: "Work at your own pace with asynchronous learning",
       icon: Clock,
-      image: "https://v3.fal.media/files/zebra/0SCwIzBoWa2mr0HAjxChs.jpeg",
+      image: hero24,
       gradient: "from-black to-gray-900",
       iconcolor:"#FF6900",
       delay: "400ms",
@@ -170,7 +176,7 @@ const LandingPage: React.FC = () => {
   return(
     <div className="font-sans text-black">
         {/* Navigation Bar */}
-      <nav className="bg-[#8C2B1D] shadow-md fixed w-full z-10">
+      <nav className="bg-[#8C2B1D] shadow-md fixed w-full z-15">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
         <div className="flex-shrink-0">
@@ -235,7 +241,7 @@ const LandingPage: React.FC = () => {
         {/* Hero Section */}
         <section className="min-h-screen flex items-center justify-center overflow-hidden bg-[#FFFFFF]">
             {/* Main content */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                 {/* Left column - Text content */}
                 <div className="space-y-8 transform transition-all duration-1000 translate-x-0 opacity-100">
@@ -298,27 +304,10 @@ const LandingPage: React.FC = () => {
                 <div className="relative transform transition-all duration-3000 delay-300 translate-x-0 opacity-100">
                     <div className="relative">
                     {/* Main image container */}
-                    <div className="relative w-full h-96 rounded-3xl overflow-hidden shadow-2xl">
-                        <img 
-                        src={hero1} 
-                        alt="Caregivers supporting their loved ones" 
-                        className="w-full h-full object-cover transition-all duration-1000" 
-                        />
-                        <img 
-                        src={hero2} 
-                        alt="Caregivers supporting their loved ones" 
-                        className="w-full h-full object-cover transition-all duration-1000" 
-                        />
-                        <img 
-                        src={hero3} 
-                        alt="Caregivers supporting their loved ones" 
-                        className="w-full h-full object-cover transition-all duration-1000" 
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                    </div>
+                    <HeroCarousel images={[hero1, hero2, hero3]} interval={4000} />
 
                     {/* Live support badge */}
-                    <div className="absolute -top-4 -right-4 bg-white/95 backdrop-blur-sm p-4 rounded-2xl shadow-lg animate-bounce">
+                    <div className="absolute -top-4 -right-4 bg-white/95 backdrop-blur-sm p-4 rounded-2xl shadow-lg animate-bounce z-50">
                         <div className="flex items-center space-x-2">
                         <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
                         <span className="text-sm font-medium text-gray-700">Expert Course Content</span>
@@ -341,7 +330,7 @@ const LandingPage: React.FC = () => {
         </div>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
           Why Caregivers Need the{" "}
-          <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-[#8C2B1D] via-[#992A2C] via-50% via-[#EC4899] to-[#F1685E] bg-clip-text text-transparent">
             Healthy Communication Practice
           </span>
         </h2>
@@ -424,7 +413,7 @@ const LandingPage: React.FC = () => {
               
               {/* Quote icon */}
               <div className="relative mb-4">
-                <div className="inline-flex items-center justify-center w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <div className="inline-flex items-center justify-center w-8 h-8 bg-gradient-to-r from-[#8C2B1D] via-[#992A2C] via-50% via-[#EC4899] to-[#DB2777] rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300">
                   <Quote className="w-4 h-4 text-white" />
                 </div>
               </div>
@@ -457,7 +446,7 @@ const LandingPage: React.FC = () => {
               </div>
               
               {/* Animated border on hover */}
-              <div className="absolute inset-0 rounded-3xl border-2 border-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-0.5">
+              <div className="absolute inset-0 rounded-3xl border-2 border-transparent bg-gradient-to-r from-[#8C2B1D] via-[#992A2C] via-50% via-[#EC4899] to-[#DB2777] opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-0.5">
                 <div className="w-full h-full bg-white rounded-3xl"></div>
               </div>
             </div>
@@ -480,7 +469,7 @@ const LandingPage: React.FC = () => {
                   {/* Heading */}
                   <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
                     An Evidence-Based,{' '}
-                    <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                    <span className="bg-gradient-to-r from-[#8C2B1D] via-[#992A2C] via-50% via-[#EC4899] to-[#F1685E] bg-clip-text text-transparent">
                       Narrative Learning Approach
                     </span>{' '}
                     to Promoting Caregiver's Well-Being
@@ -599,7 +588,7 @@ const LandingPage: React.FC = () => {
       </section>
 
     {/* Testimonial Section*/}
-      <div className="py-10 bg-gradient-to-br from-blue-50 to-purple-50">
+    <div className="py-10 bg-gradient-to-br from-blue-50 to-purple-50">
           <div className="relative max-w-4xl mx-auto transform transition-all duration-1000 translate-y-0 opacity-100 scale-100">
             <div className="relative bg-white rounded-3xl shadow-2xl p-8 md:p-12 overflow-hidden group hover:shadow-3xl transition-all duration-500">
               
@@ -609,7 +598,7 @@ const LandingPage: React.FC = () => {
               
               {/* Quote icon */}
               <div className="relative mb-4">
-                <div className="inline-flex items-center justify-center w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <div className="inline-flex items-center justify-center w-8 h-8 bg-gradient-to-r from-[#8C2B1D] via-[#992A2C] via-50% via-[#EC4899] to-[#DB2777] rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300">
                   <Quote className="w-4 h-4 text-white" />
                 </div>
               </div>
@@ -642,7 +631,7 @@ const LandingPage: React.FC = () => {
               </div>
               
               {/* Animated border on hover */}
-              <div className="absolute inset-0 rounded-3xl border-2 border-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-0.5">
+              <div className="absolute inset-0 rounded-3xl border-2 border-transparent bg-gradient-to-r from-[#8C2B1D] via-[#992A2C] via-50% via-[#EC4899] to-[#DB2777] opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-0.5">
                 <div className="w-full h-full bg-white rounded-3xl"></div>
               </div>
             </div>
@@ -665,7 +654,7 @@ const LandingPage: React.FC = () => {
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
             Communication Skills in{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#8C2B1D] via-[#992A2C] via-50% via-[#EC4899] to-[#F1685E]  bg-clip-text text-transparent" >
               Key Caregiving Contexts
             </span>
           </h2>
@@ -840,20 +829,20 @@ const LandingPage: React.FC = () => {
               
               {/* Quote icon */}
               <div className="relative mb-4">
-                <div className="inline-flex items-center justify-center w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <div className="inline-flex items-center justify-center w-8 h-8 bg-gradient-to-r from-[#8C2B1D] via-[#992A2C] via-50% via-[#EC4899] to-[#F1685E] rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300">
                   <Quote className="w-4 h-4 text-white" />
                 </div>
               </div>
               
               {/* Testimonial text */}
-              <div className="relative mb-8">
+              <div className="relative z-10 mb-8">
                 <blockquote className="text-lg md:text-xl text-gray-800 leading-relaxed font-medium italic">
                   "Appreciate you taking the time to [create] Healthy Communication Practice. No one really understands what caregivers go through until they are thrust into the position. It is challenging and can break you in ways you never expected. Thank you for shining a light and helping with coping mechanisms."
                 </blockquote>
               </div>
               
               {/* Author and rating */}
-              <div className="relative flex items-center justify-between">
+              <div className="relative z-10 flex items-center justify-between">
                 <div>
                   <div className="text-md font-semibold text-gray-900">
                     - Family Caregiver
@@ -873,18 +862,18 @@ const LandingPage: React.FC = () => {
               </div>
               
               {/* Animated border on hover */}
-              <div className="absolute inset-0 rounded-3xl border-2 border-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-0.5">
+              <div className="absolute inset-0 rounded-3xl border-2 border-transparent bg-gradient-to-r from-[#8C2B1D] via-[#992A2C] via-50% via-[#EC4899] to-[#DB2777] opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-0.5">
                 <div className="w-full h-full bg-white rounded-3xl"></div>
               </div>
             </div>
           </div>
-      </div>
+        </div>
 
     {/*HCP Section */}
     <section
       className="py-20 bg-relative overflow-hidden"
       style={{
-        backgroundImage: `url(${hero1})`,
+        backgroundImage: `url(${hero3})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -903,11 +892,11 @@ const LandingPage: React.FC = () => {
       <div className="absolute top-20 right-10 w-32 h-32 bg-white/20 rounded-full blur-2xl animate-pulse"></div>
       <div className="absolute bottom-20 left-10 w-40 h-40 bg-white/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative  max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left column - Text content */}
                 <div 
-                className="space-y-8 transform transition-all duration-1000 translate-x-0 opacity-100 bg-[#e60505]/55 backdrop-blur-md rounded-3xl p-6"
+                className="space-y-8 transform transition-all duration-1000 translate-x-0 opacity-100 bg-[#e60505]/55 backdrop-blur-md rounded-3xl p-6 z-10"
                 >
             <div className="inline-flex items-center px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full text-white font-medium">
               <Heart className="w-5 h-5 mr-2" />
@@ -961,13 +950,13 @@ const LandingPage: React.FC = () => {
                   >
                     <div className="relative w-40 h-40 rounded-full bg-white/95 backdrop-blur-sm flex items-center justify-center shadow-2xl group-hover:shadow-3xl transition-all duration-300 overflow-hidden">
                       {/* Background image */}
-                      <div className="absolute inset-0 rounded-full overflow-hidden">
+                      {/* <div className="absolute inset-0 rounded-full overflow-hidden">
                         <img 
                           src={caregiver.image}
                           alt={caregiver.title}
                           className="w-full h-full object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-300"
                         />
-                      </div>
+                      </div> */}
 
                       {/* Gradient overlay */}
                       <div className="absolute inset-0 bg-gradient-to-br from-red-500 to-red-600 opacity-10 group-hover:opacity-20 transition-opacity duration-300 rounded-full"></div>
@@ -1071,7 +1060,7 @@ const LandingPage: React.FC = () => {
       <section
       className="py-20 bg-relative overflow-hidden"
       style={{
-        backgroundImage: `url(${hero1})`,
+        backgroundImage: `url(${hero4})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -1116,13 +1105,13 @@ const LandingPage: React.FC = () => {
                   >
                     <div className="relative w-40 h-40 rounded-full bg-white/95 backdrop-blur-sm flex items-center justify-center shadow-2xl group-hover:shadow-3xl transition-all duration-300 overflow-hidden">
                       {/* Background image */}
-                      <div className="absolute inset-0 rounded-full overflow-hidden">
+                      {/* <div className="absolute inset-0 rounded-full overflow-hidden">
                         <img 
                           src={caregiver.image}
                           alt={caregiver.title}
                           className="w-full h-full object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-300"
                         />
-                      </div>
+                      </div> */}
 
                       {/* Gradient overlay */}
                       <div className="absolute inset-0 bg-gradient-to-br from-red-500 to-red-600 opacity-10 group-hover:opacity-20 transition-opacity duration-300 rounded-full"></div>
@@ -1265,7 +1254,7 @@ const LandingPage: React.FC = () => {
     <section
       className="py-20 bg-relative overflow-hidden"
       style={{
-        backgroundImage: `url(${hero1})`,
+        backgroundImage: `url(${hero5})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -1346,13 +1335,13 @@ const LandingPage: React.FC = () => {
                   >
                     <div className="relative w-40 h-40 rounded-full bg-white/95 backdrop-blur-sm flex items-center justify-center shadow-2xl group-hover:shadow-3xl transition-all duration-300 overflow-hidden">
                       {/* Background image */}
-                      <div className="absolute inset-0 rounded-full overflow-hidden">
+                      {/* <div className="absolute inset-0 rounded-full overflow-hidden">
                         <img 
                           src={caregiver.image}
                           alt={caregiver.title}
                           className="w-full h-full object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-300"
                         />
-                      </div>
+                      </div> */}
 
                       {/* Gradient overlay */}
                       <div className="absolute inset-0 bg-gradient-to-br from-red-500 to-red-600 opacity-10 group-hover:opacity-20 transition-opacity duration-300 rounded-full"></div>

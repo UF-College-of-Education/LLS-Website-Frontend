@@ -37,8 +37,8 @@ function App() {
     <div className="bg-white w-screen min-h-screen flex flex-col m-0">
       <AuthProvider>
         <Routes>
-          <Route path="/" element={<LandngPage />} />
-          <Route path='/home' element={<LandingPage />} />
+          <Route path="/home" element={<LandngPage />} />
+          <Route path='/' element={<LandingPage />} />
           <Route path="/team" element={<Team />} />
             <Route element={<MainLayout />}>
             <Route path="/course" element={<Homepage />} />
