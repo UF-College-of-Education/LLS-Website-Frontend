@@ -9,7 +9,7 @@ const Marcos_Story_Chapter1 = () => {
     const STYLES = { videoIframeContainer: { padding: '56.25% 0 0 0', position: 'relative', }, videoIframe: { position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' } }
   return (
     <div className='w-full flex flex-col items-start'>
-        <div className='w-full flex flex-col items-start mb-5'>
+        {/* <div className='w-full flex flex-col items-start mb-5'>
             <span className='font-bold'> In this module you will:</span>
             <span>Learn how to apply e-health literacy skills in online health information activities.</span>
             <div className='w-full flex flex-col items-start mt-4 w-full bg-gray-300 p-1'>
@@ -75,7 +75,7 @@ const Marcos_Story_Chapter1 = () => {
 
 
             </div>
-        </div>
+        </div> */}
         <div className='w-full flex flex-col items-start'>
             <span className='font-bold mb-3'> Dr. Samantha Paige:</span>
             <span className="mb-3">Dr. Samantha Paige is a health behavioral scientist who studies how to improve the ways that people access and communication about online health information to make informed health decisions.  .</span>
@@ -102,23 +102,9 @@ const Marcos_Story_Chapter1 = () => {
                     Your browser does not support the video tag.
                 </video>
         </div> */}
-            <div style={{padding: '56.25% 0 0 0', position: 'relative'}}>
-              <iframe
-                title="vimeo-player"
-                src="https://vimeo.com/1114355536/7ac8c2ccef"
-                width="640"
-                height="360"
-                allowFullScreen
-                style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}}
-              />
-            </div>
-            <div className='flex flex-row justify-end w-full mt-2 '>
-                <span>Download Transcript</span>
-                <img src={downloadbtn} alt='download button'  className='ml-1'/>
-
-
-
-            </div>
+        <div className="relative w-full pt-[56.25%] bg-white"><iframe src="https://player.vimeo.com/video/1114355982?h=6a8798e11b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"  style={{position:'absolute',top:'0',left:'0',width:'100%',height:'100%'}} title="15_PACES - State Preferences"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+            
+            
         </div>
 
     </div>

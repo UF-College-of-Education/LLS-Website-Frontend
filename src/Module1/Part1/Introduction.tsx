@@ -13,7 +13,7 @@ const Introduction = () => {
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
         </span>
         {/* Video Section */}
-        <div className="relative w-full pt-[56.25%] bg-white">
+        {/* <div className="relative w-full pt-[56.25%] bg-white">
           <div
             id="playButtonOverlay"
             className="absolute top-0 left-0 w-full h-full flex justify-center items-center cursor-pointer z-20"
@@ -35,7 +35,9 @@ const Introduction = () => {
         <div className="flex flex-row justify-end w-full mt-2 items-center">
           <span className="text-sm sm:text-base">Download Transcript</span>
           <img src={downloadbtn} alt="download button" className="ml-1 w-4 h-4 sm:w-6 sm:h-6" />
-        </div>
+        </div> */}
+        <div className="relative w-full pt-[56.25%] bg-white">
+        <iframe src="https://player.vimeo.com/video/1115176836?h=42a0c06632&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"  referrerPolicy="strict-origin-when-cross-origin" style={{position:'absolute',top:'0',left:'0',width:'100%',height:'100%'}} title="01_Introduction - Part 1 - Navigating Cancer Info Online"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
       </div>
 
       <div className="w-full flex flex-col items-start">
