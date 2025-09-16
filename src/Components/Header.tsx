@@ -58,7 +58,7 @@ const Header = () => {
                 alt=""
               />
             </a>
-            <span className="font-(family-name:--font-bree) font-extrabold text-lg md:text-xl lg:text-4xl mr-2">
+            <span className="font-(family-name:--font-bree) font-extrabold text-lg md:text-xl lg:text-4xl mr-2 text-white">
               Healthy Communication Practice
             </span>
           </div>

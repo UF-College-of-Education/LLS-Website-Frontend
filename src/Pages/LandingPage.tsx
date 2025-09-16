@@ -1,5 +1,5 @@
 import React, { useEffect,useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import {  CircleCheckBig, Monitor, Stethoscope,  Award, Brain, ArrowRight, Play, Heart, Users, Target,Quote, Star,Zap, BookOpen, Video, Activity, Clock, Mail, Phone, MapPin } from 'lucide-react';
 import heart from "../assets/icons/Header_Heart.png";
 import hero1 from "../assets/sam.png";
@@ -142,6 +142,7 @@ const LandingPage: React.FC = () => {
   ];
 
   const location = useLocation();
+  const navigate = useNavigate();
   const renderStars = () => {
     return Array(5).fill(0).map((_, index) => (
       <Star 
@@ -729,7 +730,7 @@ const LandingPage: React.FC = () => {
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Part I */}
-            <div className="group relative cursor-pointer transform transition-all duration-500 hover:scale-102">
+            <div onClick={()=> {window.location.href = "https://healthycommunicationpractice.com/"}} className="group relative cursor-pointer transform transition-all duration-500 hover:scale-102">
               <div className="bg-white p-8 rounded-3xl shadow-lg group-hover:shadow-2xl transition-all duration-300 border-2 border-transparent">
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center space-x-4">
@@ -772,7 +773,7 @@ const LandingPage: React.FC = () => {
             </div>
 
             {/* Part II */}
-            <div className="group relative cursor-pointer transform transition-all duration-500 hover:scale-102">
+            <div onClick={()=> {navigate("/course")}} className="group relative cursor-pointer transform transition-all duration-500 hover:scale-102">
               <div className="bg-white p-8 rounded-3xl shadow-lg group-hover:shadow-2xl transition-all duration-300 border-2 border-transparent">
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center space-x-4">
@@ -927,7 +928,7 @@ const LandingPage: React.FC = () => {
                 Learn More
                 <ArrowRight className="inline-block ml-2 w-5 h-5" />
               </button>
-              <button className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300">
+              <button className="border-2 border-white/30 px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300">
                 View Research
               </button>
             </div>
@@ -1204,7 +1205,7 @@ const LandingPage: React.FC = () => {
                   Learn More
                   <ArrowRight className="inline-block ml-2 w-5 h-5" />
                 </button>
-                <button className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300">
+                <button className="border-2 border-white/30  px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300">
                   View Research
                 </button>
               </div>
@@ -1312,7 +1313,7 @@ const LandingPage: React.FC = () => {
                   Learn More
                   <ArrowRight className="inline-block ml-2 w-5 h-5" />
                 </button>
-                <button className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300">
+                <button className="border-2 border-white/30  px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300">
                   View Research
                 </button>
               </div>

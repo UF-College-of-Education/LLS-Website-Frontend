@@ -53,7 +53,7 @@ const HeroCarousel: React.FC<HeroCarouselProps> = ({
       />
       {/* Carousel dots */}
       <div className="absolute bottom-3 left-0 right-0 flex justify-center z-20">
-        <div className="flex space-x-2">
+        <div className="flex space-x-8">
           {images.map((_, idx) => (
             <button
               key={idx}
