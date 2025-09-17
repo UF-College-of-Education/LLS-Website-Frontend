@@ -23,7 +23,7 @@ const LandingPage: React.FC = () => {
       icon: CircleCheckBig,
       text: "Evidence-Based Skills",
       gradient: "#2B6DFF",
-      delay: "0ms"
+      delay: "150ms"
     },
     {
       icon: Award,
@@ -35,25 +35,25 @@ const LandingPage: React.FC = () => {
       icon: Brain,
       text: "Improved Mental Health",
       gradient: "#AD46FF",
-      delay: "300ms"
+      delay: "150ms"
     },
     {
       icon: Heart,
       text: "Improved Communication Skills",
       gradient: "#F6339A",
-      delay: "450ms"
+      delay: "150ms"
     },
     {
       icon: Users,
       text: "Enhanced Care Ability",
       gradient: "#615FFF",
-      delay: "600ms"
+      delay: "150ms"
     },
     {
       icon: Target,
       text: "Targeted Guidance",
       gradient: "#FF6900",
-      delay: "750ms"
+      delay: "150ms"
     }
   ];
   const features = [
@@ -240,7 +240,7 @@ const LandingPage: React.FC = () => {
       </nav>
 
         {/* Hero Section */}
-        <section className="min-h-screen flex items-center justify-center overflow-hidden bg-[#FFFFFF]">
+        <section className="min-h-screen mt-12 flex items-center justify-center overflow-hidden bg-[#FFFFFF]">
             {/* Main content */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -271,11 +271,11 @@ const LandingPage: React.FC = () => {
 
                     {/* CTA buttons */}
                     <div className="flex flex-col sm:flex-row gap-4">
-                    <button className="group bg-white text-[#8C2B1D] px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                    <button className="group bg-[#8C2B1D] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                         Explore Resources
                         <ArrowRight className="inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                     </button>
-                    <button className="group flex items-center px-8 py-4 text-black border-2 border-white/30 rounded-full font-semibold text-lg hover:bg-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl">
+                    <button className="group flex items-center px-8 py-4 bg-[#8C2B1D] text-white border-2 border-white/30 rounded-full font-semibold text-lg hover:bg-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl">
                         <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-300" />
                         Watch Demo
                     </button>
@@ -286,17 +286,17 @@ const LandingPage: React.FC = () => {
                     <div className="text-center transform transition-all duration-1000 delay-0 translate-y-0 opacity-100">
                         <Users className="w-8 h-8 text-pink-300 mx-auto mb-2" />
                         <div className="text-2xl font-bold text-black">10,000+</div>
-                        <div className="text-sm text-[#8C2B1D]">Caregivers Helped</div>
+                        <div className="text-sm text-black">Caregivers Helped</div>
                     </div>
                     <div className="text-center transform transition-all duration-1000 delay-200 translate-y-0 opacity-100">
                         <Heart className="w-8 h-8 text-pink-300 mx-auto mb-2" />
                         <div className="text-2xl font-bold text-black">95%</div>
-                        <div className="text-sm text-[#8C2B1D]">Satisfaction Rate</div>
+                        <div className="text-sm text-black">Satisfaction Rate</div>
                     </div>
                     <div className="text-center transform transition-all duration-1000 delay-400 translate-y-0 opacity-100">
                         <Star className="w-8 h-8 text-pink-300 mx-auto mb-2" />
                         <div className="text-2xl font-bold text-black">4.9/5</div>
-                        <div className="text-sm text-[#8C2B1D]">Average Rating</div>
+                        <div className="text-sm text-black">Average Rating</div>
                     </div>
                     </div>
                 </div>
@@ -323,9 +323,9 @@ const LandingPage: React.FC = () => {
     </section>
 
     {/* Why Section*/}
-    <section className="bg-[#FFF6F6] py-16 px-8 md:px-16 flex flex-col md:flex-row justify-around items-center">
-            <div className="w-full md:w-1/3 mr-4 my-auto">
-            <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+    <section className="bg-[#FFF6F6] py-16 px-8 md:px-16 flex flex-col md:flex-row justify-center items-center">
+            <div className="w-full md:w-1/2 pr-16 my-auto">
+            <div className="inline-flex items-center px-4 py-2 mb-6 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
           <Heart className="w-4 h-4 mr-2" />
           Why It Matters
         </div>
@@ -335,14 +335,14 @@ const LandingPage: React.FC = () => {
             Healthy Communication Practice
           </span>
         </h2>
-        <p className="my-8 text-sm text-gray-600">
+        <p className="my-8 text-sm text-black">
                 Caregiving communication skills promote better care and health outcomes for family caregivers and for the loved ones they care for. Healthy Communication Practice takes an evidence-based skills approach to helping caregivers communicate in their caregiving role. 
               </p>
-              <p className="mb-8 text-sm text-gray-600">This program has proven effectiveness in enhancing caregivers’ mental well-being while increasing communication skills. It is grounded in rigorous research conducted by leading caregiving experts and developed in partnership with renowned health organizations and family caregivers. </p>
-            <p className="mb-8 text-sm text-gray-600">We offer multiple programs targeted to family caregivers’ distinct needs based on the disease type (e.g., blood cancer, dementia) & relationship (e.g., spouse, parent).</p>
+              <p className="mb-8 text-sm text-black">This program has proven effectiveness in enhancing caregivers’ mental well-being while increasing communication skills. It is grounded in rigorous research conducted by leading caregiving experts and developed in partnership with renowned health organizations and family caregivers. </p>
+            <p className="mb-8 text-sm text-black">We offer multiple programs targeted to family caregivers’ distinct needs based on the disease type (e.g., blood cancer, dementia) & relationship (e.g., spouse, parent).</p>
             </div>
             
-            <div className="relative transform transition-all duration-1000 translate-x-0 opacity-100">
+        <div className="relative transform transition-all duration-1000 translate-x-0 opacity-100">
           <div className="grid grid-cols-3 gap-16 max-w-full mx-auto">
             {benefits.map((benefit, index) => {
               const IconComponent = benefit.icon;
@@ -353,14 +353,14 @@ const LandingPage: React.FC = () => {
                   className="relative group cursor-pointer transform transition-all duration-500 hover:scale-110 translate-y-0 opacity-100"
                   style={{ transitionDelay: benefit.delay }}
                 >
-                    <div className={`w-32 h-32 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-2xl transition-all duration-300 relative overflow-hidden`} style={{ border: `1px solid ${benefit.gradient}` }}>
+                    <div className={`w-40 h-40 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-2xl transition-all duration-300 relative overflow-hidden bg-[#8c2b1d]`}>
                     {/* Hover overlay */}
                     <div className="absolute inset-0  rounded-full scale-0 group-hover:scale-100 transition-transform duration-500"></div>
                     
                     {/* Content */}
-                    <div className="relative text-center">
-                      <IconComponent className="w-8 h-8 text-white mx-auto mb-2 group-hover:scale-110 transition-transform duration-300" style={{ color: benefit.gradient }}/>
-                      <div className="text-xs font-semibold leading-tight px-2" style={{ color: benefit.gradient }}>
+                    <div className="relative text-center p-2">
+                      <IconComponent className="w-8 h-8 text-white mx-auto mb-2 group-hover:scale-110 transition-transform duration-300" />
+                      <div className="text-xs font-semibold leading-tight px-2 text-white" >
                       {benefit.text}
                       </div>
                     </div>
@@ -404,17 +404,17 @@ const LandingPage: React.FC = () => {
       </section>
 
     {/* Testimonial Section*/}
-    <div className="py-10 bg-gradient-to-br from-blue-50 to-purple-50">
+    <div className="py-10 mb-4">
           <div className="relative max-w-4xl mx-auto transform transition-all duration-1000 translate-y-0 opacity-100 scale-100">
             <div className="relative bg-white rounded-3xl shadow-2xl p-8 md:p-12 overflow-hidden group hover:shadow-3xl transition-all duration-500">
               
               {/* Decorative background circles */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-700"></div>
-              <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-pink-100 to-yellow-100 rounded-full translate-y-12 -translate-x-12 group-hover:scale-150 transition-transform duration-700"></div>
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-pink-100 to-[#ce2c37] rounded-full translate-y-12 -translate-x-12 group-hover:scale-150 transition-transform duration-700"></div>
               
               {/* Quote icon */}
               <div className="relative mb-4">
-                <div className="inline-flex items-center justify-center w-8 h-8 bg-gradient-to-r from-[#8C2B1D] via-[#992A2C] via-50% via-[#EC4899] to-[#DB2777] rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <div className="inline-flex items-center justify-center w-8 h-8 bg-[#ce2c37] rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300">
                   <Quote className="w-4 h-4 text-white" />
                 </div>
               </div>
@@ -462,7 +462,8 @@ const LandingPage: React.FC = () => {
               <div className="space-y-18 transform transition-all duration-1000 translate-x-0 opacity-100">
                 <div className="space-y-16">
                   {/* Badge */}
-                  <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 rounded-full text-sm font-medium">
+                  
+                  <div className="inline-flex items-center px-4 py-2 mb-6 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
                     <Zap className="w-4 h-4 mr-2" />
                     Evidence-Based Approach
                   </div>
@@ -509,10 +510,8 @@ const LandingPage: React.FC = () => {
                         }`}
                         style={{ transitionDelay: feature.delay }}
                       >
-                        <div className={`relative overflow-hidden rounded-2xl shadow-lg group-hover:shadow-2xl transition-all duration-300 ${
-                          isFeatured ? 'ring-4 ring-blue-300 shadow-2xl' : ''
-                        }`}>
-                          <div className="aspect-square bg-gradient-to-br from-gray-100 to-gray-200">
+                        <div className={`relative overflow-hidden rounded-2xl shadow-lg group-hover:shadow-2xl transition-all duration-300 `}>
+                          <div className="aspect-square  bg-[#1c1c1c]" style={{background: "linear-gradient(358deg,rgba(28, 28, 28, 0.99) 0%, rgba(26, 26, 26, 0.34) 74%)"}}>
                             <img
                               src={feature.image}
                               alt={feature.title}
@@ -521,7 +520,7 @@ const LandingPage: React.FC = () => {
                           </div>
                           <div className={`absolute inset-0 bg-gradient-to-t ${feature.gradient} opacity-80 group-hover:opacity-90 transition-opacity duration-300`}></div>
                             <div className="absolute inset-0 p-4 flex flex-col justify-end text-white">
-                            <div className="w-10 h-10 mb-2 rounded-full flex items-center justify-center transition-transform duration-300" style={{ backgroundColor: feature.iconcolor }}>
+                            <div className="w-10 h-10 mb-2 rounded-full flex items-center justify-center transition-transform duration-300 bg-[#D3412C]">
                               <IconComponent className={`w-6 h-6 ${isFeatured ? 'scale-110' : 'group-hover:scale-110'}`} />
                             </div>
                             <h3 className="font-bold text-sm leading-tight mb-1">
@@ -531,9 +530,9 @@ const LandingPage: React.FC = () => {
                               {feature.description}
                             </p>
                             </div>
-                          {isFeatured && (
+                          {/* {isFeatured && (
                             <div className="absolute top-2 right-2 w-3 h-3 bg-white rounded-full animate-pulse"></div>
-                          )}
+                          )} */}
                         </div>
                       </div>
                     );
@@ -554,7 +553,7 @@ const LandingPage: React.FC = () => {
                       </div>
                       <div className={`absolute inset-0 bg-gradient-to-t ${features[4]?.gradient} opacity-80 group-hover:opacity-90 transition-opacity duration-300`}></div>
                       <div className="absolute inset-0 p-4 flex flex-col justify-end text-white">
-                        <div className="w-10 h-10 mb-2 rounded-full flex items-center justify-center transition-transform duration-300" style={{ backgroundColor: "#FF6900" }}>
+                        <div className="w-10 h-10 mb-2 rounded-full flex items-center justify-center transition-transform duration-300 bg-[#D3412C]" >
                               <Clock className="w-6 h-6  transition-transform duration-300 group-hover:scale-110" /></div>
                         <h3 className="font-bold text-sm leading-tight mb-1">
                           {features[4]?.title}
@@ -589,17 +588,17 @@ const LandingPage: React.FC = () => {
       </section>
 
     {/* Testimonial Section*/}
-    <div className="py-10 bg-gradient-to-br from-blue-50 to-purple-50">
+    <div className="py-10 mb-4">
           <div className="relative max-w-4xl mx-auto transform transition-all duration-1000 translate-y-0 opacity-100 scale-100">
             <div className="relative bg-white rounded-3xl shadow-2xl p-8 md:p-12 overflow-hidden group hover:shadow-3xl transition-all duration-500">
               
               {/* Decorative background circles */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-700"></div>
-              <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-pink-100 to-yellow-100 rounded-full translate-y-12 -translate-x-12 group-hover:scale-150 transition-transform duration-700"></div>
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-pink-100 to-[#ce2c37] rounded-full translate-y-12 -translate-x-12 group-hover:scale-150 transition-transform duration-700"></div>
               
               {/* Quote icon */}
               <div className="relative mb-4">
-                <div className="inline-flex items-center justify-center w-8 h-8 bg-gradient-to-r from-[#8C2B1D] via-[#992A2C] via-50% via-[#EC4899] to-[#DB2777] rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <div className="inline-flex items-center justify-center w-8 h-8 bg-[#ce2c37] rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300">
                   <Quote className="w-4 h-4 text-white" />
                 </div>
               </div>
@@ -649,7 +648,7 @@ const LandingPage: React.FC = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header section */}
         <div className="text-center mb-16 transform transition-all duration-1000 translate-y-0 opacity-100">
-          <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 rounded-full text-sm font-medium mb-6">
+          <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800  rounded-full text-sm font-medium mb-6">
             <CircleCheckBig className="w-4 h-4 mr-2" />
             Key Caregiving Contexts
           </div>
@@ -666,54 +665,54 @@ const LandingPage: React.FC = () => {
         </div>
 
         {/* Three context cards */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-3 gap-8 mb-24">
           {/* Online Context Card */}
           <div className="group relative transform transition-all duration-700 hover:scale-105 translate-y-0 opacity-100">
-            <div className="bg-blue-50 p-8 rounded-3xl shadow-lg group-hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl shadow-lg mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Monitor className="w-8 h-8 text-white" />
+            <div className="bg-[#F2C6C0] p-8 rounded-3xl shadow-lg group-hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
+              {/* <div className="absolute inset-0  opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div> */}
+              <div className="inline-flex items-center justify-center w-16 h-16  rounded-2xl  mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Monitor className="w-8 h-8 text-black" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Online Context</h3>
               <p className="text-gray-700 leading-relaxed">
                 Sharing cancer information with clinicians and family members
               </p>
               <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300">
-                <ArrowRight className="w-5 h-5 text-gray-400" />
+                <ArrowRight className="w-5 h-5 text-black" />
               </div>
             </div>
           </div>
 
           {/* Clinical Context Card */}
           <div className="group relative transform transition-all duration-700 hover:scale-105 translate-y-0 opacity-100" style={{ transitionDelay: '200ms' }}>
-            <div className="bg-green-50 p-8 rounded-3xl shadow-lg group-hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-green-500 to-emerald-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl shadow-lg mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Stethoscope className="w-8 h-8 text-white" />
+            <div className="bg-[#F2C6C0] p-8 rounded-3xl shadow-lg group-hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
+              {/* <div className="absolute inset-0 bg-gradient-to-br from-green-500 to-emerald-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div> */}
+              <div className="inline-flex items-center justify-center w-16 h-16  mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Stethoscope className="w-8 h-8 text-black" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Clinical Context</h3>
               <p className="text-gray-700 leading-relaxed">
                 Talking with your loved one's doctors in clinical settings
               </p>
               <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300">
-                <ArrowRight className="w-5 h-5 text-gray-400" />
+                <ArrowRight className="w-5 h-5 text-black" />
               </div>
             </div>
           </div>
 
           {/* Family Context Card */}
           <div className="group relative transform transition-all duration-700 hover:scale-105 translate-y-0 opacity-100" style={{ transitionDelay: '400ms' }}>
-            <div className="bg-purple-50 p-8 rounded-3xl shadow-lg group-hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl shadow-lg mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Users className="w-8 h-8 text-white" />
+            <div className="bg-[#F2C6C0] p-8 rounded-3xl shadow-lg group-hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
+              {/* <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div> */}
+              <div className="inline-flex items-center justify-center w-16 h-16  mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Users className="w-8 h-8 text-black" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Family Context</h3>
               <p className="text-gray-700 leading-relaxed">
                 Facilitating open, supportive communication with family
               </p>
               <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300">
-                <ArrowRight className="w-5 h-5 text-gray-400" />
+                <ArrowRight className="w-5 h-5 text-black" />
               </div>
             </div>
           </div>
@@ -731,10 +730,10 @@ const LandingPage: React.FC = () => {
           <div className="grid md:grid-cols-2 gap-8">
             {/* Part I */}
             <div onClick={()=> {window.location.href = "https://healthycommunicationpractice.com/"}} className="group relative cursor-pointer transform transition-all duration-500 hover:scale-102">
-              <div className="bg-white p-8 rounded-3xl shadow-lg group-hover:shadow-2xl transition-all duration-300 border-2 border-transparent">
+              <div className="bg-white p-8 group-hover:shadow-2xl transition-all duration-300 border-2 border-[#F1685E] rounded-3xl">
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white font-bold text-lg">
+                    <div className="w-12 h-12 rounded-2xl bg-[#D3412C] flex items-center justify-center text-white font-bold text-lg">
                       1
                     </div>
                     <div>
@@ -765,7 +764,7 @@ const LandingPage: React.FC = () => {
                       style={{ transitionDelay: item.delay }}
                     >
                       <CircleCheckBig className="w-4 h-4 text-green-500 flex-shrink-0" />
-                      <span>{item.text}</span>
+                      <span className='font-bold'>{item.text}</span>
                     </div>
                   ))}
                 </div>
@@ -774,10 +773,10 @@ const LandingPage: React.FC = () => {
 
             {/* Part II */}
             <div onClick={()=> {navigate("/course")}} className="group relative cursor-pointer transform transition-all duration-500 hover:scale-102">
-              <div className="bg-white p-8 rounded-3xl shadow-lg group-hover:shadow-2xl transition-all duration-300 border-2 border-transparent">
+              <div className="bg-white p-8 group-hover:shadow-2xl transition-all duration-300 border-2 border-[#F1685E] rounded-3xl">
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-lg">
+                    <div className="w-12 h-12 rounded-2xl bg-[#D3412C] flex items-center justify-center text-white font-bold text-lg">
                       2
                     </div>
                     <div>
@@ -808,7 +807,7 @@ const LandingPage: React.FC = () => {
                       style={{ transitionDelay: item.delay }}
                     >
                       <CircleCheckBig className="w-4 h-4 text-green-500 flex-shrink-0" />
-                      <span>{item.text}</span>
+                      <span className='font-bold'>{item.text}</span>
                     </div>
                   ))}
                 </div>
@@ -820,17 +819,17 @@ const LandingPage: React.FC = () => {
     </section>
 
     {/*Testimonial-2 Section*/}
-    <div className="py-10 bg-gradient-to-br from-blue-50 to-purple-50">
+    <div className="py-10 mb-4">
           <div className="relative max-w-4xl mx-auto transform transition-all duration-1000 translate-y-0 opacity-100 scale-100">
             <div className="relative bg-white rounded-3xl shadow-2xl p-8 md:p-12 overflow-hidden group hover:shadow-3xl transition-all duration-500">
               
               {/* Decorative background circles */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-700"></div>
-              <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-pink-100 to-yellow-100 rounded-full translate-y-12 -translate-x-12 group-hover:scale-150 transition-transform duration-700"></div>
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-pink-100 to-[#ce2c37] rounded-full translate-y-12 -translate-x-12 group-hover:scale-150 transition-transform duration-700"></div>
               
               {/* Quote icon */}
               <div className="relative mb-4">
-                <div className="inline-flex items-center justify-center w-8 h-8 bg-gradient-to-r from-[#8C2B1D] via-[#992A2C] via-50% via-[#EC4899] to-[#F1685E] rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <div className="inline-flex items-center justify-center w-8 h-8 bg-[#ce2c37] rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300">
                   <Quote className="w-4 h-4 text-white" />
                 </div>
               </div>
@@ -928,7 +927,7 @@ const LandingPage: React.FC = () => {
                 Learn More
                 <ArrowRight className="inline-block ml-2 w-5 h-5" />
               </button>
-              <button className="border-2 border-white/30 px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300">
+              <button className="text-white border-2 border-white/30 px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300">
                 View Research
               </button>
             </div>
@@ -1205,7 +1204,7 @@ const LandingPage: React.FC = () => {
                   Learn More
                   <ArrowRight className="inline-block ml-2 w-5 h-5" />
                 </button>
-                <button className="border-2 border-white/30  px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300">
+                <button className="text-white border-2 border-white/30  px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300">
                   View Research
                 </button>
               </div>
@@ -1313,7 +1312,7 @@ const LandingPage: React.FC = () => {
                   Learn More
                   <ArrowRight className="inline-block ml-2 w-5 h-5" />
                 </button>
-                <button className="border-2 border-white/30  px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300">
+                <button className="border-2 text-white border-white/30  px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300">
                   View Research
                 </button>
               </div>
