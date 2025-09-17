@@ -245,14 +245,14 @@ export default function MarcoLetterActivity() {
                             </div>
 
                             {/* Action Buttons */}
-                            <div className="flex flex-col sm:flex-row gap-3 pt-4">
+                            <div className="flex flex-col sm:flex-row gap-3 pt-4 z-50">
                                 <button
                                     onClick={checkAnswers}
                                     disabled={!allAnswered}
                                     className={`flex-1 py-3 px-6 rounded-lg font-medium transition-all duration-200 ${
                                         allAnswered
-                                            ? 'bg-green-600 hover:bg-green-700 text-white shadow-md hover:shadow-lg'
-                                            : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                                            ? 'bg-green-600 hover:bg-green-700 text-white shadow-md hover:shadow-lg z-50'
+                                            : 'bg-gray-300 text-gray-500 z-50 cursor-not-allowed'
                                     }`}
                                 >
                                     Check Answers
@@ -260,9 +260,9 @@ export default function MarcoLetterActivity() {
 
                                 <button
                                     onClick={resetActivity}
-                                    className="flex items-center gap-2 py-3 px-6 bg-gray-600 hover:bg-gray-700 text-white rounded-lg font-medium transition-all duration-200 shadow-md hover:shadow-lg"
+                                    className="flex items-center gap-2 py-3 px-6 z-50 bg-gray-600 hover:bg-gray-700 text-white rounded-lg font-medium transition-all duration-200 shadow-md hover:shadow-lg"
                                 >
-                                    <RotateCcw className="w-4 h-4" />
+                                    <RotateCcw className="w-4 h-4 " />
                                     Reset
                                 </button>
                             </div>

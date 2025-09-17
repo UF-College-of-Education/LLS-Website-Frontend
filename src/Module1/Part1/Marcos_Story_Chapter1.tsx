@@ -79,31 +79,8 @@ const Marcos_Story_Chapter1 = () => {
         <div className='w-full flex flex-col items-start'>
             <span className='font-bold mb-3'> Dr. Samantha Paige:</span>
             <span className="mb-3">Dr. Samantha Paige is a health behavioral scientist who studies how to improve the ways that people access and communication about online health information to make informed health decisions.  .</span>
-            {/* <div className="relative w-full pt-[56.25%] bg-white">
-                <div
-                    id="playButtonOverlay"
-                    className="absolute top-0 left-0 w-full h-full flex justify-center items-center cursor-pointer z-20"
-                    onClick={() => {
-                    const videoElement = document.getElementById('moduleVideo') as HTMLVideoElement;
-                    if (videoElement) {
-                videoElement.play();
-                document.getElementById('playButtonOverlay')!.style.display = 'none';
-                    }
-                    }}
-                >
-                    <img src={playButton} alt="Play Button" className="w-1/10 h-auto" />
-                </div>
-                <video
-                    id="moduleVideo"
-                    className="absolute top-0 left-0 w-full h-full"
-                    controls
-                >
-                    <source src={samplevideo} type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
-        </div> */}
-        <div className="relative w-full pt-[56.25%] bg-white"><iframe src="https://player.vimeo.com/video/1114355982?h=6a8798e11b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"  style={{position:'absolute',top:'0',left:'0',width:'100%',height:'100%'}} title="15_PACES - State Preferences"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
             
+        <div className="relative w-full pt-[56.25%] bg-white"><iframe src="https://player.vimeo.com/video/1114355536?h=7ac8c2ccef&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"  style={{position:'absolute',top:'0',left:'0',width:'100%',height:'100%'}} title="03_James&#039; Story - Chapter 1 - Internet Search"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
             
         </div>
 

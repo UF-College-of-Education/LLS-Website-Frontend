@@ -273,7 +273,7 @@ export default function MarcoLetterActivity() {
                 <button
                   onClick={checkAnswers}
                   disabled={!allAnswered}
-                  className={`flex-1 py-3 px-6 rounded-lg font-medium transition-all duration-200 ${
+                  className={`flex-1 py-3 px-6 rounded-lg font-medium transition-all duration-200 z-50 ${
                     allAnswered
                       ? 'bg-green-600 hover:bg-green-700 text-white shadow-md hover:shadow-lg'
                       : 'bg-gray-300 text-gray-500 cursor-not-allowed'
@@ -284,7 +284,7 @@ export default function MarcoLetterActivity() {
                 
                 <button
                   onClick={resetActivity}
-                  className="flex items-center gap-2 py-3 px-6 bg-gray-600 hover:bg-gray-700 text-white rounded-lg font-medium transition-all duration-200 shadow-md hover:shadow-lg"
+                  className="flex items-center gap-2 py-3 px-6 z-50 bg-gray-600 hover:bg-gray-700 text-white rounded-lg font-medium transition-all duration-200 shadow-md hover:shadow-lg"
                 >
                   <RotateCcw className="w-4 h-4" />
                   Reset

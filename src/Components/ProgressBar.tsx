@@ -10,7 +10,7 @@ interface ProgressBarProps {
 const ProgressBar: React.FC<ProgressBarProps> = ({ progress, onPrevious, onNext }) => {
   progress = Math.floor(progress);
   return (
-    <div className="flex flex-col sm:flex-row justify-between items-center p-4 space-y-4 sm:space-y-0 sm:space-x-4">
+    <div className="flex flex-col sm:flex-row justify-between items-center p-4 space-y-4 sm:space-y-0 sm:space-x-4 z-50">
       <Button
         name="Previous"
         arrow={true}

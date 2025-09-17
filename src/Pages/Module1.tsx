@@ -4,7 +4,7 @@ import ProgressBar from '../Components/ProgressBar';
 import ModuleHead from '../Components/ModuleHead';
 import Breadcrumb from '../Components/Breadcrumb';
 import FindingInfo from '../Module1/FindingInfo';
-import Critical_ehealth_Informal from '../Module1/Critical_ehealth_Informal';
+import Clinicial_ehealth_literacy from '../Module1/Part1/Clinicial_ehealth_literacy';
 
 
 import Module_ending from '../Module1/Module_ending';
@@ -18,6 +18,11 @@ import Marcos_Story_Chapter2 from '../Module1/Part1/Marcos_Story_Chapter2';
 import Marcos_Story_Chapter3 from '../Module1/Part1/Marcos_Story_Chapter3';
 import Communication_with_doctors from '../Module1/Part1/Communication_with_doctors';
 import Resonding_to_James from '../Module1/Part1/Responding_to_James';
+import Present from '../Module1/Part1/Present';
+import Ask from '../Module1/Part1/Ask';
+import Check from '../Module1/Part1/Check';
+import Express from '../Module1/Part1/Express';
+import State from '../Module1/Part1/State';
 
 const Module1 = () => {
 
@@ -59,22 +64,22 @@ const Module1 = () => {
           return <Marcos_Story_Chapter2 />;
       case 'responding-to-james':
         return <Resonding_to_James />;
-      case 'critical-literacy':
-        return <Critical_ehealth_Informal />;
+      case 'clinical-literacy':
+        return <Clinicial_ehealth_literacy />;
       case 'jamesStory-chapter3':
         return <Marcos_Story_Chapter3 />
       case 'communication-with-doctors':
         return <Communication_with_doctors />
       case 'p-present':
-        return <FindingInfo />;
+        return <Present />;
       case 'p-ask':
-        return <FindingInfo />;
+        return <Ask />;
       case 'p-clarify':
-        return <FindingInfo />;
+        return <Check />;
       case 'p-express':
-        return <FindingInfo />;
+        return <Express />;
       case 'p-state':
-        return <Module_ending />;
+        return <State />;
       default:
         return <p>Select a section from the sidebar.</p>;
     }
