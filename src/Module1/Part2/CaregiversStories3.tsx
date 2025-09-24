@@ -13,9 +13,9 @@ const CaregiversStories3 = () => {
     <div className="w-full flex flex-col items-start px-1 sm:px-1 lg:px-8">
       {/* Existing content */}
       <div className="w-full flex flex-col items-start">
-        <span className="font-bold mb-3 text-lg sm:text-xl">Introduction</span>
-        <span className="mb-3 text-sm sm:text-base">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
+      <span className="font-bold font-bree mb-3 text-lg sm:text-xl">Caregivers' Stories</span>
+        <span className="mb-3 font-bold text-xl sm:text-3xl">
+        Caregivers' Stories: Mateo, Mandy, and Anya
         </span>
         
         <div className="relative w-full pt-[56.25%] bg-white">
@@ -23,9 +23,9 @@ const CaregiversStories3 = () => {
         </div>
 
       <div className="w-full flex flex-col items-start">
-        <span className="my-3 text-sm sm:text-base">
-          Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per.
-        </span>
+      <span className="my-6 w-full text-sm sm:text-base rounded-xl shadow-2xl p-4 bg-white border border-gray-300">
+       Please complete the activity on the next page.
+</span> 
       </div>
     </div>
     

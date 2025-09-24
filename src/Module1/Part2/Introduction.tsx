@@ -1,9 +1,4 @@
-import React, { useState } from 'react';
-import downloadbtn from "../../assets/icons/baseline-get_app-24p.png";
-import samplevideo from "../../assets/SampleVideo.mp4";
-import playButton from "../../assets/icons/Video_playButton.png";
-import audiofile from "../../assets/Arthur.mp3"
-import playBtn from "../../assets/icons/baseline-play_arrow-.png"
+
 
 const Introduction = () => {
   
@@ -13,9 +8,9 @@ const Introduction = () => {
     <div className="w-full flex flex-col items-start px-1 sm:px-1 lg:px-8">
       {/* Existing content */}
       <div className="w-full flex flex-col items-start">
-        <span className="font-bold mb-3 text-lg sm:text-xl">Introduction</span>
-        <span className="mb-3 text-sm sm:text-base">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
+      <span className="font-bold font-bree mb-3 text-lg sm:text-xl">Introduction</span>
+        <span className="mb-3 font-bold text-xl sm:text-3xl">
+        Facilitating Open and Supportive Communication in the Family
         </span>
         
         <div className="relative w-full pt-[56.25%] bg-white">
@@ -23,9 +18,9 @@ const Introduction = () => {
         </div>
 
       <div className="w-full flex flex-col items-start">
-        <span className="my-3 text-sm sm:text-base">
-          Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per.
-        </span>
+        <span className="my-6 w-full text-sm sm:text-base rounded-xl shadow-2xl p-4 bg-white border border-gray-300">
+     Let's begin by exploring how you can connect to meaning in your caregiving role.
+</span> 
       </div>
     </div>
     

@@ -77,11 +77,15 @@ const Marcos_Story_Chapter1 = () => {
             </div>
         </div> */}
         <div className='w-full flex flex-col items-start'>
-            <span className='font-bold mb-3'> Dr. Samantha Paige:</span>
-            <span className="mb-3">Dr. Samantha Paige is a health behavioral scientist who studies how to improve the ways that people access and communication about online health information to make informed health decisions.  .</span>
+        <span className="font-bold font-bree mb-3 text-lg sm:text-xl">James' Story Chapter 1</span>
+        <span className="mb-3 font-bold text-xl sm:text-3xl">
+        The Internet Search
+        </span>
             
         <div className="relative w-full pt-[56.25%] bg-white"><iframe src="https://player.vimeo.com/video/1114355536?h=7ac8c2ccef&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"  style={{position:'absolute',top:'0',left:'0',width:'100%',height:'100%'}} title="03_James&#039; Story - Chapter 1 - Internet Search"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-            
+        <span className="my-6 w-full text-sm sm:text-base rounded-xl shadow-2xl p-4 bg-white border border-gray-300">
+        Please complete the activity on the next page using the HOPE model as your reference.
+</span>    
         </div>
 
     </div>

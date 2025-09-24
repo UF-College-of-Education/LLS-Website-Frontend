@@ -20,6 +20,9 @@ const ReflectionActivity2 = () => {
           it can be helpful to reflect on your family dynamics with your spouse, children, or other family members. </span>
         
       </div>
+      <span className="my-6 w-full text-sm sm:text-base rounded-xl shadow-2xl p-4 bg-white border border-gray-300">
+      Next, let's explore some of the challenges caregivers face in their family relationships and how we can develop open and supportive communication skills.
+</span> 
     </div>
   )
 }

@@ -22,6 +22,9 @@ const ReflectionActivity1 = () => {
           <li>A heightened sense of connection through experiences of love, beauty and humor, and through the five senses </li>
         </ul>
       </div>
+      <span className="my-6 w-full text-sm sm:text-base rounded-xl shadow-2xl p-4 bg-white border border-gray-300">
+      Next, let's explore the importance of strengthening our family relationships and building a healthy communication practice.
+</span> 
     </div>
   )
 }

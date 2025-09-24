@@ -268,8 +268,14 @@ else{
       },
     }));}
   return (
-    <div className="w-full mt-8">
-        <h2 className="font-bold text-lg mb-4">Activity</h2>
+    <div className="w-full mt-2">
+        <div className='w-full flex flex-col items-start mb-1'>
+        <span className="font-bold font-bree mb-3 text-lg sm:text-xl">Hope Activity</span>
+        <span className="mb-3 font-bold text-xl sm:text-3xl">
+        Evaluating Online Health Information
+        </span>
+            
+        </div>
         <p className="mb-4">
           The message board messages below show messages from four distinct sources: organization, caregiver, patient, physician. Rate each message as high or low on each of the four dimensions of HOPE (Honesty, Objectivity, Practicality, Expertise) and receive feedback on your response.
         </p>
@@ -341,8 +347,15 @@ else{
             </div>
                 
         ))}
+        
         </div>
+        <div className='w-full flex flex-col items-start'><span className="mt-8 text-sm sm:text-base rounded-xl shadow-2xl p-4  bg-white border border-gray-300">
+        As you can see, there are messages that are clearly honest and objective, but there are also messages that are easy to act upon (highly practical) but are lacking in honesty and objectivity. Always question the quality of information on the Internet. Avoid sharing information that does not satisfy the HOPE Model criteria. When in doubt, ask your doctor.
+
+Next, Dr. Paige outlines ways to communicate with others about online health information.
+</span>  </div>
         <AvatarFeedback feedback={feedback} emotion={emotion} />
+        
       </div>
   )
 }

@@ -222,7 +222,7 @@ export default function MarcoLetterActivity() {
 
   return (
     <DndProvider backend={HTML5Backend}>
-      <div className="max-w-6xl mx-auto p-6 bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+      <div className="max-w-6xl m-auto p-6 bg-gradient-to-br from-blue-50 to-indigo-100 ">
         <div className="bg-white rounded-xl shadow-lg overflow-hidden">
           {/* Header */}
           
