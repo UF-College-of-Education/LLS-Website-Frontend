@@ -165,7 +165,7 @@ fetch(`${API_BASE}/get_progress.php`,
   
 
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col mt-8'>
       {/* <ModuleHead leftButtonText="Previous" headingText="Part II: Facilitating Open and Supportive Communication in the Family" rightButtonText='Next' subHeadingText={sections.find(section => section.id === currentSection)?.title || ''} 
       onPrevious={handlePrevious} onNext={handleNext}/> */}
       <Breadcrumb paths={[{ name: 'Home', link: '/parts' },{ name: 'Part 2', link: '/part2' }]} />

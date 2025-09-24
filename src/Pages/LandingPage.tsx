@@ -772,7 +772,7 @@ const LandingPage: React.FC = () => {
             </div>
 
             {/* Part II */}
-            <div onClick={()=> {navigate("/course")}} className="group relative cursor-pointer transform transition-all duration-500 hover:scale-102">
+            <div onClick={()=> {navigate("/course")}} id='part2' className="group relative cursor-pointer transform transition-all duration-500 hover:scale-102">
               <div className="bg-white p-8 group-hover:shadow-2xl transition-all duration-300 border-2 border-[#F1685E] rounded-3xl">
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center space-x-4">
@@ -871,6 +871,7 @@ const LandingPage: React.FC = () => {
 
     {/*HCP Section */}
     <section
+    id="HCP"
       className="py-20 bg-relative overflow-hidden"
       style={{
         backgroundImage: `url(${hero3})`,
@@ -1055,7 +1056,7 @@ const LandingPage: React.FC = () => {
     </section>
 
     {/*Dementia Section*/}
-    <div className="transform transition-transform duration-100 ease-out">
+    <div id="dementia" className="transform transition-transform duration-100 ease-out">
       
       <section
       className="py-20 bg-relative overflow-hidden"
@@ -1250,7 +1251,7 @@ const LandingPage: React.FC = () => {
     </div>
 
     {/* Breast Cancer Section */}
-    <div className="transform transition-transform duration-100 ease-out">
+    <div id="BC" className="transform transition-transform duration-100 ease-out">
     <section
       className="py-20 bg-relative overflow-hidden"
       style={{

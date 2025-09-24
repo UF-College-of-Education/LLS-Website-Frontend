@@ -66,11 +66,11 @@ const Courses = () => {
       <div className="flex flex-col justify-center w-full p-5 md:p-10">
         <div className="flex flex-col">
           <h2 className="font-(family-name:--font-bree) font-extrabold tracking-wide items-center text-center text-[20px] md:text-[30px] text-[#CE2C37]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Caring for a Spouse with a Blood Cancer
           </h2>
           <p className="font-(family-name:--font-open-sans) text-center text-xs md:text-sm text-black my-5">
-            Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.
-          </p>
+          Welcome to the Healthy Communication Practice™ Program for Caregivers of a spouse with a Blood Cancer. This two-part program is designed to support the important work you are doing as you care for your spouse with a blood cancer. We will present key concepts and skills that can be useful as you navigate online cancer information, communicate with doctors, and facilitate communication within your family. Throughout the two-part program, we will introduce you to caregivers who share stories and demonstrate the skills and concepts we are presenting. We estimate it will take approximately 45 minutes to go through each part of the program. Thank you for joining us!
+</p>
         </div>
       </div>
       <div className="flex flex-col justify-center w-full p-5 gap-5">
@@ -84,12 +84,12 @@ const Courses = () => {
               <span className="flex flex-row gap-5 justify-start">
                 <img src={alarm} className="w-6 md:w-8" />
                 <span className="font-(family-name:--font-bree) font-medium tracking-widest text-black text-lg md:text-2xl">
-                  30 MINUTES
+                  45 MINUTES
                 </span>
               </span>
               <span className="font-(family-name:--font-open-sans) font-light text-[#2F2F2F] text-sm md:text-base">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
-              </span>
+              We will describe skills for evaluating online health information, communicating online with others about health information, and communicating with doctors about online health information. Then, we will look at key skills you can use to support your spouse in their clinical visits.
+</span>
             </div>
             <div className="flex flex-row gap-5 justify-start">
               <button
@@ -120,8 +120,7 @@ const Courses = () => {
                 </span>
               </span>
               <span className="font-(family-name:--font-open-sans) font-light text-[#2F2F2F] text-sm md:text-base">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.
-              </span>
+              We will explore the importance of finding meaning in your caregiving role as well as how to strengthen your family relationships with open and supportive communication skills. Then, we will look at how to use these skills when navigating relational challenges and difficult but important caregiving conversations.</span>
             </div>
             <div className="flex flex-row gap-5 justify-start">
               <button

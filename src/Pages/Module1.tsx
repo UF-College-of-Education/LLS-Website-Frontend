@@ -184,9 +184,9 @@ const response = await fetch(`${API_BASE}/update_progress.php`, {
   
 
   return (
-    <div className='flex flex-col'>
-      <ModuleHead leftButtonText="Previous" headingText="Part 1: Navigating Cancer Information in Online and Clinical Settings" rightButtonText='Next' subHeadingText={sections.find(section => section.id === currentSection)?.title || ''} 
-      onPrevious={handlePrevious} onNext={handleNext}/>
+    <div className='flex flex-col mt-8'>
+      {/* <ModuleHead leftButtonText="Previous" headingText="Part 1: Navigating Cancer Information in Online and Clinical Settings" rightButtonText='Next' subHeadingText={sections.find(section => section.id === currentSection)?.title || ''} 
+      onPrevious={handlePrevious} onNext={handleNext}/> */}
       <Breadcrumb paths={[{ name: 'Home', link: '/parts' },{ name: 'Part 1', link: '/part1' }]} />
       {/* Main Content */}
       <div className="flex flex-col md:flex-row p-[10px]">
