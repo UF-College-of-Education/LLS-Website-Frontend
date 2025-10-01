@@ -24,12 +24,12 @@ const Homepage = () => {
     <div className="flex flex-col items-center justify-center w-full px-4 md:px-[10%]">
       <div className="flex flex-col justify-center w-full p-5 md:p-10">
         <div className="flex flex-col">
-          <h2 className="font-(family-name:--font-bree) font-extrabold tracking-normal text-center text-[24px] md:text-[30px] text-[#2B70B4]">
-            Losdrem ipsum dolor sit amet consectetur adipisicing elit.
+        <h2 className="font-(family-name:--font-bree) font-extrabold tracking-wide items-center text-center text-[20px] md:text-[30px] text-[#CE2C37]">
+          Caring for a Spouse with a Blood Cancer
           </h2>
-          <p className="font-(family-name:--font-open-sans) text-center text-xs md:text-sm text-black my-3 md:my-5">
-            Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.
-          </p>
+          <p className="font-(family-name:--font-open-sans) text-center text-xs md:text-sm text-black my-5">
+          Welcome to the Healthy Communication Practice™ Program for Caregivers of a spouse with a Blood Cancer. This two-part program is designed to support the important work you are doing as you care for your spouse with a blood cancer. We will present key concepts and skills that can be useful as you navigate online cancer information, communicate with doctors, and facilitate communication within your family. Throughout the two-part program, we will introduce you to caregivers who share stories and demonstrate the skills and concepts we are presenting. We estimate it will take approximately 45 minutes to go through each part of the program. Thank you for joining us!
+</p>
         </div>
         <div className="flex flex-row flex-wrap justify-center md:justify-around mx-2 md:mx-[10%]">
           {islogin ? null : (

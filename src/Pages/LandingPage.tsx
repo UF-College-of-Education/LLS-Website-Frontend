@@ -168,7 +168,7 @@ const LandingPage: React.FC = () => {
   }, [location]);
 
   const handleScrollToResources = () => {
-    const section = document.getElementById("child");
+    const section = document.getElementById("resources");
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
@@ -176,8 +176,8 @@ const LandingPage: React.FC = () => {
 
   return(
     <div className="font-sans text-black">
-        {/* Navigation Bar */}
-      <nav className="bg-[#8C2B1D] shadow-md fixed w-full z-15">
+    {/* Navigation Bar */}
+    <nav className="bg-[#8C2B1D] shadow-md fixed w-full z-15">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
         <div className="flex-shrink-0">
@@ -239,8 +239,8 @@ const LandingPage: React.FC = () => {
         </div>
       </nav>
 
-        {/* Hero Section */}
-        <section className="min-h-screen mt-12 flex items-center justify-center overflow-hidden bg-[#FFFFFF]">
+    {/* Hero Section */}
+    <section className="min-h-screen mt-12 flex items-center justify-center overflow-hidden bg-[#FFFFFF]">
             {/* Main content */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -254,7 +254,7 @@ const LandingPage: React.FC = () => {
                     </div>
 
                     {/* Main heading */}
-                    <h1 className="text-6xl md:text-8xl font-bold leading-tight">
+                    <h1 className=" text-6xl md:text-8xl font-bold leading-tight">
                         <span className="block text-[#8C2B1D] ">Healthy</span>
                         <span className="block bg-gradient-to-r from-pink-300 to-yellow-300 bg-clip-text text-transparent">
                         Communication
@@ -271,13 +271,30 @@ const LandingPage: React.FC = () => {
 
                     {/* CTA buttons */}
                     <div className="flex flex-col sm:flex-row gap-4">
-                    <button className="group bg-[#8C2B1D] text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                    <button
+                      type="button"
+                      onClick={handleScrollToResources}
+                      aria-controls="resources"
+                      className="group cursor-pointer select-none rounded-full bg-[#8C2B1D] px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-300 transform hover:scale-105 hover:bg-blue-50 hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#8C2B1D]"
+                    >
+                      <span className="inline-flex items-center">
                         Explore Resources
-                        <ArrowRight className="inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                        <ArrowRight
+                          aria-hidden="true"
+                          className="ml-2 h-5 w-5 transform transition-transform duration-300 group-hover:translate-x-1"
+                        />
+                      </span>
                     </button>
-                    <button className="group flex items-center px-8 py-4 bg-[#8C2B1D] text-white border-2 border-white/30 rounded-full font-semibold text-lg hover:bg-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl">
-                        <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-300" />
-                        Watch Demo
+
+                    <button
+                      type="button"
+                      className="group flex items-center cursor-pointer select-none rounded-full border-2 border-white/30 bg-[#8C2B1D] px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:bg-blue-50 hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#8C2B1D]"
+                    >
+                      <Play
+                        aria-hidden="true"
+                        className="mr-2 h-5 w-5 transform transition-transform duration-300 group-hover:scale-110"
+                      />
+                      Watch Demo
                     </button>
                     </div>
 
@@ -320,7 +337,7 @@ const LandingPage: React.FC = () => {
                 </div>
                 </div>
             </div>
-    </section>
+      </section>
 
     {/* Why Section*/}
     <section className="bg-[#FFF6F6] py-16 px-8 md:px-16 flex flex-col md:flex-row justify-center items-center">
@@ -350,7 +367,7 @@ const LandingPage: React.FC = () => {
               return (
                 <div
                   key={index}
-                  className="relative group cursor-pointer transform transition-all duration-500 hover:scale-110 translate-y-0 opacity-100"
+                  className="relative group cursor-pointer transform transition-all duration-500 hover:scale-110 translate-y-0 opacity-100 sm:col-span-2 md:col-span-1 flex justify-center"
                   style={{ transitionDelay: benefit.delay }}
                 >
                     <div className={`w-40 h-40 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-2xl transition-all duration-300 relative overflow-hidden bg-[#8c2b1d]`}>
@@ -452,7 +469,7 @@ const LandingPage: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
+      </div>
 
     {/*Evidence Section*/}
     <section className="py-10 bg-gradient-to-br from-white to-gray-50 relative ">
@@ -567,7 +584,7 @@ const LandingPage: React.FC = () => {
                 </div>
     
                 {/* Bottom info card */}
-                <div className="mt-8 p-6 bg-white rounded-2xl shadow-lg border border-gray-100">
+                {/* <div className="mt-8 p-6 bg-white rounded-2xl shadow-lg border border-gray-100">
                   <div className="flex items-start space-x-4">
                     <div className="p-3 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600">
                       <BookOpen className="w-6 h-6 text-white" />
@@ -581,7 +598,7 @@ const LandingPage: React.FC = () => {
                       </p>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -636,10 +653,10 @@ const LandingPage: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
+      </div>
 
     {/* COntext Section */}
-     <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_2px_2px,_theme(colors.blue.500)_2px,_transparent_0)] bg-[size:60px_60px]"></div>
@@ -719,7 +736,7 @@ const LandingPage: React.FC = () => {
         </div>
 
         {/* Program Structure Section */}
-        <div className="transform transition-all duration-1000 delay-500 translate-y-0 opacity-100">
+        <div id='resources' className="transform transition-all duration-1000 delay-500 translate-y-0 opacity-100">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">Program Structure</h3>
             <p className="text-lg text-gray-600">
@@ -816,7 +833,7 @@ const LandingPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </section>
+     </section>
 
     {/*Testimonial-2 Section*/}
     <div className="py-10 mb-4">
@@ -867,7 +884,7 @@ const LandingPage: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
+      </div>
 
     {/*HCP Section */}
     <section
@@ -1053,7 +1070,7 @@ const LandingPage: React.FC = () => {
           animation: draw-line 2s ease-out forwards;
         }
       `}</style>
-    </section>
+      </section>
 
     {/*Dementia Section*/}
     <div id="dementia" className="transform transition-transform duration-100 ease-out">
@@ -1248,7 +1265,7 @@ const LandingPage: React.FC = () => {
           }
         `}</style>
       </section>
-    </div>
+      </div>
 
     {/* Breast Cancer Section */}
     <div id="BC" className="transform transition-transform duration-100 ease-out">
@@ -1405,7 +1422,7 @@ const LandingPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
+      </div>
 
     {/* Footer Section */}
     <footer className="bg-gray-900 text-white py-16">
@@ -1480,7 +1497,7 @@ const LandingPage: React.FC = () => {
           </p>
         </div>
       </div>
-    </footer>
+      </footer>
 
     </div>
 

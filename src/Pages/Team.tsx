@@ -1,5 +1,7 @@
-import carma from "../assets/Carma.png";
-import carla from "../assets/carla.png";
+import carma from "../assets/teams/Carma.png";
+import carla from "../assets/teams/carla.png";
+import samantha from "../assets/teams/samantha.png";
+import allison from "../assets/teams/allison.png";
 import heart from "../assets/icons/Header_Heart.png";
 
 function Team() {
@@ -67,7 +69,8 @@ function Team() {
                 </button>
               </div>
       </nav>
-            <div className="flex flex-col gap-6 mt-20 p-20">
+            <div className="flex flex-col gap-6 mt-20 p-20 md:px-40">
+              <h1 className="text-center font-(family-name:--font-bree) font-bold capitalize text-[#CE2C37]">Meet the Team</h1>
               <div> 
                 <span className="italic font-semibold text-gray-800">With support from Blood Cancer United, Drs. Carla L. Fisher and Carma L. Bylund lead one of the nation's only family caregiver research programs dedicated to understanding the distinct needs of different types of blood cancer caregivers. Drs. Fisher and Bylund have worked together for nearly 20 years on caregiver and healthcare communication research. Through interdisciplinary research with leading scientists in caregiving and health communication, they have created the Healthy Communication PracticeTM to better support you in the important role you play as a caregiver for a spouse with blood cancer.</span>
               </div>
@@ -75,12 +78,12 @@ function Team() {
               <div>
                 <h2 className="text-3xl md:text-4xl font-(family-name:--font-bree) font-bold text-black mb-4">Meet the Developers - Principal Investigators</h2>
                 <div className="flex flex-col md:flex-row shadow-lg items-stretch">
-                    <div className="w-[45%] md:w-[30%]">
-                        <img
-                            src={carma}
-                            alt="Carma Bylund Image"
-                            className="w-[full] h-[full] object-cover"
-                        />
+                    <div className="w-[45%] h-[95%] md:w-[30%]">
+                      <img
+                        src={carma}
+                        alt="Carma Bylund Image"
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <div className="w-full md:w-[70%] flex flex-col items-start p-4">
                         <span className="text-left my-1 text-xl md:text-2xl text-black font-(family-name:--font-bree)">
@@ -102,12 +105,12 @@ function Team() {
                         </p>
                     </div>
                 </div>
-                <div className="flex flex-col md:flex-row shadow-lg">
-                    <div className="w-full md:w-[30%]">
+                <div className="flex flex-col mt-3 md:flex-row shadow-lg">
+                    <div className="w-[45%] h-[95%] md:w-[30%]">
                         <img
                             src={carla}
                             alt="Carla Fisher Image"
-                            className="w-full h-full object-cover"
+                            className="w-full h-fullobject-cover"
                         />
                     </div>
                     <div className="w-full md:w-[70%] flex flex-col items-start p-4">
@@ -134,58 +137,47 @@ function Team() {
               <div>
                 <h2 className="text-3xl md:text-4xl font-(family-name:--font-bree) font-bold text-black mb-4">Meet the Collaborating Experts</h2>
                 <div className="flex flex-col md:flex-row shadow-lg items-stretch">
-                    <div className="w-[45%] md:w-[30%]">
+                    <div className="w-[45%] h-[95%] md:w-[30%]">
                         <img
-                            src={carma}
-                            alt="Carma Bylund Image"
-                            className="w-[full] h-[full] object-cover"
-                        />
-                    </div>
-                    <div className="w-full md:w-[70%] flex flex-col items-start p-4">
-                        <span className="text-left my-1 text-xl md:text-2xl text-black font-(family-name:--font-bree)">
-                            Carma Bylund, Ph.D
-                        </span>
-                        <b className="text-left my-1 font-(family-name:--font-open-sans) text-black">
-                            Primary Investigator
-                        </b>
-                        <p className="text-left my-1 text-black text-sm md:text-base">
-                            Carma L. Bylund is Professor and Associate Chair of Education in the Department of Health
-                             Outcomes and Biomedical Informatics in the UF College of Medicine and Assistant Director
-                              of the Cancer Training and Education Program for the UF Health Cancer Center. Dr. Bylund
-                               is an international leader in improving communication in cancer care. She has 20 years
-                                of continual research funding and more than 200 peer-reviewed publications, including 
-                                three books on health/family communication. Dr. Bylund led the development of the nation’s 
-                                first communication skills program (ComSkil) at Memorial Sloan Kettering Cancer Center to 
-                                enhance oncologists’ communication with patients. Dr. Bylund and others have adapted this 
-                                program internationally.
-                        </p>
-                    </div>
-                </div>
-                <div className="flex flex-col md:flex-row shadow-lg">
-                    <div className="w-full md:w-[30%]">
-                        <img
-                            src={carla}
-                            alt="Carla Fisher Image"
+                            src={samantha}
+                            alt="Samantha Paige Image"
                             className="w-full h-full object-cover"
                         />
                     </div>
                     <div className="w-full md:w-[70%] flex flex-col items-start p-4">
                         <span className="text-left my-1 text-xl md:text-2xl text-black font-(family-name:--font-bree)">
-                            Carla Fisher, Ph.D, MSW
+                        Samantha Paige, PhD, MPH
                         </span>
-                        <b className="text-left my-1 font-(family-name:--font-open-sans) text-black">
-                            Co-Primary Investigator
-                        </b>
+                        {/* <b className="text-left my-1 font-(family-name:--font-open-sans) text-black">
+                            Primary Investigator
+                        </b> */}
                         <p className="text-left my-1 text-black text-sm md:text-base">
-                            Carla L. Fisher is Professor in the Department of Health Outcomes and Biomedical Informatics
-                             in the UF College of Medicine and Member of the UF Health Cancer Center. Dr. Fisher is an
-                              international leader in developing narrative-driven, family-centered psychosocial care and
-                               services, with a primary focus on cancer caregivers’ distinct needs based on relationship
-                                and lifespan differences. Her work has been consistently funded for nearly 20 years and
-                                 includes more than 130 publications and three books aimed at helping families navigate
-                                  illness together. She is often invited by leading health institutions, the government,
-                                   and advocacy organizations to provide family communication guidance to improve care
-                                    practice and enhance mental health outcomes.
+                            Coming Soon..
+                        </p>
+                    </div>
+                </div>
+                <div className="flex flex-col mt-3 md:flex-row shadow-lg">
+                    <div className="w-[45%] h-[95%] md:w-[30%]">
+                        <img
+                            src={allison}
+                            alt="Allison Applebaum Image"
+                            className="w-full h-full object-cover"
+                        />
+                    </div>
+                    <div className="w-full md:w-[70%] flex flex-col items-start p-4">
+                        <span className="text-left my-1 text-xl md:text-2xl text-black font-(family-name:--font-bree)">
+                        Allison J. Applebaum, PhD
+                        </span>
+                        {/* <b className="text-left my-1 font-(family-name:--font-open-sans) text-black">
+                            Co-Primary Investigator
+                        </b> */}
+                        <p className="text-left my-1 text-black text-sm md:text-base">
+                        Allison J. Applebaum is a Professor of Geriatrics and Palliative Medicine and the Director of the Steven S. Elbaum Family Center for 
+                        Caregiving at the Icahn School of Medicine at Mount Sinai. She was previously the Founding Director of the Caregivers Clinic at Memorial 
+                        Sloan Kettering Cancer Center, the first program in the nation to provide comprehensive psychosocial care to family members and friends of 
+                        patients in the caregiving role. Dr. Applebaum is an international leader in developing and disseminating supportive services for cancer 
+                        caregivers, including targeted therapeutic approaches like meaning-centered psychotherapy. With consistent funding for nearly 20 years, 
+                        she has over 100 publications, and is the editor of the renowned book, Cancer Caregivers (Oxford University, 2019). 
                         </p>
                     </div>
                 </div>
