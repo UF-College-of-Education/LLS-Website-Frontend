@@ -20,7 +20,7 @@ const Communicative_eHealth = () => {
         
       </div>
       <span className="my-6 text-sm sm:text-base rounded-xl shadow-2xl p-4 bg-white border border-gray-300">
-      Next, let's return to James and see how he communicates with his cousin who shares some online health information.
+      Next, let's return to James and see how he communicates with his son who shares some online health information.
 </span>  
 
       

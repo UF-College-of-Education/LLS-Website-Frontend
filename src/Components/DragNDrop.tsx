@@ -43,7 +43,7 @@ const questions = [
   },
   {
     id: 'verification',
-    text: 'When you _____ it can encourage your parent to share their distress and enhance their well-being while making them feel supported.',
+    text: 'When you _____ it can encourage your spouse to share their distress and enhance their well-being while making them feel supported.',
     correctAnswer: "I will share this with your mom, and we can talk to her doctor about it at our next appointment.",
     color: 'border-red-400'
   }

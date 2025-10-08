@@ -11,7 +11,7 @@ const Communication_with_doctors = () => {
         <div className='w-full flex flex-col items-start mb-5'>
         <span className="font-bold font-bree mb-3 text-lg sm:text-xl">Communication with Doctors</span>
         <span className="mb-3 font-bold text-xl sm:text-3xl">
-        Using the PACES Approach to Support Your Parent's Communication with Doctors
+        Using the PACES Approach to Support Your Spouse's Communication with Doctors
         </span>
             
         </div>

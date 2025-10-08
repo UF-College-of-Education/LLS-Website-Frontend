@@ -81,7 +81,7 @@ const HOPE_Activity = () => {
     }
   } else if (author == "Taylor (Ann Arbor, MI)") {
     if( value === 'high') {
-      setFeedback("Let's think about this...  The caregiver only presents their parent's experience and asks Chris to private message for more information about the product and its cost. Based on the HOPE Model, you should always use caution with this information. It's likely biased and driven by ulterior motives.");
+      setFeedback("Let's think about this...  The caregiver only presents their spouse's experience and asks Chris to private message for more information about the product and its cost. Based on the HOPE Model, you should always use caution with this information. It's likely biased and driven by ulterior motives.");
       setEmotion('wrong');
     }else{
       setFeedback("That's correct! ");
@@ -211,8 +211,8 @@ else{
       icon:"../../assets/icons/mod_purpleicon2.png",
       author: 'Morgan (Tempe, AZ)',
       message: "I participated in a clinical trial and it didn't help me at all. Honestly, I am not sure if was worth all the extra visits and time.",
-      honestivity: 'Low',
-      objectivity: 'High',
+      honestivity: 'High',
+      objectivity: 'Low',
       practicality: 'Low',
       expertise: 'High',
       sub:false,
@@ -223,7 +223,7 @@ else{
       author: 'Dr.Cortez (Tampa, FL)',
       message: 'Thanks for sharing your experience. Clinical trials are not the best option for every patient. I would still recommend anyone who is interested talk with their doctor to see if there is a trial that is right for them.',
       honestivity: 'High',
-      objectivity: 'Low',
+      objectivity: 'High',
       practicality: 'High',
       expertise: 'High',
       sub:true,
@@ -233,9 +233,9 @@ else{
       icon:"../../assets/icons/mod_orangeicon2.png",
       author: 'Taylor (Ann Arbor, MI)',
       message: "Instead of a clinical trial, why don't you consider green tea extract? My husband used this and he is cancer free! Private message me for more information on where to buy this.",
-      honestivity: 'High',
+      honestivity: 'Low',
       objectivity: 'Low',
-      practicality: 'High',
+      practicality: 'Low',
       expertise: 'High',
       sub:false,
     },
@@ -245,7 +245,7 @@ else{
       author: 'Blood Cancer Foundation (BCF)',
       message: 'Thanks for sharing your experience. Clinical trials are not the best option for every patient. I would still recommend anyone who is interested talk with their doctor to see if there is a trial that is right for them.',
       honestivity: 'High',
-      objectivity: 'Low',
+      objectivity: 'High',
       practicality: 'High',
       expertise: 'High',
       sub:true,

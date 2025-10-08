@@ -41,7 +41,7 @@ const Module1 = () => {
     {id:  'p-present' , title: 'P: Present Information', sub:true},
     {id: 'p-ask', title: 'A: Ask Questions', sub:true},
     {id: 'p-clarify', title: 'C: Check Understanding', sub:true},
-    {id: 'p-express', title: 'E: Express Concerns', sub:true}, 
+    {id: 'p-express', title: 'E: Express Information', sub:true}, 
     {id: 'p-state', title: 'S: State Preferences', sub:true},
   ];
 
