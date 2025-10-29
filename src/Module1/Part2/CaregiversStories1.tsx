@@ -15,7 +15,7 @@ const CaregiversStories1 = () => {
       <div className="w-full flex flex-col items-start">
       <span className="font-bold font-bree mb-3 text-lg sm:text-xl">Caregivers' Stories</span>
         <span className="mb-3 font-bold text-xl sm:text-3xl">
-        Caregivers' Stories: Catherine, Raj and Elena
+        Caregivers' Stories: Raj, Catherine and Elena
         </span>
         
         <div className="relative w-full pt-[56.25%] bg-white">

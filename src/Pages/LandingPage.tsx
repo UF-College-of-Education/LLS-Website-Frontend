@@ -12,6 +12,11 @@ import hero3 from "../assets/LLS Screenshots/bab.jpg";
 import hero4 from "../assets/LLS Screenshots/aaa.jpg";
 import hero5 from "../assets/LLS Screenshots/abc.jpg"
 import HeroCarousel from '../Components/HeroCarousel';
+import Slider from 'react-infinite-logo-slider'
+import logo1 from "../assets/logos/BloodCancerUnited2025.svg"
+import logo2 from "../assets/logos/FDOH.png"
+import logo3 from "../assets/logos/nih-nia-logo.svg"
+import logo4 from "../assets/logos/ufhealth-full.svg"
 
 
 
@@ -39,7 +44,7 @@ const LandingPage: React.FC = () => {
     },
     {
       icon: Target,
-      text: "Targeting Guidance based on the disease & relationship",
+      text: "targeting guidance based on the disease & relationship",
       gradient: "#FF6900",
       delay: "150ms"
     }
@@ -522,7 +527,7 @@ const LandingPage: React.FC = () => {
                     <span className="bg-gradient-to-r from-[#8C2B1D] via-[#992A2C] via-50% via-[#EC4899] to-[#F1685E] bg-clip-text text-transparent">
                       Narrative Learning Approach
                     </span>{' '}
-                    to Supporting Caregiver's
+                    to Supporting Caregivers
                   </h2>
     
                   {/* Description paragraphs */}
@@ -531,15 +536,15 @@ const LandingPage: React.FC = () => {
                   </p>
     
                   <p className="text-lg text-gray-600 leading-relaxed">
-                  Developed in partnership with instructional design experts, users will feel engaged and can practice skills with interactive activities at home and at their own pace.</p>
+                  Developed <b>in partnership with instructional design experts</b>, users will feel engaged and can practice skills with interactive activities at home and at their own pace.</p>
                   
                 </div>
     
                 {/* Highlighted box */}
-                <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-2xl border border-blue-100">
+                {/* <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-2xl border border-blue-100">
                   <p className="text-gray-700 leading-relaxed">
                   Developed in partnership with instructional design experts, users will feel engaged and can practice skills with interactive activities at home and at their own pace.</p>
-                </div>
+                </div> */}
               </div>
     
               {/* Right Column - Feature Grid */}
@@ -633,8 +638,6 @@ const LandingPage: React.FC = () => {
             </div>
           </div>
       </section>
-
-    
 
     {/* COntext Section */}
     <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
@@ -815,15 +818,15 @@ const LandingPage: React.FC = () => {
         </div>
       </div>
      </section>
-
+    
     {/*HCP Section */}
     <section
     id="HCP"
-      className="py-20 bg-relative overflow-hidden"
+      className="py-20 bg-relative overflow-hidden "
       style={{
-        backgroundImage: `url(${hero3})`,
+        background: `linear-gradient(358deg,rgba(28, 28, 28, 0.99) 0%, rgba(26, 26, 26, 0.55) 72%), url(${hero3})`,
         backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundPosition: "center"
       }}
     >
       {/* Background patterns and effects */}
@@ -1006,7 +1009,7 @@ const LandingPage: React.FC = () => {
       <section
       className="py-20 bg-relative overflow-hidden"
       style={{
-        backgroundImage: `url(${hero4})`,
+        backgroundImage: `linear-gradient(358deg,rgba(28, 28, 28, 0.99) 0%, rgba(26, 26, 26, 0.55) 72%),url(${hero4})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -1200,7 +1203,7 @@ const LandingPage: React.FC = () => {
     <section
       className="py-20 bg-relative overflow-hidden"
       style={{
-        backgroundImage: `url(${hero5})`,
+        backgroundImage: `linear-gradient(358deg,rgba(28, 28, 28, 0.99) 0%, rgba(26, 26, 26, 0.55) 72%),url(${hero5})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -1214,13 +1217,13 @@ const LandingPage: React.FC = () => {
         }}
       ></div>
         {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10">
+        {/* <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_1px_1px,_white_1px,_transparent_0)] bg-[size:40px_40px]"></div>
-        </div>
+        </div> */}
 
         {/* Animated Background Elements */}
-        <div className="absolute top-20 right-10 w-32 h-32 bg-white/20 rounded-full blur-2xl animate-pulse"></div>
-        <div className="absolute bottom-20 left-10 w-40 h-40 bg-white/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        {/* <div className="absolute top-20 right-10 w-32 h-32 bg-white/20 rounded-full blur-2xl animate-pulse"></div>
+        <div className="absolute bottom-20 left-10 w-40 h-40 bg-white/15 rounded-full blur-3xl animate-pulse delay-1000"></div> */}
 
         {/* Main Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1315,7 +1318,7 @@ const LandingPage: React.FC = () => {
             </div>
 
             {/* Decorative SVG lines */}
-            <svg 
+            {/* <svg 
               className="absolute inset-0 w-full h-full pointer-events-none" 
               style={{ zIndex: -1 }}
             >
@@ -1339,14 +1342,22 @@ const LandingPage: React.FC = () => {
                 className="animate-draw-line"
               />
               <path 
-                d="M 80 240 Q 200 200 320 240" 
+                d="M 80 120 Q 200 200 320 240" 
                 stroke="url(#lineGradient)" 
                 strokeWidth="2" 
                 fill="none" 
                 className="animate-draw-line"
-                style={{ animationDelay: '0.5s' }}
+                style={{ animationDelay: '1.5s' }}
               />
-            </svg>
+              <path 
+                d="M 380 20 Q 350 350 320 240" 
+                stroke="url(#lineGradient)" 
+                strokeWidth="2" 
+                fill="none" 
+                className="animate-draw-line"
+                style={{ animationDelay: '1.5s' }}
+              />
+            </svg> */}
           </div>
           </div>
         </div>

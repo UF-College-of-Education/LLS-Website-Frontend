@@ -5,9 +5,9 @@ const Express = () => {
     <div className="w-full flex flex-col items-start px-1 sm:px-1 lg:px-8">
       {/* Existing content */}
       <div className="w-full flex flex-col items-start">
-      <span className="font-bold font-bree mb-3 text-lg sm:text-xl">Express Information</span>
+      <span className="font-bold font-bree mb-3 text-lg sm:text-xl">Express Concerns</span>
         <span className="mb-3 font-bold text-xl sm:text-3xl">
-        "E" Express Information
+        "E" Express Concerns
         </span>
         
         <div className="relative w-full pt-[56.25%] bg-white">

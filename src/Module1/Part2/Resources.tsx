@@ -15,9 +15,9 @@ const Resources = () => {
             <li>For other caregiver resources and information, please see:  <a href="https://bloodcancerunited.org/resources/caregivers" className='text-blue-500 underline inline'>https://bloodcancerunited.org/resources/caregivers</a></li>
         </ol>
       </div>
-      <span className="my-6 w-full text-sm sm:text-base rounded-xl shadow-2xl p-4 bg-white border border-gray-300">
+      {/* <span className="my-6 w-full text-sm sm:text-base rounded-xl shadow-2xl p-4 bg-white border border-gray-300">
       Next, let's explore some of the challenges caregivers face in their family relationships and how we can develop open and supportive communication skills.
-</span> 
+</span>  */}
     </div>
   )
 }

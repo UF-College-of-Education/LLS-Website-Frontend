@@ -14,8 +14,7 @@ const ReflectionActivity2 = () => {
       </div>
 
       <div className='flex flex-col mt-5'>
-        <span >We encourage you to either write about this on your own in your healthy communication practice workbook or 
-          spend some time thinking on your own. As Dr. Fisher discussed and as you learned in the caregivers’ stories, 
+        <span >We encourage you to either write about this on your own or spend some time thinking on your own. As Dr. Fisher discussed and as you learned in the caregivers’ stories, 
           we can differ in our comfort level with being open or supportive. To further develop a healthy communication practice, 
           it can be helpful to reflect on your family dynamics with your spouse, children, or other family members. </span>
         
