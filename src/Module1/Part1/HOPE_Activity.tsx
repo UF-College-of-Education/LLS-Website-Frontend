@@ -22,34 +22,34 @@ const HOPE_Activity = () => {
     if (dimension === 'Honesty') {
       if( author === "Blood Cancer Foundation (BCF)" ) {
         if( value === 'high') {
-        setFeedback("That's correct, In addition, the doctor's and patient's responses are honest and trustworthy.");
+        setFeedback("That's correct. In addition, the doctor's and patient's responses are honest and trustworthy.");
         setEmotion('correct');
       }else{
-        setFeedback("Let's rethink this, that does not seem right. The Blood Cancer Foundation is a reputable organization.");
+        setFeedback("Let's rethink this. That does not seem right. The Blood Cancer Foundation is a reputable organization.");
         setEmotion('wrong');
         };
     }else if (author == "Dr.Cortez (Tampa, FL)") {
       if( value === 'high') {
-        setFeedback("That's correct! In addition, the Blood Cancer Foundation and patient's response are honest and trustworthy.");
+        setFeedback("That's correct. In addition, the Blood Cancer Foundation and patient's response are honest and trustworthy.");
         setEmotion('correct');
       }else{
-        setFeedback("Let's rethink this, that does not seem right. Dr. Cortez is a physician and his response is honest and trustworthy.");
+        setFeedback("Let's rethink this. That does not seem right. Dr. Cortez is a physician and his response is honest and trustworthy.");
         setEmotion('wrong');
         };
     } else if(author == "Morgan (Tempe, AZ)") {
       if( value === 'high') {
-        setFeedback("That's correct! Morgan may be an Honest source. Be sure to confirm the accuracy of information on a reputable site like cdc.gov or nih.gov.");
+        setFeedback("That's correct. Morgan may be an Honest source. Be sure to confirm the accuracy of information on a reputable site like cdc.gov or nih.gov.");
         setEmotion('correct');
       }else{
-        setFeedback("Let's rethink this, that does not seem right.");
+        setFeedback("Let's rethink this. That does not seem right.");
         setEmotion('wrong');
       }
     } else if (author == "Taylor (Ann Arbor, MI)") {
       if( value === 'high') {
-        setFeedback("Let's rethink this...The caregiver is talking about an over-the-counter product to cure cancer. There is no scientific evidence or website to support this claim.");
+        setFeedback("Let's rethink this. The caregiver is talking about an over-the-counter product to cure cancer. There is no scientific evidence or website to support this claim.");
         setEmotion('wrong');
       }else{
-        setFeedback("That's correct! The caregiver is talking about an over-the-counter product to cure cancer. There is no scientific evidence or website to support this claim. ");
+        setFeedback("That's correct. The caregiver is talking about an over-the-counter product to cure cancer. There is no scientific evidence or website to support this claim. ");
         setEmotion('correct');
       }
     }
@@ -57,18 +57,18 @@ const HOPE_Activity = () => {
   } else if (dimension === 'Objectivity') {
     if( author === "Blood Cancer Foundation (BCF)" ) {
       if( value === 'high') {
-      setFeedback("That's correct!  The Blood Cancer Foundation's response recognizes that some complementary treatments can be used in cancer, but questions the effectiveness of green tea extract. The foundation further directs the user to a reputable website with information about complementary treatments to learn more.  The doctor is another example of providing an objective response.");
+      setFeedback("That's correct. The Blood Cancer Foundation's response recognizes that some complementary treatments can be used in cancer, but questions the effectiveness of green tea extract. The foundation further directs the user to a reputable website with information about complementary treatments to learn more.  The doctor is another example of providing an objective response.");
       setEmotion('correct');
     }else{
-      setFeedback("Let's rethink this, that does not seem right. The Blood Cancer Foundation is a reputable organization.");
+      setFeedback("Let's rethink this. That does not seem right. The Blood Cancer Foundation is a reputable organization.");
       setEmotion('wrong');
       };
   }else if (author == "Dr.Cortez (Tampa, FL)") {
     if( value === 'high') {
-      setFeedback("That's correct!  The doctor's responses demonstrate objectivity. The doctor recommends that Chris speaks to their doctor about clinical trials. She suggests that clinical trials are a good medical practice, but also recognizes that clinical trials don't always work for everyone.  Another example of an objective response is from the Blood Cancer Foundation.");
+      setFeedback("That's correct. The doctor's responses demonstrate objectivity. The doctor recommends that Chris speaks to their doctor about clinical trials. She suggests that clinical trials are a good medical practice, but also recognizes that clinical trials don't always work for everyone.  Another example of an objective response is from the Blood Cancer Foundation.");
       setEmotion('correct');
     }else{
-      setFeedback("Let's rethink this, that does not seem right. Dr. Cortez is a physician and his response is objective.");
+      setFeedback("Let's rethink this. That does not seem right. Dr. Cortez is a physician and his response is objective.");
       setEmotion('wrong');
       };
   } else if(author == "Morgan (Tempe, AZ)") {
@@ -76,12 +76,12 @@ const HOPE_Activity = () => {
       setFeedback("Wait a minute...  The patient presents only details about their own personal experience, so this would not be considered objective.  If you're looking for objective information, consider the responses from the Blood Cancer Foundation and the doctor.");
       setEmotion('wrong');
     }else{
-      setFeedback("Thats Correct! ");
+      setFeedback("Thats correct! ");
       setEmotion('correct');
     }
   } else if (author == "Taylor (Ann Arbor, MI)") {
     if( value === 'high') {
-      setFeedback("Let's think about this...  The caregiver only presents their spouse's experience and asks Chris to private message for more information about the product and its cost. Based on the HOPE Model, you should always use caution with this information. It's likely biased and driven by ulterior motives.");
+      setFeedback("Let's think about this. The caregiver only presents their spouse's experience and asks Chris to private message for more information about the product and its cost. Based on the HOPE Model, you should always use caution with this information. It's likely biased and driven by ulterior motives.");
       setEmotion('wrong');
     }else{
       setFeedback("That's correct! ");
@@ -92,18 +92,18 @@ const HOPE_Activity = () => {
   } else if (dimension === 'Practicality') {
     if( author === "Blood Cancer Foundation (BCF)" ) {
       if( value === 'high') {
-      setFeedback("That's correct!  The Blood Cancer Foundation's response recommends the user to refer to a website where they can learn more information about clinical trials and complementary treatments.");
+      setFeedback("That's correct! The Blood Cancer Foundation's response recommends the user to refer to a website where they can learn more information about clinical trials and complementary treatments.");
       setEmotion('correct');
     }else{
-      setFeedback("Let's rethink this, that does not seem right. The Blood Cancer Foundation is a reputable organization.");
+      setFeedback("Let's rethink this. That does not seem right. The Blood Cancer Foundation is a reputable organization.");
       setEmotion('wrong');
       };
   }else if (author == "Dr.Cortez (Tampa, FL)") {
     if( value === 'high') {
-      setFeedback("That's correct!  The doctor's message encourages the user to go to their own healthcare provider with questions about clinical trials.");
+      setFeedback("That's correct. The doctor's message encourages the user to go to their own healthcare provider with questions about clinical trials.");
       setEmotion('correct');
     }else{
-      setFeedback("Let's rethink this, that does not seem right. Dr. Cortez is a physician and his response is Practical.");
+      setFeedback("Let's rethink this. That does not seem right. Dr. Cortez is a physician and his response is Practical.");
       setEmotion('wrong');
       };
   } else if(author == "Morgan (Tempe, AZ)") {
@@ -126,18 +126,18 @@ const HOPE_Activity = () => {
 } else if (dimension === 'Practicality') {
     if( author === "Blood Cancer Foundation (BCF)" ) {
       if( value === 'high') {
-      setFeedback("That's correct!  The Blood Cancer Foundation's response recommends the user to refer to a website where they can learn more information about clinical trials and complementary treatments.");
+      setFeedback("That's correct. The Blood Cancer Foundation's response recommends the user to refer to a website where they can learn more information about clinical trials and complementary treatments.");
       setEmotion('correct');
     }else{
-      setFeedback("Let's rethink this, that does not seem right. The Blood Cancer Foundation is a reputable organization.");
+      setFeedback("Let's rethink this. That does not seem right. The Blood Cancer Foundation is a reputable organization.");
       setEmotion('wrong');
       };
   }else if (author == "Dr.Cortez (Tampa, FL)") {
     if( value === 'high') {
-      setFeedback("That's correct!  The doctor's message encourages the user to go to their own healthcare provider with questions about clinical trials.");
+      setFeedback("That's correct. The doctor's message encourages the user to go to their own healthcare provider with questions about clinical trials.");
       setEmotion('correct');
     }else{
-      setFeedback("Let's rethink this, that does not seem right. Dr. Cortez is a physician and his response is Practical.");
+      setFeedback("Let's rethink this. That does not seem right. Dr. Cortez is a physician and his response is Practical.");
       setEmotion('wrong');
       };
   } else if(author == "Morgan (Tempe, AZ)") {
@@ -145,7 +145,7 @@ const HOPE_Activity = () => {
       setFeedback("Wait a minute... The patient described their experience but didn't provide any instructions or next steps.");
       setEmotion('wrong');
     }else{
-      setFeedback("Thats Correct! ");
+      setFeedback("Thats correct! ");
       setEmotion('correct');
     }
   } else if (author == "Taylor (Ann Arbor, MI)") {
@@ -160,11 +160,11 @@ const HOPE_Activity = () => {
 } else{
   if(value == "high"){
     if( author === "Morgan (Tempe, AZ)" || author === "Taylor (Ann Arbor, MI)") {
-      setFeedback("That's correct!  That's right. Patients have their own level of non-medical expertise.");
+      setFeedback("That's correct. That's right. Patients have their own level of non-medical expertise.");
       setEmotion('correct');
   }else{
     setEmotion("correct");
-    setFeedback("That's correct!  Physicians and organizations like the Blood Cancer Foundation have medical expertise.");
+    setFeedback("That's correct. Physicians and organizations like the Blood Cancer Foundation have medical expertise.");
   }
 }
 else{
@@ -277,7 +277,7 @@ else{
             
         </div>
         <p className="mb-4">
-          The message board messages below show messages from four distinct sources: organization, caregiver, patient, physician. Rate each message as high or low on each of the four dimensions of HOPE (Honesty, Objectivity, Practicality, Expertise) and receive feedback on your response.
+          The message board below show messages from four distinct sources: organization, caregiver, patient, physician. Rate each message as high or low on each of the four dimensions of HOPE (Honesty, Objectivity, Practicality, Expertise) and receive feedback on your response.
         </p>
         <div className='flex flex-row items-center mb-4 shadow-md p-4 bg-white gap-4'>
             <img src={activityicon} alt='activity icon' className='w-1/10 h-auto mr-2'/>

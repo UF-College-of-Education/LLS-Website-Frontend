@@ -208,6 +208,11 @@ export default function MarcoLetterActivity() {
     return (
         <DndProvider backend={HTML5Backend}>
             <div className="max-w-6xl mx-auto p-4 sm:p-6 bg-gradient-to-br from-blue-50 to-indigo-100">
+              <div className="bg-blue-50 p-3 mb-4 sm:p-4 rounded-lg border border-blue-200">
+                                <p className="text-sm sm:text-base text-blue-700">
+                                    <strong>Instructions:</strong> Please read each statement that addresses how to talk to your family about one of the challenging topics we explored. Drag the communication strategy you could use to navigate that conversation and promote open and supportive communication in your family.
+                                </p>
+                            </div>
                 <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                     <div className="p-4 sm:p-6 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
                         {/* Letter Section */}
@@ -222,11 +227,7 @@ export default function MarcoLetterActivity() {
                                 ))}
                             </div>
 
-                            <div className="bg-blue-50 p-3 sm:p-4 rounded-lg border border-blue-200">
-                                <p className="text-sm sm:text-base text-blue-700">
-                                    <strong>Instructions:</strong> Please read each statement that addresses how to talk to your family about one of the challenging topics we explored. Drag the communication strategy you could use to navigate that conversation and promote open and supportive communication in your family.
-                                </p>
-                            </div>
+                            
                             </div>
                         
 

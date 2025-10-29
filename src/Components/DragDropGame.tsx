@@ -18,7 +18,7 @@ interface DragItem {
 // 'James Message content with highlighted sections
 const letterSections = [
   { id: 'greeting', text: 'Hi Brett', type: 'normal' },
-  { id: 'thanks', text: 'Thanks so much the message.', type: 'normal' },
+  { id: 'thanks', text: 'Thanks so much for the message.', type: 'normal' },
   { id: 'reflection', text: 'I watched the TikTok video you sent about the potential of Ivermectin to cure your mom’s cancer. ', type: 'draggable', color: 'bg-purple-200' },
   { id: 'concern', text: 'I am concerned about the credibility of this information because there aren’t studies showing it is safe or effective to treat cancer in humans.', type: 'draggable', color: 'bg-green-200' },
   { id: 'separator', text: '', type: 'separator' }, // New separator
@@ -223,15 +223,22 @@ export default function MarcoLetterActivity() {
   return (
     <DndProvider backend={HTML5Backend}>
       <div className="max-w-6xl m-auto p-6 bg-gradient-to-br from-blue-50 to-indigo-100 ">
+        <div className="bg-blue-50 p-4 mb-4 rounded-lg border border-blue-200">
+                <p className="text-sm text-blue-700">
+                  <strong>Instructions:</strong> Drag the highlighted sentences from James' Message to match them with the correct communication concepts below.
+                </p>
+            </div>
         <div className="bg-white rounded-xl shadow-lg overflow-hidden">
           {/* Header */}
           
-
-          <div className="p-6 grid grid-cols-1 lg:grid-cols-2 gap-8">
+          
+          <div className="p-6  grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Letter Section */}
+            
             <div className="space-y-6">
               <div>
-                <h2 className="text-xl font-semibold text-gray-800 mb-4">James Message</h2>
+                
+                <h2 className="text-xl font-semibold text-gray-800 mb-4">James' Message</h2>
                 <div className="bg-gradient-to-br from-yellow-50 to-orange-50 p-6 rounded-lg border-l-4 border-orange-300 shadow-sm">
                   <div className="font-handwriting text-lg leading-relaxed text-gray-800">
                     {letterSections.map((section, index) => (
@@ -245,11 +252,7 @@ export default function MarcoLetterActivity() {
                 </div>
               </div>
 
-              <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
-                <p className="text-sm text-blue-700">
-                  <strong>Instructions:</strong> Drag the highlighted sentences from James Message to match them with the correct communication concepts below.
-                </p>
-              </div>
+              
             </div>
 
             {/* Questions Section */}

@@ -25,13 +25,13 @@ const P2Sidebar: React.FC<SidebarProps> = ({ sections, currentSection, onSection
         {/* Sidebar for Small and Medium Screens */}
         {isOpen && (
           <div className="absolute top-full left-0 w-full bg-gray-100 p-4 z-50">
-            <h2 className="text-lg font-bold mb-2 text-black">Part 2 : Objective</h2>
+            <h2 className="text-lg font-bold mb-2 text-black">Part 2: Objective</h2>
             <div className="px-3">
               <span className="text-black font-extralight">
               Facilitating Open and Supportive Communication in the Family.
               </span>
             </div>
-            <h2 className="text-lg font-bold my-2 text-black">Part 2 - Outline</h2>
+            <h2 className="text-lg font-bold my-2 text-black">Part 2- Outline</h2>
             <ul>
               {sections.map((section) => (
                 <li
@@ -55,13 +55,13 @@ const P2Sidebar: React.FC<SidebarProps> = ({ sections, currentSection, onSection
 
       {/* Sidebar for Large Screens */}
       <div className="hidden md:block w-2/9 p-4 bg-gray-100 h-fit">
-        <h2 className="text-lg font-bold mb-2 text-black">Part 2 : Objective</h2>
+        <h2 className="text-lg font-bold mb-2 text-black">Part 2: Objective</h2>
         <div className="px-3">
           <span className="text-black font-extralight">
           Facilitating Open and Supportive Communication in the Family.
           </span>
         </div>
-        <h2 className="text-lg font-bold my-2 text-black">Part 2 - Outline</h2>
+        <h2 className="text-lg font-bold my-2 text-black">Part 2- Outline</h2>
         <ul>
           {sections.map((section) => (
             <li

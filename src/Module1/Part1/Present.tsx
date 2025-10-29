@@ -15,7 +15,7 @@ const Present = () => {
 
       <div className="w-full flex flex-col items-start">
       <span className="my-6 w-full text-sm sm:text-base rounded-xl shadow-2xl p-4 bg-white border border-gray-300">
-      Next, let's see how Anne and Nathan ask questions of the doctor.
+      Next, let's see how Anne and her husband, Nathan ask questions of the doctor.
 </span>    
       </div>
     </div>

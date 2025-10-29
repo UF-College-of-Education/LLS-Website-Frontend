@@ -15,7 +15,7 @@ const FutureUncertainty = () => {
       <div className="w-full flex flex-col items-start">
       <span className="font-bold font-bree mb-3 text-lg sm:text-xl">Future Uncertainty and Mortality</span>
         <span className="mb-3 font-bold text-xl sm:text-3xl">
-      Practicing "TIES" : Talking to Spouse about Future Uncertainty and Mortality
+      Practicing "TIES": Talking to a Spouse about Future Uncertainty and Mortality
         </span>
         
         <div className="relative w-full pt-[56.25%] bg-white">
