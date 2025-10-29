@@ -21,37 +21,25 @@ const LandingPage: React.FC = () => {
   const benefits = [
     {
       icon: CircleCheckBig,
-      text: "Evidence-Based Skills",
+      text: "focused on improving communication skills",
       gradient: "#2B6DFF",
       delay: "150ms"
     },
     {
       icon: Award,
-      text: "Proven Effectiveness",
+      text: "evidence-based",
       gradient: "#00C950",
       delay: "150ms"
     },
     {
       icon: Brain,
-      text: "Improved Mental Health",
+      text: "effective in improving communication and mental health",
       gradient: "#AD46FF",
       delay: "150ms"
     },
     {
-      icon: Heart,
-      text: "Improved Communication Skills",
-      gradient: "#F6339A",
-      delay: "150ms"
-    },
-    {
-      icon: Users,
-      text: "Enhanced Care Ability",
-      gradient: "#615FFF",
-      delay: "150ms"
-    },
-    {
       icon: Target,
-      text: "Targeted Guidance",
+      text: "Targeting Guidance based on the disease & relationship",
       gradient: "#FF6900",
       delay: "150ms"
     }
@@ -68,7 +56,7 @@ const LandingPage: React.FC = () => {
       featured: true
     },
     {
-      title: "Expert Videos",
+      title: "Expert Guides",
       description: "Learn from experts in caregiving, healthcare, and family communication",
       icon: Video,
       image: hero21,
@@ -111,6 +99,50 @@ const LandingPage: React.FC = () => {
   const caregiverTypes = [
     {
       id: 1,
+      title: "Young-Adult Caregiving Daughters",
+      icon: Users,
+      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
+      delay: "500ms",
+      comingSoon: true
+    },
+    {
+      id: 2,
+      title: "Midlife Caregiving Daughters",
+      icon: Heart,
+      image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
+      delay: "700ms",
+      comingSoon: false
+    },
+    {
+      id: 3,
+      title: "Midlife-Later Life Caregiving Mothers",
+      icon: Brain,
+      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
+      delay: "900ms",
+      comingSoon: true
+    }
+  ];
+  const caregiverTypesDementia = [
+    {
+      id: 1,
+      title: "Spouse Caregiver",
+      icon: Users,
+      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
+      delay: "500ms",
+      comingSoon: true
+    },
+    {
+      id: 2,
+      title: "Adult-Child Caregiver of Parent",
+      icon: Brain,
+      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
+      delay: "900ms",
+      comingSoon: true
+    }
+  ];
+  const caregiverTypesHCP = [
+    {
+      id: 1,
       title: "Adult-Child Caregiver of Parent",
       icon: Users,
       image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
@@ -121,8 +153,8 @@ const LandingPage: React.FC = () => {
       id: 2,
       title: "Spouse Caregiver",
       icon: Heart,
-      image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
-      delay: "700ms",
+      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
+      delay: "900ms",
       comingSoon: false
     },
     {
@@ -133,6 +165,7 @@ const LandingPage: React.FC = () => {
       delay: "900ms",
       comingSoon: true
     }
+
   ];
   const programs = [
     'Blood Cancer',
@@ -265,7 +298,7 @@ const LandingPage: React.FC = () => {
                     {/* Description */}
                     <p className="text-lg text-black leading-relaxed max-w-2xl">
                         a self-paced, online program using real caregivers’ narratives to empower family caregivers to develop communication skills that can promote their caregiving ability and mental well-being.
-                         The goal of the program is to <u>enhance caregivers’ health with communication skills support.</u> 
+                         The goal of the program is to <u>enhance caregivers’ health with communication skills support.</u> We offer multiple programs targeted to family caregivers’ distinct needs based on the disease type & relationship.
                     </p>
                     </div>
 
@@ -340,8 +373,8 @@ const LandingPage: React.FC = () => {
       </section>
 
     {/* Why Section*/}
-    <section className="bg-[#FFF6F6] py-16 px-8 md:px-16 flex flex-col md:flex-row justify-center items-center">
-            <div className="w-full md:w-1/2 pr-16 my-auto">
+    <section className="bg-[#FFF6F6] py-16 px-8 md:px-16 flex flex-col  justify-center items-center">
+            <div className="z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="inline-flex items-center px-4 py-2 mb-6 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
           <Heart className="w-4 h-4 mr-2" />
           Why It Matters
@@ -352,15 +385,13 @@ const LandingPage: React.FC = () => {
             Healthy Communication Practice
           </span>
         </h2>
-        <p className="my-8 text-sm text-black">
-                Caregiving communication skills promote better care and health outcomes for family caregivers and for the loved ones they care for. Healthy Communication Practice takes an evidence-based skills approach to helping caregivers communicate in their caregiving role. 
-              </p>
-              <p className="mb-8 text-sm text-black">This program has proven effectiveness in enhancing caregivers’ mental well-being while increasing communication skills. It is grounded in rigorous research conducted by leading caregiving experts and developed in partnership with renowned health organizations and family caregivers. </p>
-            <p className="mb-8 text-sm text-black">We offer multiple programs targeted to family caregivers’ distinct needs based on the disease type (e.g., blood cancer, dementia) & relationship (e.g., spouse, parent).</p>
+        <p className="my-8 text-lg text-black">
+        Caregiving communication skills promote better care and health outcomes for family caregivers and for the loved ones they care for. Healthy Communication Practice is the only supportive program available to caregivers that is...</p>
+              {/* <p clsName="mb-8 text-sm text-black">We offer multiple programs targeted to family caregivers’ distinct needs based on the disease type (e.g., blood cancer, dementia) & relationship (e.g., spouse, parent).</p> */}
             </div>
             
         <div className="relative transform transition-all duration-1000 translate-x-0 opacity-100">
-          <div className="grid grid-cols-3 gap-16 max-w-full mx-auto">
+          <div className="grid grid-cols-4 gap-16 max-w-full mx-auto">
             {benefits.map((benefit, index) => {
               const IconComponent = benefit.icon;
               
@@ -487,28 +518,27 @@ const LandingPage: React.FC = () => {
     
                   {/* Heading */}
                   <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-                    An Evidence-Based,{' '}
+                    Evidence-Based,{' '}
                     <span className="bg-gradient-to-r from-[#8C2B1D] via-[#992A2C] via-50% via-[#EC4899] to-[#F1685E] bg-clip-text text-transparent">
                       Narrative Learning Approach
                     </span>{' '}
-                    to Promoting Caregiver's Well-Being
+                    to Supporting Caregiver's
                   </h2>
     
                   {/* Description paragraphs */}
-                  <p className="text-xl text-gray-700 leading-relaxed">
-                    To teach the skills in a memorable and relatable way, Healthy Communication Practice uses evidence-based, theory-driven communication models that are introduced by experts in caregiving, healthcare and family communication, mental health, and the disease context.
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                  Users learn caregiving communication skills through experts who introduce memorable theory- driven communication models and by observing caregivers enact the skills in real stories drawn from extensive research.
                   </p>
     
                   <p className="text-lg text-gray-600 leading-relaxed">
-                    Users will watch caregivers model communication skills in challenging care conversations using real caregivers' narratives captured through extensive research so that caregivers can relate to the stories, promoting their skill development.
-                  </p>
+                  Developed in partnership with instructional design experts, users will feel engaged and can practice skills with interactive activities at home and at their own pace.</p>
+                  
                 </div>
     
                 {/* Highlighted box */}
                 <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-2xl border border-blue-100">
                   <p className="text-gray-700 leading-relaxed">
-                    This program has been developed in partnership with education and instructional design experts to ensure caregivers become engaged via interactive activities like writing prompts, drag and drop quizzes, and interactive videos. Caregivers can work on their own and at their own pace.
-                  </p>
+                  Developed in partnership with instructional design experts, users will feel engaged and can practice skills with interactive activities at home and at their own pace.</p>
                 </div>
               </div>
     
@@ -556,7 +586,7 @@ const LandingPage: React.FC = () => {
                   })}
     
                   {/* Fifth item spans both columns */}
-                  <div
+                  {/* <div
                     className="col-span-2 relative group cursor-pointer transform transition-all duration-500 hover:scale-105 translate-y-0 opacity-100"
                     style={{ transitionDelay: features[4]?.delay }}
                   >
@@ -580,7 +610,7 @@ const LandingPage: React.FC = () => {
                         </p>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
     
                 {/* Bottom info card */}
@@ -604,56 +634,7 @@ const LandingPage: React.FC = () => {
           </div>
       </section>
 
-    {/* Testimonial Section*/}
-    <div className="py-10 mb-4">
-          <div className="relative max-w-4xl mx-auto transform transition-all duration-1000 translate-y-0 opacity-100 scale-100">
-            <div className="relative bg-white rounded-3xl shadow-2xl p-8 md:p-12 overflow-hidden group hover:shadow-3xl transition-all duration-500">
-              
-              {/* Decorative background circles */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-700"></div>
-              <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-pink-100 to-[#ce2c37] rounded-full translate-y-12 -translate-x-12 group-hover:scale-150 transition-transform duration-700"></div>
-              
-              {/* Quote icon */}
-              <div className="relative mb-4">
-                <div className="inline-flex items-center justify-center w-8 h-8 bg-[#ce2c37] rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <Quote className="w-4 h-4 text-white" />
-                </div>
-              </div>
-              
-              {/* Testimonial text */}
-              <div className="relative z-10 mb-8">
-                <blockquote className="text-lg md:text-xl text-gray-800 leading-relaxed font-medium italic">
-                  "Appreciate you taking the time to [create] Healthy Communication Practice. No one really understands what caregivers go through until they are thrust into the position. It is challenging and can break you in ways you never expected. Thank you for shining a light and helping with coping mechanisms."
-                </blockquote>
-              </div>
-              
-              {/* Author and rating */}
-              <div className="relative z-10 flex items-center justify-between">
-                <div>
-                  <div className="text-md font-semibold text-gray-900">
-                    - Family Caregiver
-                  </div>
-                </div>
-                
-                {/* 5-star rating */}
-                <div className="flex space-x-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star 
-                      key={i}
-                      className="w-5 h-5 text-yellow-400 fill-current transition-all duration-300"
-                      style={{ transitionDelay: `${500 + i * 100}ms` }}
-                    />
-                  ))}
-                </div>
-              </div>
-              
-              {/* Animated border on hover */}
-              <div className="absolute inset-0 rounded-3xl border-2 border-transparent bg-gradient-to-r from-[#8C2B1D] via-[#992A2C] via-50% via-[#EC4899] to-[#DB2777] opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-0.5">
-                <div className="w-full h-full bg-white rounded-3xl"></div>
-              </div>
-            </div>
-          </div>
-      </div>
+    
 
     {/* COntext Section */}
     <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
@@ -672,13 +653,13 @@ const LandingPage: React.FC = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
             Communication Skills in{" "}
             <span className="bg-gradient-to-r from-[#8C2B1D] via-[#992A2C] via-50% via-[#EC4899] to-[#F1685E]  bg-clip-text text-transparent" >
-              Key Caregiving Contexts
+              Three Caregiving Contexts
             </span>
           </h2>
-          <p className="text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto">
+          {/* <p className="text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto">
             The Healthy Communication Practice program teaches communication skills that will help caregivers 
             navigate complex and important care conversations in online, clinical, and family contexts.
-          </p>
+          </p> */}
         </div>
 
         {/* Three context cards */}
@@ -690,9 +671,9 @@ const LandingPage: React.FC = () => {
               <div className="inline-flex items-center justify-center w-16 h-16  rounded-2xl  mb-6 group-hover:scale-110 transition-transform duration-300">
                 <Monitor className="w-8 h-8 text-black" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Online Context</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Online Communication</h3>
               <p className="text-gray-700 leading-relaxed">
-                Sharing cancer information with clinicians and family members
+              Discussing online cancer information with clinicians and family members
               </p>
               <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300">
                 <ArrowRight className="w-5 h-5 text-black" />
@@ -707,9 +688,9 @@ const LandingPage: React.FC = () => {
               <div className="inline-flex items-center justify-center w-16 h-16  mb-6 group-hover:scale-110 transition-transform duration-300">
                 <Stethoscope className="w-8 h-8 text-black" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Clinical Context</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Clinical Communication</h3>
               <p className="text-gray-700 leading-relaxed">
-                Talking with your loved one's doctors in clinical settings
+                Talking with your family member's doctors in clinical settings
               </p>
               <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300">
                 <ArrowRight className="w-5 h-5 text-black" />
@@ -724,9 +705,9 @@ const LandingPage: React.FC = () => {
               <div className="inline-flex items-center justify-center w-16 h-16  mb-6 group-hover:scale-110 transition-transform duration-300">
                 <Users className="w-8 h-8 text-black" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Family Context</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Family Communication</h3>
               <p className="text-gray-700 leading-relaxed">
-                Facilitating open, supportive communication with family
+                Facilitating open,supportive communication with family about challenging topics
               </p>
               <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300">
                 <ArrowRight className="w-5 h-5 text-black" />
@@ -738,7 +719,7 @@ const LandingPage: React.FC = () => {
         {/* Program Structure Section */}
         <div id='resources' className="transform transition-all duration-1000 delay-500 translate-y-0 opacity-100">
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Program Structure</h3>
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">Two Program Structure</h3>
             <p className="text-lg text-gray-600">
               The program is divided into two parts, with each part taking about 45 minutes to complete:
             </p>
@@ -835,57 +816,6 @@ const LandingPage: React.FC = () => {
       </div>
      </section>
 
-    {/*Testimonial-2 Section*/}
-    <div className="py-10 mb-4">
-          <div className="relative max-w-4xl mx-auto transform transition-all duration-1000 translate-y-0 opacity-100 scale-100">
-            <div className="relative bg-white rounded-3xl shadow-2xl p-8 md:p-12 overflow-hidden group hover:shadow-3xl transition-all duration-500">
-              
-              {/* Decorative background circles */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-700"></div>
-              <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-pink-100 to-[#ce2c37] rounded-full translate-y-12 -translate-x-12 group-hover:scale-150 transition-transform duration-700"></div>
-              
-              {/* Quote icon */}
-              <div className="relative mb-4">
-                <div className="inline-flex items-center justify-center w-8 h-8 bg-[#ce2c37] rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <Quote className="w-4 h-4 text-white" />
-                </div>
-              </div>
-              
-              {/* Testimonial text */}
-              <div className="relative z-10 mb-8">
-                <blockquote className="text-lg md:text-xl text-gray-800 leading-relaxed font-medium italic">
-                  "Appreciate you taking the time to [create] Healthy Communication Practice. No one really understands what caregivers go through until they are thrust into the position. It is challenging and can break you in ways you never expected. Thank you for shining a light and helping with coping mechanisms."
-                </blockquote>
-              </div>
-              
-              {/* Author and rating */}
-              <div className="relative z-10 flex items-center justify-between">
-                <div>
-                  <div className="text-md font-semibold text-gray-900">
-                    - Family Caregiver
-                  </div>
-                </div>
-                
-                {/* 5-star rating */}
-                <div className="flex space-x-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star 
-                      key={i}
-                      className="w-5 h-5 text-yellow-400 fill-current transition-all duration-300"
-                      style={{ transitionDelay: `${500 + i * 100}ms` }}
-                    />
-                  ))}
-                </div>
-              </div>
-              
-              {/* Animated border on hover */}
-              <div className="absolute inset-0 rounded-3xl border-2 border-transparent bg-gradient-to-r from-[#8C2B1D] via-[#992A2C] via-50% via-[#EC4899] to-[#DB2777] opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-0.5">
-                <div className="w-full h-full bg-white rounded-3xl"></div>
-              </div>
-            </div>
-          </div>
-      </div>
-
     {/*HCP Section */}
     <section
     id="HCP"
@@ -918,7 +848,7 @@ const LandingPage: React.FC = () => {
                 >
             <div className="inline-flex items-center px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full text-white font-medium">
               <Heart className="w-5 h-5 mr-2" />
-              LLS Partnership
+              Blood Cancer United
             </div>
 
             <div className="space-y-6">
@@ -929,14 +859,12 @@ const LandingPage: React.FC = () => {
               <p className="text-xl text-white/90 leading-relaxed">
                 Each year nearly 200,000 people will be diagnosed with a leukemia, lymphoma or myeloma 
                 (Blood Cancer United, 2025). Blood cancers can be chronic (with no cure) or acute and 
-                require immediate life-changing treatment that can extend for years.
+                require immediate life-changing treatment for years.
               </p>
 
               <div className="text-lg text-white/80 leading-relaxed">
-                A blood cancer diagnosis can also occur across the lifespan, requiring families to care 
-                for a child, spouse, or aging parent. With support from The Leukemia & Lymphoma Society (LLS), 
-                we offer three options to support different types of family caregivers of a loved one living 
-                with a blood cancer.
+                Blood cancer can occur across the lifespan, requiring families to care 
+                for a child, spouse, or aging parent. With support from Blood Cancer United, we offer three options to support family caregivers affected by blood cancer.
               </div>
             </div>
 
@@ -954,7 +882,7 @@ const LandingPage: React.FC = () => {
           {/* Right column - Caregiver type circles */}
           <div className="relative transform transition-all duration-1000 delay-300 translate-x-0 opacity-100">
             <div className="grid grid-cols-2 gap-8 max-w-md mx-auto">
-              {caregiverTypes.map((caregiver, index) => {
+              {caregiverTypesHCP.map((caregiver, index) => {
                 const IconComponent = caregiver.icon;
                 const isThirdItem = index === 2;
                 
@@ -1109,7 +1037,7 @@ const LandingPage: React.FC = () => {
             {/* Left Column - Interactive Cards */}
           <div className="relative transform transition-all duration-1000 delay-300 translate-x-0 opacity-100">
             <div className="grid grid-cols-2 gap-8 max-w-md mx-auto">
-              {caregiverTypes.map((caregiver, index) => {
+              {caregiverTypesDementia.map((caregiver, index) => {
                 const IconComponent = caregiver.icon;
                 const isThirdItem = index === 2;
                 
@@ -1208,20 +1136,20 @@ const LandingPage: React.FC = () => {
                 </h2>
                 
                 <p className="text-xl text-white/90 leading-relaxed">
-                  Alzheimer's disease and related dementias affect nearly 7 million people over the age of 65—a number that is expected to double over the next 40 years (Alzheimer's Association, 2025).
+                  Alzheimer's disease and related dementias affect nearly 7 million people over the age of 65—a number expected to double over the next 40 years (Alzheimer's Association, 2025).
                 </p>
                 
                 <div className="text-lg text-white/80 leading-relaxed">
-                  Dementia caregiving continuously increases as the disease progresses, and caregivers become increasingly relied on during medical appointments. With support from the Florida Department of Health (FDOH) Ed & Ethel Moore Alzheimer's Disease Research Grant Program, we offer two options to support different types of family caregivers of a loved one with dementia.
+                  Dementia caregiving increases as the disease progresses, and caregivers are increasingly relied on during medical appointments. With support from the <u><a href='https://www.floridahealth.gov/provider-and-partner-resources/research/funding-opportunity-announcements/alzheimersfoa.html'>Florida Department of Health (FDOH) Ed & Ethel Moore Alzheimer's Disease Research Grant Program</a></u>, we offer two options to support family caregivers of a loved one with dementia.
                 </div>
               </div>
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                <a href='https://www.floridahealth.gov/provider-and-partner-resources/research/funding-opportunity-announcements/alzheimersfoa.html'  className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                   Learn More
                   <ArrowRight className="inline-block ml-2 w-5 h-5" />
-                </button>
+                </a>
                 <button className="text-white border-2 border-white/30  px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300">
                   View Research
                 </button>
@@ -1316,11 +1244,12 @@ const LandingPage: React.FC = () => {
                 </h2>
                 
                 <p className="text-xl text-white/90 leading-relaxed">
-                  Today more than 4 million women are living with breast cancer (National Cancer Institute, 2025). Daughters often provide caregiving to their mothers and increasingly are young adults daughters (aged 18-39).
+                  Today more than 4 million women are living with breast cancer (National Cancer Institute, 2025). Daughters often provide caregiving to their mothers and they are increasingly young adults (aged 18-39)  who are the most at risk for
+                  distress.
                 </p>
                 
                 <div className="text-lg text-white/80 leading-relaxed">
-                  These daughters are the most at risk for distress and burden and also describe needing helping communicating in their caregiving role (Fenton et al., 2021). With support from the University of Health Cancer Center and National Institute on Aging (NIA) we offer two options to support both caregiving daughters and their mothers living with breast cancer.
+                  With support from the <u><a href='https://cancer.ufl.edu/'>University of Florida Health Cancer Center</a></u> and <u><a href='https://nia.gov/'>National Institute on Aging (NIA)</a></u> we offer three options to support both caregiving mothers and daughters across the lifespan.
                 </div>
               </div>
 
@@ -1454,16 +1383,35 @@ const LandingPage: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Programs</h3>
             <ul className="space-y-2 text-gray-400">
-              {programs.map((program, index) => (
-                <li key={index}>
+                {programs.map((program, index) => {
+                // Map program names to their corresponding section IDs
+                const sectionIds: Record<string, string> = {
+                  'Blood Cancer': 'HCP',
+                  'Dementia': 'dementia',
+                  'Breast Cancer': 'BC',
+                  'About': ''
+                };
+                
+                const sectionId = sectionIds[program] || '';
+                
+                return (
+                  <li key={index}>
                   <a 
-                    href="#" 
+                    href={`#${sectionId}`}
                     className="hover:text-white transition-colors cursor-pointer"
+                    onClick={(e) => {
+                    e.preventDefault();
+                    const element = document.getElementById(sectionId);
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                    }}
                   >
                     {program}
                   </a>
-                </li>
-              ))}
+                  </li>
+                );
+                })}
             </ul>
           </div>
 
