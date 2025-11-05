@@ -19,6 +19,7 @@ import FutureUncertainty from '../Module1/Part2/FutureUncertainty';
 import DistressingEmotions from '../Module1/Part2/DistressingEmotions';
 import Conclusion from '../Module1/Part2/Conclusion';
 import Resources from '../Module1/Part2/Resources';
+import Acknowledgements from '../Module1/Part2/Acknowledgements';
 
 
 //Part 1 Modules
@@ -83,7 +84,7 @@ const Module2 = () => {
       case 'resources':
         return <Resources />;
       case 'acknowledgements':
-        return <p>Acknowledgements goes here</p>;
+        return <Acknowledgements/>;
       default:
         return <p>Select a section from the sidebar.</p>;
     }

@@ -78,7 +78,7 @@ function Team() {
               <div>
                 <h2 className="text-3xl md:text-4xl font-(family-name:--font-bree) font-bold text-black mb-4">Meet the Developers - Principal Investigators</h2>
                 <div className="flex flex-col md:flex-row shadow-lg items-stretch">
-                    <div className="w-[45%] h-[95%] md:w-[30%]">
+                    <div className="w-[45%] h-[45%] md:w-[30%]">
                       <img
                         src={carma}
                         alt="Carma Bylund Image"
@@ -87,10 +87,10 @@ function Team() {
                     </div>
                     <div className="w-full md:w-[70%] flex flex-col items-start p-4">
                         <span className="text-left my-1 text-xl md:text-2xl text-black font-(family-name:--font-bree)">
-                            Carma Bylund, Ph.D
+                            Carma L. Bylund, PhD
                         </span>
                         <b className="text-left my-1 font-(family-name:--font-open-sans) text-black">
-                            Primary Investigator
+                        Principal Investigator
                         </b>
                         <p className="text-left my-1 text-black text-sm md:text-base">
                             Carma L. Bylund is Professor and Associate Chair of Education in the Department of Health
@@ -115,10 +115,10 @@ function Team() {
                     </div>
                     <div className="w-full md:w-[70%] flex flex-col items-start p-4">
                         <span className="text-left my-1 text-xl md:text-2xl text-black font-(family-name:--font-bree)">
-                            Carla Fisher, Ph.D, MSW
+                            Carla L. Fisher, PhD, MSW
                         </span>
                         <b className="text-left my-1 font-(family-name:--font-open-sans) text-black">
-                            Co-Primary Investigator
+                        Principal Investigator
                         </b>
                         <p className="text-left my-1 text-black text-sm md:text-base">
                             Carla L. Fisher is Professor in the Department of Health Outcomes and Biomedical Informatics
