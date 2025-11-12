@@ -77,15 +77,15 @@ function Team() {
 
               <div>
                 <h2 className="text-3xl md:text-4xl font-(family-name:--font-bree) font-bold text-black mb-4">Meet the Developers - Principal Investigators</h2>
-                <div className="flex flex-col md:flex-row shadow-lg items-stretch">
-                    <div className="w-[45%] h-[45%] md:w-[30%]">
+                <div className="flex flex-col mt-3 md:flex-row shadow-lg">
+                    <div className="w-[45%] md:w-[20%]">
                       <img
                         src={carma}
                         alt="Carma Bylund Image"
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div className="w-full md:w-[70%] flex flex-col items-start p-4">
+                    <div className="w-full md:w-[70%] flex flex-col items-start p-4 m-auto">
                         <span className="text-left my-1 text-xl md:text-2xl text-black font-(family-name:--font-bree)">
                             Carma L. Bylund, PhD
                         </span>
@@ -106,14 +106,14 @@ function Team() {
                     </div>
                 </div>
                 <div className="flex flex-col mt-3 md:flex-row shadow-lg">
-                    <div className="w-[45%] h-[95%] md:w-[30%]">
+                    <div className="w-[45%] md:w-[20%]">
                         <img
                             src={carla}
                             alt="Carla Fisher Image"
                             className="w-full h-fullobject-cover"
                         />
                     </div>
-                    <div className="w-full md:w-[70%] flex flex-col items-start p-4">
+                    <div className="w-full md:w-[70%] flex flex-col items-start p-4 m-auto">
                         <span className="text-left my-1 text-xl md:text-2xl text-black font-(family-name:--font-bree)">
                             Carla L. Fisher, PhD, MSW
                         </span>
@@ -136,15 +136,15 @@ function Team() {
               </div>
               <div>
                 <h2 className="text-3xl md:text-4xl font-(family-name:--font-bree) font-bold text-black mb-4">Meet the Collaborating Experts</h2>
-                <div className="flex flex-col md:flex-row shadow-lg items-stretch">
-                    <div className="w-[45%] h-[95%] md:w-[30%]">
+                <div className="flex flex-col mt-3 md:flex-row shadow-lg">
+                    <div className="w-[45%] md:w-[20%]">
                         <img
                             src={samantha}
                             alt="Samantha Paige Image"
                             className="w-full h-full object-cover"
                         />
                     </div>
-                    <div className="w-full md:w-[70%] flex flex-col items-start p-4">
+                    <div className="w-full md:w-[70%] flex flex-col items-start p-4 m-auto">
                         <span className="text-left my-1 text-xl md:text-2xl text-black font-(family-name:--font-bree)">
                         Samantha Paige, PhD, MPH
                         </span>
@@ -157,7 +157,7 @@ function Team() {
                     </div>
                 </div>
                 <div className="flex flex-col mt-3 md:flex-row shadow-lg">
-                    <div className="w-[45%] h-[95%] md:w-[30%]">
+                    <div className="w-[45%] md:w-[20%]">
                         <img
                             src={allison}
                             alt="Allison Applebaum Image"

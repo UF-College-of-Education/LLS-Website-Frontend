@@ -17,6 +17,7 @@ import logo1 from "../assets/logos/BloodCancerUnited2025.svg"
 import logo2 from "../assets/logos/FDOH.png"
 import logo3 from "../assets/logos/nih-nia-logo.svg"
 import logo4 from "../assets/logos/ufhealth-full.svg"
+import Button from '../Components/Button';
 
 
 
@@ -278,7 +279,7 @@ const LandingPage: React.FC = () => {
       </nav>
 
     {/* Hero Section */}
-    <section className="min-h-screen mt-12 flex items-center justify-center overflow-hidden bg-[#FFFFFF]">
+    <section className=" mt-48 mb-24 flex items-center justify-center overflow-hidden bg-[#FFFFFF]">
             {/* Main content */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -337,7 +338,7 @@ const LandingPage: React.FC = () => {
                     </div>
 
                     {/* Stats */}
-                    <div className="grid grid-cols-3 gap-6 pt-8">
+                    {/* <div className="grid grid-cols-3 gap-6 pt-8">
                     <div className="text-center transform transition-all duration-1000 delay-0 translate-y-0 opacity-100">
                         <Users className="w-8 h-8 text-pink-300 mx-auto mb-2" />
                         <div className="text-2xl font-bold text-black">10,000+</div>
@@ -353,7 +354,7 @@ const LandingPage: React.FC = () => {
                         <div className="text-2xl font-bold text-black">4.9/5</div>
                         <div className="text-sm text-black">Average Rating</div>
                     </div>
-                    </div>
+                    </div> */}
                 </div>
 
                 {/* Right column - Visual content */}
@@ -378,7 +379,7 @@ const LandingPage: React.FC = () => {
       </section>
 
     {/* Why Section*/}
-    <section className="bg-[#FFF6F6] py-16 px-8 md:px-16 flex flex-col  justify-center items-center">
+    <section className="bg-[#FFF6F6] py-8 px-8 md:px-16 flex flex-col justify-center items-center">
             <div className="z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="inline-flex items-center px-4 py-2 mb-6 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
           <Heart className="w-4 h-4 mr-2" />
@@ -457,7 +458,7 @@ const LandingPage: React.FC = () => {
       </section>
 
     {/* Testimonial Section*/}
-    <div className="py-10 mb-4">
+    <div className="py-10 mb-2">
           <div className="relative max-w-4xl mx-auto transform transition-all duration-1000 translate-y-0 opacity-100 scale-100">
             <div className="relative bg-white rounded-3xl shadow-2xl p-8 md:p-12 overflow-hidden group hover:shadow-3xl transition-all duration-500">
               
@@ -640,7 +641,7 @@ const LandingPage: React.FC = () => {
       </section>
 
     {/* COntext Section */}
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+    <section className="py-10 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_2px_2px,_theme(colors.blue.500)_2px,_transparent_0)] bg-[size:60px_60px]"></div>
@@ -727,10 +728,12 @@ const LandingPage: React.FC = () => {
               The program is divided into two parts, with each part taking about 45 minutes to complete:
             </p>
           </div>
+            
 
-          <div className="grid md:grid-cols-2 gap-8">
+            {/* without images parts strictuces*/}
+          {/* <div className="grid md:grid-cols-2 gap-8"> */}
             {/* Part I */}
-            <div onClick={()=> {window.location.href = "https://healthycommunicationpractice.com/"}} className="group relative cursor-pointer transform transition-all duration-500 hover:scale-102">
+            {/* <div onClick={()=> {window.location.href = "https://healthycommunicationpractice.com/"}} className="group relative cursor-pointer transform transition-all duration-500 hover:scale-102">
               <div className="bg-white p-8 group-hover:shadow-2xl transition-all duration-300 border-2 border-[#F1685E] rounded-3xl">
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center space-x-4">
@@ -770,10 +773,10 @@ const LandingPage: React.FC = () => {
                   ))}
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* Part II */}
-            <div onClick={()=> {navigate("/course")}} id='part2' className="group relative cursor-pointer transform transition-all duration-500 hover:scale-102">
+            {/* <div onClick={()=> {navigate("/course")}} id='part2' className="group relative cursor-pointer transform transition-all duration-500 hover:scale-102">
               <div className="bg-white p-8 group-hover:shadow-2xl transition-all duration-300 border-2 border-[#F1685E] rounded-3xl">
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center space-x-4">
@@ -814,6 +817,49 @@ const LandingPage: React.FC = () => {
                 </div>
               </div>
             </div>
+          </div> */}
+
+
+          {/*Duplicating it*/}
+          <div className="grid md:grid-cols-2 gap-8 mt-4">
+            {/* Part I */}
+            <div className='flex flex-row border-2 border-[#F1685E] rounded-3xl overflow-hidden'>
+              <div className='w-[30%] border-r-2 border-gray-300 mr-2'>
+                <img src={hero1} alt="Part 1 preview" className="w-full h-full object-cover " />
+              </div>
+              <div className='w-[70%] ml-3 flex flex-col gap-2 m-auto p-2'>
+                <h3 className="text-lg font-semibold">Part I: Foundation communication skills and online information sharing</h3>
+                <div className="flex items-center text-gray-500 text-sm">
+                        <Clock className="w-4 h-4 mr-1" />
+                        About 45 minutes
+                </div>
+                <p>We will describe skills for evaluating online health information, communicating online with others about health information, 
+                  and communicating with doctors about online health information. Then, we will look at key skills you can use to support your parent in their clinical visits.
+                </p>
+                <Button name='GO TO PART-I' link='https://healthycommunicationpractice.com/'  arrow={true} arrowPosition='right'/>
+              </div>
+
+            </div>
+
+            {/* Part II */}
+            <div className='flex flex-row border-2 border-[#F1685E] rounded-3xl overflow-hidden'>
+              <div className='w-[30%] border-r-2 border-gray-300 mr-2'>
+                <img src={hero5} alt="Part II preview" className="w-full h-full object-cover " />
+              </div>
+              <div className='w-[70%] ml-3 flex flex-col gap-2 m-auto p-2 '>
+                <h3 className="text-lg font-semibold">Part II: Advanced Skills for clinical and family conversations</h3>
+                <div className="flex items-center text-gray-500 text-sm">
+                        <Clock className="w-4 h-4 mr-1" />
+                        About 45 minutes
+                </div>
+                <p>We will explore the importance of finding meaning in your caregiving role as well as how to strengthen your family relationships with open and supportive communication skills.
+                   Then, we will look at how to use these skills when navigating relational challenges and difficult but important caregiving conversations.</p>
+                <Button name='GO TO PART-II' link='' onClick={()=> {navigate("/course")}} arrow={true} arrowPosition='right' />
+              </div>
+
+            </div>
+
+            
           </div>
         </div>
       </div>
@@ -822,7 +868,7 @@ const LandingPage: React.FC = () => {
     {/*HCP Section */}
     <section
     id="HCP"
-      className="py-20 bg-relative overflow-hidden "
+      className="py-10 bg-relative overflow-hidden "
       style={{
         background: `linear-gradient(358deg,rgba(28, 28, 28, 0.99) 0%, rgba(26, 26, 26, 0.55) 72%), url(${hero3})`,
         backgroundSize: "cover",
@@ -1007,7 +1053,7 @@ const LandingPage: React.FC = () => {
     <div id="dementia" className="transform transition-transform duration-100 ease-out">
       
       <section
-      className="py-20 bg-relative overflow-hidden"
+      className="py-10 bg-relative overflow-hidden"
       style={{
         backgroundImage: `linear-gradient(358deg,rgba(28, 28, 28, 0.99) 0%, rgba(26, 26, 26, 0.55) 72%),url(${hero4})`,
         backgroundSize: "cover",
@@ -1201,7 +1247,7 @@ const LandingPage: React.FC = () => {
     {/* Breast Cancer Section */}
     <div id="BC" className="transform transition-transform duration-100 ease-out">
     <section
-      className="py-20 bg-relative overflow-hidden"
+      className="py-10 bg-relative overflow-hidden"
       style={{
         backgroundImage: `linear-gradient(358deg,rgba(28, 28, 28, 0.99) 0%, rgba(26, 26, 26, 0.55) 72%),url(${hero5})`,
         backgroundSize: "cover",
