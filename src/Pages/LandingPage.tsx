@@ -8,15 +8,24 @@ import hero21 from "../assets/LLS Screenshots/aab.jpg"
 import hero22 from "../assets/LLS Screenshots/bba.jpg"
 import hero23 from "../assets/LLS Screenshots/baa.jpg"
 import hero24 from "../assets/LLS Screenshots/abb.jpg"
-import hero3 from "../assets/LLS Screenshots/bab.jpg";
-import hero4 from "../assets/LLS Screenshots/aaa.jpg";
-import hero5 from "../assets/LLS Screenshots/abc.jpg"
+import hero14 from "../assets/carma.jpg"
+import hero15 from "../assets/carla.png"
+import hero16 from "../assets/hopemodel.jpg"
+import hero33 from "../assets/LLS Screenshots/bab.jpg";
+import hero3 from "../assets/bloodcancer.png";
+import hero43 from "../assets/interactiveactivites.jpg"
+// import hero4 from "../assets/LLS Screenshots/aaa.jpg";
+import hero4 from "../assets/dementiastill.png"
+import hero5 from "../assets/LLS Screenshots/abc.jpg";
+import hero55 from "../assets/breastcancerstill.png"
 import HeroCarousel from '../Components/HeroCarousel';
-import Slider from 'react-infinite-logo-slider'
-import logo1 from "../assets/logos/BloodCancerUnited2025.svg"
+// import Slider from 'react-infinite-logo-slider'
+import logo1 from "../assets/logos/bloodcancerunitedlogo.jpg";
 import logo2 from "../assets/logos/FDOH.png"
-import logo3 from "../assets/logos/nih-nia-logo.svg"
-import logo4 from "../assets/logos/ufhealth-full.svg"
+import logo3 from "../assets/logos/NIAlogo.png"
+// import logo4 from "../assets/logos/ufhealth-full.svg"
+import logo5 from "../assets/logos/BloodCancerUnited2025.svg"
+import logo6 from "../assets/logos/UFhealthlogo.png"
 import Button from '../Components/Button';
 
 
@@ -55,7 +64,7 @@ const LandingPage: React.FC = () => {
       title: "Memorable Communication Models",
       description: "Evidence-based, theory-driven communication models introduced by experts",
       icon: BookOpen,
-      image: hero2,
+      image: hero16,
       gradient: "from-black to-gray-900",
       iconcolor:"#1A5EE2",
       delay: "0ms",
@@ -65,7 +74,7 @@ const LandingPage: React.FC = () => {
       title: "Expert Guides",
       description: "Learn from experts in caregiving, healthcare, and family communication",
       icon: Video,
-      image: hero21,
+      image: hero33,
       gradient: "from-black to-gray-900",
       iconcolor:"#00A63E",
       delay: "100ms",
@@ -85,7 +94,7 @@ const LandingPage: React.FC = () => {
       title: "Interactive Activities",
       description: "Writing prompts, drag and drop quizzes, and interactive videos",
       icon: Activity,
-      image: hero23,
+      image: hero43,
       gradient: "from-black to-gray-900",
       iconcolor:"#9810FA",
       delay: "300ms",
@@ -361,7 +370,7 @@ const LandingPage: React.FC = () => {
                 <div className="relative transform transition-all duration-3000 delay-300 translate-x-0 opacity-100">
                     <div className="relative">
                     {/* Main image container */}
-                    <HeroCarousel images={[hero1, hero2, hero3]} interval={4000} />
+                    <HeroCarousel images={[hero1, hero2, hero3, hero14, hero15]} interval={4000} />
 
                     {/* Live support badge */}
                     <div className="absolute -top-4 -right-4 bg-white/95 backdrop-blur-sm p-4 rounded-2xl shadow-lg animate-bounce z-50">
@@ -568,7 +577,7 @@ const LandingPage: React.FC = () => {
                             <img
                               src={feature.image}
                               alt={feature.title}
-                              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                              className="w-full h-full object-left transition-transform duration-500 group-hover:scale-110"
                             />
                           </div>
                           <div className={`absolute inset-0 bg-gradient-to-t ${feature.gradient} opacity-80 group-hover:opacity-90 transition-opacity duration-300`}></div>
@@ -828,7 +837,7 @@ const LandingPage: React.FC = () => {
                 <img src={hero1} alt="Part 1 preview" className="w-full h-full object-cover " />
               </div>
               <div className='w-[70%] ml-3 flex flex-col gap-2 m-auto p-2'>
-                <h3 className="text-lg font-semibold">Part I: Foundation communication skills and online information sharing</h3>
+                <h3 className="text-lg font-semibold">Part I: Navigating Cancer Information in Online and Clinical Settings</h3>
                 <div className="flex items-center text-gray-500 text-sm">
                         <Clock className="w-4 h-4 mr-1" />
                         About 45 minutes
@@ -847,7 +856,7 @@ const LandingPage: React.FC = () => {
                 <img src={hero5} alt="Part II preview" className="w-full h-full object-cover " />
               </div>
               <div className='w-[70%] ml-3 flex flex-col gap-2 m-auto p-2 '>
-                <h3 className="text-lg font-semibold">Part II: Advanced Skills for clinical and family conversations</h3>
+                <h3 className="text-lg font-semibold">Part II: Facilitating Open and Supportive Communication in the Family</h3>
                 <div className="flex items-center text-gray-500 text-sm">
                         <Clock className="w-4 h-4 mr-1" />
                         About 45 minutes
@@ -862,6 +871,39 @@ const LandingPage: React.FC = () => {
             
           </div>
         </div>
+
+        {/* Collaboration logos */}
+        <div className="text-center mt-15">
+          <h3 className="text-3xl font-bold text-gray-900 mb-4">In Collaboration With</h3>
+
+          <div className="overflow-hidden mt-4">
+            <div
+              className="flex items-center"
+              style={{ width: '200%', willChange: 'transform', animation: 'marquee 20s linear infinite' }}
+              aria-hidden={false}
+              role="list"
+            >
+              {[
+                logo1, logo2, logo3,  logo5, logo6,
+              ].concat([logo1, logo2, logo3,  logo5, logo6]).map((logoSrc, idx) => (
+                <div key={idx} className="flex-shrink-0 flex items-center justify-center mx-6" role="listitem">
+                  <img src={logoSrc} alt={`partner-${idx}`} className="h-20 w-40 object-contain" />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <style>{`
+            @keyframes marquee {
+              0% { transform: translateX(0); }
+              100% { transform: translateX(-50%); }
+            }
+            /* reduce motion preference respect */
+            @media (prefers-reduced-motion: reduce) {
+              .animate-marquee, .flex[style*="animation"] { animation: none !important; }
+            }
+          `}</style>
+        </div>
       </div>
      </section>
     
@@ -870,182 +912,183 @@ const LandingPage: React.FC = () => {
     id="HCP"
       className="py-10 bg-relative overflow-hidden "
       style={{
-        background: `linear-gradient(358deg,rgba(28, 28, 28, 0.99) 0%, rgba(26, 26, 26, 0.55) 72%), url(${hero3})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center"
+      background: `linear-gradient(358deg,rgba(28, 28, 28, 0.99) 0%, rgba(26, 26, 26, 0.55) 72%), url(${hero3})`,
+      backgroundSize: "auto, cover",
+      backgroundPosition: "center, center",
+      backgroundRepeat: "no-repeat"
       }}
     >
       {/* Background patterns and effects */}
       <div
-        className="absolute inset-0"
-        style={{
-          background: "linear-gradient(16%, #1b1b1b 20%, #0D0D0D 94%, #0D0D0D 100%)",
-          opacity: 0.8,
-        }}
+      className="absolute inset-0"
+      style={{
+        background: "linear-gradient(16%, #1b1b1b 20%, #0D0D0D 94%, #0D0D0D 100%)",
+        opacity: 0.8,
+      }}
       ></div>
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_1px_1px,_white_1px,_transparent_0)] bg-[size:40px_40px]"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_1px_1px,_white_1px,_transparent_0)] bg-[size:40px_40px]"></div>
       </div>
       <div className="absolute top-20 right-10 w-32 h-32 bg-white/20 rounded-full blur-2xl animate-pulse"></div>
       <div className="absolute bottom-20 left-10 w-40 h-40 bg-white/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
 
       <div className="relative  max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left column - Text content */}
-                <div 
-                className="space-y-8 transform transition-all duration-1000 translate-x-0 opacity-100 bg-[#e60505]/55 backdrop-blur-md rounded-3xl p-6 z-10"
-                >
-            <div className="inline-flex items-center px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full text-white font-medium">
-              <Heart className="w-5 h-5 mr-2" />
-              Blood Cancer United
-            </div>
+      <div className="grid lg:grid-cols-2 gap-16 items-center">
+        {/* Left column - Text content */}
+          <div 
+          className="space-y-8 transform transition-all duration-1000 translate-x-0 opacity-100 bg-[#e60505]/65 backdrop-blur-md rounded-3xl p-6 z-10"
+          >
+        <div className="inline-flex items-center px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full text-white font-medium">
+          <Heart className="w-5 h-5 mr-2" />
+          Blood Cancer United
+        </div>
 
-            <div className="space-y-6">
-              <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
-                Healthy Communication Practice for Blood Cancer Caregiving
-              </h2>
-              
-              <p className="text-xl text-white/90 leading-relaxed">
-                Each year nearly 200,000 people will be diagnosed with a leukemia, lymphoma or myeloma 
-                (Blood Cancer United, 2025). Blood cancers can be chronic (with no cure) or acute and 
-                require immediate life-changing treatment for years.
-              </p>
+        <div className="space-y-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+          Healthy Communication Practice for Blood Cancer Caregiving
+          </h2>
+          
+          <p className="text-xl text-white/90 leading-relaxed">
+          Each year nearly 200,000 people will be diagnosed with a leukemia, lymphoma or myeloma 
+          (Blood Cancer United, 2025). Blood cancers can be chronic (with no cure) or acute and 
+          require immediate life-changing treatment for years.
+          </p>
 
-              <div className="text-lg text-white/80 leading-relaxed">
-                Blood cancer can occur across the lifespan, requiring families to care 
-                for a child, spouse, or aging parent. With support from Blood Cancer United, we offer three options to support family caregivers affected by blood cancer.
-              </div>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                Learn More
-                <ArrowRight className="inline-block ml-2 w-5 h-5" />
-              </button>
-              <button className="text-white border-2 border-white/30 px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300">
-                View Research
-              </button>
-            </div>
-          </div>
-
-          {/* Right column - Caregiver type circles */}
-          <div className="relative transform transition-all duration-1000 delay-300 translate-x-0 opacity-100">
-            <div className="grid grid-cols-2 gap-8 max-w-md mx-auto">
-              {caregiverTypesHCP.map((caregiver, index) => {
-                const IconComponent = caregiver.icon;
-                const isThirdItem = index === 2;
-                
-                return (
-                  <div 
-                    key={caregiver.id}
-                    className={`relative group cursor-pointer transform transition-all duration-500 translate-y-0 opacity-100 hover:scale-110 ${
-                      isThirdItem ? 'col-span-2 justify-self-center' : ''
-                    }`}
-                    style={{ transitionDelay: caregiver.delay }}
-                  >
-                    <div className="relative w-40 h-40 rounded-full bg-white/95 backdrop-blur-sm flex items-center justify-center shadow-2xl group-hover:shadow-3xl transition-all duration-300 overflow-hidden">
-                      {/* Background image */}
-                      {/* <div className="absolute inset-0 rounded-full overflow-hidden">
-                        <img 
-                          src={caregiver.image}
-                          alt={caregiver.title}
-                          className="w-full h-full object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-300"
-                        />
-                      </div> */}
-
-                      {/* Gradient overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-red-500 to-red-600 opacity-10 group-hover:opacity-20 transition-opacity duration-300 rounded-full"></div>
-
-                      {/* Content */}
-                      <div className="relative z-10 text-center p-4">
-                        <IconComponent className="w-8 h-8 text-gray-700 mx-auto mb-2 group-hover:scale-110 transition-transform duration-300" />
-                        <div className="text-gray-900 text-sm font-bold leading-tight">
-                          {caregiver.title}
-                        </div>
-                        {caregiver.comingSoon && (
-                          <div className="text-xs text-gray-500 mt-1 font-medium">
-                            *Coming Soon
-                          </div>
-                        )}
-                      </div>
-
-                      {/* Border ring effect */}
-                      <div className="absolute inset-0 rounded-full border-2 border-white/50 scale-100 group-hover:scale-125 opacity-100 group-hover:opacity-0 transition-all duration-500"></div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-
-            {/* Decorative SVG lines */}
-            {/* <svg 
-              className="absolute inset-0 w-full h-full pointer-events-none" 
-              style={{ zIndex: -1 }}
-            >
-              <defs>
-                <linearGradient 
-                  id="lineGradient" 
-                  x1="0%" 
-                  y1="0%" 
-                  x2="100%" 
-                  y2="100%"
-                >
-                  <stop offset="0%" stopColor="white" stopOpacity="0.3" />
-                  <stop offset="100%" stopColor="white" stopOpacity="0.1" />
-                </linearGradient>
-              </defs>
-              <path 
-                d="M 80 80 Q 200 120 320 80" 
-                stroke="url(#lineGradient)" 
-                strokeWidth="2" 
-                fill="none" 
-                className="animate-draw-line"
-              />
-              <path 
-                d="M 80 240 Q 200 200 320 240" 
-                stroke="url(#lineGradient)" 
-                strokeWidth="2" 
-                fill="none" 
-                className="animate-draw-line"
-                style={{ animationDelay: '0.5s' }}
-              />
-            </svg> */}
+          <div className="text-lg text-white/80 leading-relaxed">
+          Blood cancer can occur across the lifespan, requiring families to care 
+          for a child, spouse, or aging parent. With support from Blood Cancer United, we offer three options to support family caregivers affected by blood cancer.
           </div>
         </div>
+
+        <div className="flex flex-col sm:flex-row gap-4">
+          <button className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+          Learn More
+          <ArrowRight className="inline-block ml-2 w-5 h-5" />
+          </button>
+          <button className="text-white border-2 border-white/30 px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300">
+          View Research
+          </button>
+        </div>
+        </div>
+
+        {/* Right column - Caregiver type circles */}
+        <div className="relative transform transition-all duration-1000 delay-300 translate-x-0 opacity-100">
+        <div className="grid grid-cols-2 gap-8 max-w-md mx-auto">
+          {caregiverTypesHCP.map((caregiver, index) => {
+          const IconComponent = caregiver.icon;
+          const isThirdItem = index === 2;
+          
+          return (
+            <div 
+            key={caregiver.id}
+            className={`relative group cursor-pointer transform transition-all duration-500 translate-y-0 opacity-100 hover:scale-110 ${
+              isThirdItem ? 'col-span-2 justify-self-center' : ''
+            }`}
+            style={{ transitionDelay: caregiver.delay }}
+            >
+            <div className="relative w-40 h-40 rounded-full bg-white/95 backdrop-blur-sm flex items-center justify-center shadow-2xl group-hover:shadow-3xl transition-all duration-300 overflow-hidden">
+              {/* Background image */}
+              {/* <div className="absolute inset-0 rounded-full overflow-hidden">
+              <img 
+                src={caregiver.image}
+                alt={caregiver.title}
+                className="w-full h-full object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-300"
+              />
+              </div> */}
+
+              {/* Gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-red-500 to-red-600 opacity-10 group-hover:opacity-20 transition-opacity duration-300 rounded-full"></div>
+
+              {/* Content */}
+              <div className="relative z-10 text-center p-4">
+              <IconComponent className="w-8 h-8 text-gray-700 mx-auto mb-2 group-hover:scale-110 transition-transform duration-300" />
+              <div className="text-gray-900 text-sm font-bold leading-tight">
+                {caregiver.title}
+              </div>
+              {caregiver.comingSoon && (
+                <div className="text-xs text-gray-500 mt-1 font-medium">
+                *Coming Soon
+                </div>
+              )}
+              </div>
+
+              {/* Border ring effect */}
+              <div className="absolute inset-0 rounded-full border-2 border-white/50 scale-100 group-hover:scale-125 opacity-100 group-hover:opacity-0 transition-all duration-500"></div>
+            </div>
+            </div>
+          );
+          })}
+        </div>
+
+        {/* Decorative SVG lines */}
+        {/* <svg 
+          className="absolute inset-0 w-full h-full pointer-events-none" 
+          style={{ zIndex: -1 }}
+        >
+          <defs>
+          <linearGradient 
+            id="lineGradient" 
+            x1="0%" 
+            y1="0%" 
+            x2="100%" 
+            y2="100%"
+          >
+            <stop offset="0%" stopColor="white" stopOpacity="0.3" />
+            <stop offset="100%" stopColor="white" stopOpacity="0.1" />
+          </linearGradient>
+          </defs>
+          <path 
+          d="M 80 80 Q 200 120 320 80" 
+          stroke="url(#lineGradient)" 
+          strokeWidth="2" 
+          fill="none" 
+          className="animate-draw-line"
+          />
+          <path 
+          d="M 80 240 Q 200 200 320 240" 
+          stroke="url(#lineGradient)" 
+          strokeWidth="2" 
+          fill="none" 
+          className="animate-draw-line"
+          style={{ animationDelay: '0.5s' }}
+          />
+        </svg> */}
+        </div>
+      </div>
       </div>
 
       <style>{`
-        @keyframes fade-in {
-          from {
-            opacity: 0;
-            transform: translateY(10px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
+      @keyframes fade-in {
+        from {
+        opacity: 0;
+        transform: translateY(10px);
         }
+        to {
+        opacity: 1;
+        transform: translateY(0);
+        }
+      }
 
-        @keyframes draw-line {
-          from {
-            stroke-dasharray: 1000;
-            stroke-dashoffset: 1000;
-          }
-          to {
-            stroke-dasharray: 1000;
-            stroke-dashoffset: 0;
-          }
+      @keyframes draw-line {
+        from {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
         }
+        to {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 0;
+        }
+      }
 
-        .animate-fade-in {
-          animation: fade-in 0.3s ease-out;
-        }
+      .animate-fade-in {
+        animation: fade-in 0.3s ease-out;
+      }
 
-        .animate-draw-line {
-          stroke-dasharray: 1000;
-          stroke-dashoffset: 1000;
-          animation: draw-line 2s ease-out forwards;
-        }
+      .animate-draw-line {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: draw-line 2s ease-out forwards;
+      }
       `}</style>
       </section>
 
@@ -1055,7 +1098,7 @@ const LandingPage: React.FC = () => {
       <section
       className="py-10 bg-relative overflow-hidden"
       style={{
-        backgroundImage: `linear-gradient(358deg,rgba(28, 28, 28, 0.99) 0%, rgba(26, 26, 26, 0.55) 72%),url(${hero4})`,
+        backgroundImage: `linear-gradient(358deg,rgba(28, 28, 28, 0.99) 0%, rgba(26, 26, 26, 0.55) 82%),url(${hero4})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -1169,7 +1212,7 @@ const LandingPage: React.FC = () => {
 
           {/* Right Column - Text Content */}
           <div 
-                className="space-y-8 transform transition-all duration-1000 translate-x-0 opacity-100 bg-[#4A0D66]/75 backdrop-blur-md rounded-3xl p-6"
+                className="space-y-8 transform transition-all duration-1000 translate-x-0 opacity-100 bg-[#4A0D66]/35 backdrop-blur-md rounded-3xl p-6"
                 >
               
               {/* Partnership Badge */}
@@ -1249,7 +1292,7 @@ const LandingPage: React.FC = () => {
     <section
       className="py-10 bg-relative overflow-hidden"
       style={{
-        backgroundImage: `linear-gradient(358deg,rgba(28, 28, 28, 0.99) 0%, rgba(26, 26, 26, 0.55) 72%),url(${hero5})`,
+        backgroundImage: `linear-gradient(358deg,rgba(28, 28, 28, 0.99) 0%, rgba(26, 26, 26, 0.55) 85%),url(${hero55})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -1277,7 +1320,7 @@ const LandingPage: React.FC = () => {
             
             {/* Left Column - Text Content */}
             <div 
-                className="space-y-8 transform transition-all duration-1000 translate-x-0 opacity-100 bg-[#E52D87]/75 backdrop-blur-md rounded-3xl p-6"
+                className="space-y-8 transform transition-all duration-1000 translate-x-0 opacity-100 bg-[#E52D87]/40 backdrop-blur-md rounded-3xl p-6"
                 >
               
               {/* Partnership Badge */}
@@ -1480,12 +1523,6 @@ const LandingPage: React.FC = () => {
                 <Mail className="w-4 h-4" />
                 <span>support@healthycomm.org</span>
               </div>
-              
-              <div className="flex items-center space-x-2">
-                <Phone className="w-4 h-4" />
-                <span>1-800-CAREGIVER</span>
-              </div>
-              
               <div className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4" />
                 <span>University Research Center</span>
