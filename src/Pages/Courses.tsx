@@ -121,7 +121,7 @@ const Courses = () => {
               <span className="flex flex-row gap-5 justify-start">
                 <Clock className="w-8 h-8 mr-1" />
                 <span className="font-(family-name:--font-bree) font-medium tracking-widest text-black text-lg md:text-2xl">
-                  30 MINUTES
+                  45 MINUTES
                 </span>
               </span>
               <span className="font-(family-name:--font-open-sans) font-light text-[#2F2F2F] text-sm md:text-base">

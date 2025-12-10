@@ -8,7 +8,7 @@ import hero21 from "../assets/LLS Screenshots/aab.jpg"
 import hero22 from "../assets/LLS Screenshots/bba.jpg"
 import hero23 from "../assets/LLS Screenshots/baa.jpg"
 import hero24 from "../assets/LLS Screenshots/abb.jpg"
-import hero14 from "../assets/carma.jpg"
+import hero14 from "../assets/carma1.png"
 import hero15 from "../assets/carla.png"
 import hero16 from "../assets/hopemodel.jpg"
 import hero33 from "../assets/LLS Screenshots/bab.jpg";
@@ -131,7 +131,7 @@ const LandingPage: React.FC = () => {
     {
       id: 3,
       title: "Midlife-Later Life Caregiving Mothers",
-      icon: Brain,
+      icon: Users,
       image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
       delay: "900ms",
       comingSoon: true
@@ -149,7 +149,7 @@ const LandingPage: React.FC = () => {
     {
       id: 2,
       title: "Adult-Child Caregiver of Parent",
-      icon: Brain,
+      icon: Users,
       image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
       delay: "900ms",
       comingSoon: true
@@ -167,7 +167,7 @@ const LandingPage: React.FC = () => {
     {
       id: 2,
       title: "Spouse Caregiver",
-      icon: Heart,
+      icon: Users,
       image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
       delay: "900ms",
       comingSoon: false
@@ -175,7 +175,7 @@ const LandingPage: React.FC = () => {
     {
       id: 3,
       title: "Parent Caregiver of Adolescent or Young Adult (AYA)",
-      icon: Brain,
+      icon: Users,
       image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
       delay: "900ms",
       comingSoon: true
@@ -216,7 +216,7 @@ const LandingPage: React.FC = () => {
   }, [location]);
 
   const handleScrollToResources = () => {
-    const section = document.getElementById("resources");
+    const section = document.getElementById("HCP");
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
@@ -319,19 +319,19 @@ const LandingPage: React.FC = () => {
 
                     {/* CTA buttons */}
                     <div className="flex flex-col sm:flex-row gap-4">
-                    <div
+                    <button
                       onClick={handleScrollToResources}
                       aria-controls="resources"
                       className="group cursor-pointer select-none rounded-full bg-[#8C2B1D] px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-300 transform hover:scale-105 hover:bg-blue-50 hover:text-[#8C2B1D] hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#8C2B1D]"
                     >
-                      <div className="inline-flex items-center " onClick={handleScrollToResources}>
+                      <div className="inline-flex items-center">
                         Explore Resources
                         <ArrowRight
                           aria-hidden="true"
                           className="ml-2 h-5 w-5 transform transition-transform duration-300 group-hover:translate-x-1 "
                         />
                       </div>
-                    </div>
+                    </button>
 
                     <button
                       type="button"
@@ -372,12 +372,12 @@ const LandingPage: React.FC = () => {
                     <HeroCarousel images={[hero1, hero2, hero3, hero14, hero15]} interval={4000} />
 
                     {/* Live support badge */}
-                    <div className="absolute -top-4 -right-4 bg-white/95 backdrop-blur-sm p-4 rounded-2xl shadow-lg animate-bounce z-50">
+                    {/* <div className="absolute -top-4 -right-4 bg-white/95 backdrop-blur-sm p-4 rounded-2xl shadow-lg animate-bounce z-50">
                         <div className="flex items-center space-x-2">
                         <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
                         <span className="text-sm font-medium text-gray-700">Expert Course Content</span>
                         </div>
-                    </div>
+                    </div> */}
 
                     
                     </div>
@@ -394,10 +394,10 @@ const LandingPage: React.FC = () => {
           Why It Matters
         </div>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-          Why Caregivers Need{" "}
-          <span className="bg-gradient-to-r from-[#8C2B1D] via-[#992A2C] via-50% via-[#EC4899] to-[#F1685E] bg-clip-text text-transparent">
+          Why Caregivers Need{" "} Healthy Communication Practice
+          {/* <span className="bg-gradient-to-r from-[#8C2B1D] via-[#992A2C] via-50% via-[#EC4899] to-[#F1685E] bg-clip-text text-transparent">
             Healthy Communication Practice
-          </span>
+          </span> */}
         </h2>
         <p className="my-8 text-lg text-black">
         Caregiving communication skills promote better care and health outcomes for family caregivers and for the loved ones they care for. Healthy Communication Practice is the only supportive program available to caregivers that is...</p>
@@ -532,11 +532,11 @@ const LandingPage: React.FC = () => {
     
                   {/* Heading */}
                   <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-                    Evidence-Based,{' '}
-                    <span className="bg-gradient-to-r from-[#8C2B1D] via-[#992A2C] via-50% via-[#EC4899] to-[#F1685E] bg-clip-text text-transparent">
+                    Evidence-Based,{' '} Narrative Learning Approach
+                    {/* <span className="bg-gradient-to-r from-[#8C2B1D] via-[#992A2C] via-50% via-[#EC4899] to-[#F1685E] bg-clip-text text-transparent">
                       Narrative Learning Approach
-                    </span>{' '}
-                    to Supporting Caregivers
+                    </span>{' '} */}
+                    {' '} to Supporting Caregivers
                   </h2>
     
                   {/* Description paragraphs */}
@@ -558,7 +558,7 @@ const LandingPage: React.FC = () => {
     
               {/* Right Column - Feature Grid */}
               <div className="relative transform transition-all duration-1000 delay-300 translate-x-0 opacity-100">
-                <div className="grid grid-cols-2 gap-16">
+                <div className="grid grid-cols-2 gap-8">
                   {features.slice(0, 4).map((feature, index) => {
                     const IconComponent = feature.icon;
                     const isFeatured = true; // First item is featured
@@ -663,10 +663,10 @@ const LandingPage: React.FC = () => {
             Key Caregiving Contexts
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
-            Communication Skills in{" "}
-            <span className="bg-gradient-to-r from-[#8C2B1D] via-[#992A2C] via-50% via-[#EC4899] to-[#F1685E]  bg-clip-text text-transparent" >
+            Communication Skills in{" "} Three Caregiving Contexts
+            {/* <span className="bg-gradient-to-r from-[#8C2B1D] via-[#992A2C] via-50% via-[#EC4899] to-[#F1685E]  bg-clip-text text-transparent" >
               Three Caregiving Contexts
-            </span>
+            </span> */}
           </h2>
           {/* <p className="text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto">
             The Healthy Communication Practice program teaches communication skills that will help caregivers 
@@ -687,9 +687,9 @@ const LandingPage: React.FC = () => {
               <p className="text-gray-700 leading-relaxed">
               Discussing online cancer information with clinicians and family members
               </p>
-              <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300">
+              {/* <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300">
                 <ArrowRight className="w-5 h-5 text-black" />
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -704,9 +704,9 @@ const LandingPage: React.FC = () => {
               <p className="text-gray-700 leading-relaxed">
                 Talking with your family member's doctors in clinical settings
               </p>
-              <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300">
+              {/* <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300">
                 <ArrowRight className="w-5 h-5 text-black" />
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -721,9 +721,9 @@ const LandingPage: React.FC = () => {
               <p className="text-gray-700 leading-relaxed">
                 Facilitating open,supportive communication with family about challenging topics
               </p>
-              <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300">
+              {/* <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300">
                 <ArrowRight className="w-5 h-5 text-black" />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -833,7 +833,7 @@ const LandingPage: React.FC = () => {
             {/* Part I */}
             <div className='flex flex-row border-2 border-[#F1685E] rounded-3xl overflow-hidden'>
               <div className='w-[30%] border-r-2 border-gray-300 mr-2'>
-                <img src={hero1} alt="Part 1 preview" className="w-full h-full object-cover " />
+                <img src={hero5} alt="Part 1 preview" className="w-full h-full object-cover " />
               </div>
               <div className='w-[70%] ml-3 flex flex-col gap-2 m-auto p-2'>
                 <h3 className="text-lg font-semibold">Part I: Navigating Cancer Information in Online and Clinical Settings</h3>
@@ -844,7 +844,7 @@ const LandingPage: React.FC = () => {
                 <p>We will describe skills for evaluating online health information, communicating online with others about health information, 
                   and communicating with doctors about online health information. Then, we will look at key skills you can use to support your parent in their clinical visits.
                 </p>
-                <Button name='GO TO PART-I' link='https://healthycommunicationpractice.com/'  arrow={true} arrowPosition='right'/>
+                {/* <Button name='GO TO PART-I' link='https://healthycommunicationpractice.com/'  arrow={true} arrowPosition='right'/> */}
               </div>
 
             </div>
@@ -852,7 +852,7 @@ const LandingPage: React.FC = () => {
             {/* Part II */}
             <div className='flex flex-row border-2 border-[#F1685E] rounded-3xl overflow-hidden'>
               <div className='w-[30%] border-r-2 border-gray-300 mr-2'>
-                <img src={hero5} alt="Part II preview" className="w-full h-full object-cover " />
+                <img src={hero1} alt="Part II preview" className="w-full h-full object-cover " />
               </div>
               <div className='w-[70%] ml-3 flex flex-col gap-2 m-auto p-2 '>
                 <h3 className="text-lg font-semibold">Part II: Facilitating Open and Supportive Communication in the Family</h3>
@@ -862,7 +862,7 @@ const LandingPage: React.FC = () => {
                 </div>
                 <p>We will explore the importance of finding meaning in your caregiving role as well as how to strengthen your family relationships with open and supportive communication skills.
                    Then, we will look at how to use these skills when navigating relational challenges and difficult but important caregiving conversations.</p>
-                <Button name='GO TO PART-II' link='' onClick={()=> {navigate("/course")}} arrow={true} arrowPosition='right' />
+                {/* <Button name='GO TO PART-II' link='' onClick={()=> {navigate("/course")}} arrow={true} arrowPosition='right' /> */}
               </div>
 
             </div>
@@ -883,8 +883,8 @@ const LandingPage: React.FC = () => {
               role="list"
             >
               {[
-                logo1, logo2, logo3,  logo5, logo6,
-              ].concat([logo1, logo2, logo3,  logo5, logo6]).map((logoSrc, idx) => (
+                 logo2, logo3,  logo5, logo6
+              ].concat([ logo2, logo3,  logo5, logo6]).map((logoSrc, idx) => (
                 <div key={idx} className="flex-shrink-0 flex items-center justify-center mx-6" role="listitem">
                   <img src={logoSrc} alt={`partner-${idx}`} className="h-20 w-40 object-contain" />
                 </div>
@@ -960,7 +960,7 @@ const LandingPage: React.FC = () => {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4">
-          <button className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+          <button onClick={() => window.open('https://healthycommunicationpractice.org', '_blank')} className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
           Learn More
           <ArrowRight className="inline-block ml-2 w-5 h-5" />
           </button>
@@ -1470,12 +1470,12 @@ const LandingPage: React.FC = () => {
               Empowering family caregivers with evidence-based communication skills to enhance their caregiving ability and mental well-being through real caregiver narratives and expert guidance.
             </p>
             
-            <div className="flex items-center space-x-1">
+            {/* <div className="flex items-center space-x-1">
               {renderStars()}
               <span className="text-sm text-gray-400 ml-2">
                 4.9/5 from 10,000+ caregivers
               </span>
-            </div>
+            </div> */}
           </div>
 
           {/* Programs Section */}
@@ -1520,12 +1520,12 @@ const LandingPage: React.FC = () => {
             <div className="space-y-3 text-gray-400">
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
-                <span>support@healthycomm.org</span>
+                <span>Healthy-communication@ufl.edu</span>
               </div>
-              <div className="flex items-center space-x-2">
+              {/* <div className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4" />
                 <span>University Research Center</span>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
