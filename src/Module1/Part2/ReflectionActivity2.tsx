@@ -9,7 +9,7 @@ const ReflectionActivity2 = () => {
       </div>
 
       <div className='flex flex-col items-center justify-items-center mt-10'> 
-        <span className='font-bold text-xl text-center'> What are your families’ communication strengths in being open or supportive when it comes to coping with cancer and caregiving?</span>
+        <span className='font-bold text-xl text-center'> What are your Family's communication strengths in being open or supportive when it comes to coping with cancer and caregiving?</span>
         <span className='font-bold text-xl mt-5'> Where could you work on enhancing these skills?</span>
       </div>
 

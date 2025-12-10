@@ -241,9 +241,9 @@ const LandingPage: React.FC = () => {
           <a href="#sponsors" className="text-white hover:text-gray-900 font-bold">
             Sponsors
           </a>
-          <button className="bg-[#F1685E] text-[#8C2B1D] px-4 py-2 rounded-full font-bold text-sm">
+          {/* <button className="bg-[#F1685E] text-[#8C2B1D] px-4 py-2 rounded-full font-bold text-sm">
             Donate
-          </button>
+          </button> */}
         </div>
         <div className="md:hidden flex items-center">
           <button
@@ -281,9 +281,9 @@ const LandingPage: React.FC = () => {
           <a href="#sponsors" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
         Sponsors
           </a>
-          <button className="block w-full text-left px-4 py-2 bg-[#F1685E] text-white rounded font-bold">
+          {/* <button className="block w-full text-left px-4 py-2 bg-[#F1685E] text-white rounded font-bold">
         Donate
-          </button>
+          </button> */}
         </div>
       </nav>
 
@@ -312,31 +312,30 @@ const LandingPage: React.FC = () => {
 
                     {/* Description */}
                     <p className="text-lg text-black leading-relaxed max-w-2xl">
-                        a self-paced, online program using real caregivers’ narratives to empower family caregivers to develop communication skills that can promote their caregiving ability and mental well-being.
+                        A self-paced, online program using real caregivers’ narratives to empower family caregivers to develop communication skills that can promote their caregiving ability and mental well-being.
                          The goal of the program is to <u>enhance caregivers’ health with communication skills support.</u> We offer multiple programs targeted to family caregivers’ distinct needs based on the disease type & relationship.
                     </p>
                     </div>
 
                     {/* CTA buttons */}
                     <div className="flex flex-col sm:flex-row gap-4">
-                    <button
-                      type="button"
+                    <div
                       onClick={handleScrollToResources}
                       aria-controls="resources"
-                      className="group cursor-pointer select-none rounded-full bg-[#8C2B1D] px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-300 transform hover:scale-105 hover:bg-blue-50 hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#8C2B1D]"
+                      className="group cursor-pointer select-none rounded-full bg-[#8C2B1D] px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-300 transform hover:scale-105 hover:bg-blue-50 hover:text-[#8C2B1D] hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#8C2B1D]"
                     >
-                      <span className="inline-flex items-center">
+                      <div className="inline-flex items-center " onClick={handleScrollToResources}>
                         Explore Resources
                         <ArrowRight
                           aria-hidden="true"
-                          className="ml-2 h-5 w-5 transform transition-transform duration-300 group-hover:translate-x-1"
+                          className="ml-2 h-5 w-5 transform transition-transform duration-300 group-hover:translate-x-1 "
                         />
-                      </span>
-                    </button>
+                      </div>
+                    </div>
 
                     <button
                       type="button"
-                      className="group flex items-center cursor-pointer select-none rounded-full border-2 border-white/30 bg-[#8C2B1D] px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:bg-blue-50 hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#8C2B1D]"
+                      className="group flex items-center cursor-pointer select-none rounded-full border-2 border-white/30 bg-[#8C2B1D] px-8 py-4 text-lg font-semibold text-white hover:text-[#8C2B1D]  shadow-lg transition-all duration-300 hover:bg-blue-50 hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#8C2B1D]"
                     >
                       <Play
                         aria-hidden="true"
@@ -395,7 +394,7 @@ const LandingPage: React.FC = () => {
           Why It Matters
         </div>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-          Why Caregivers Need the{" "}
+          Why Caregivers Need{" "}
           <span className="bg-gradient-to-r from-[#8C2B1D] via-[#992A2C] via-50% via-[#EC4899] to-[#F1685E] bg-clip-text text-transparent">
             Healthy Communication Practice
           </span>
@@ -732,7 +731,7 @@ const LandingPage: React.FC = () => {
         {/* Program Structure Section */}
         <div id='resources' className="transform transition-all duration-1000 delay-500 translate-y-0 opacity-100">
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Two Program Structure</h3>
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">Two Part Structure</h3>
             <p className="text-lg text-gray-600">
               The program is divided into two parts, with each part taking about 45 minutes to complete:
             </p>
@@ -948,7 +947,7 @@ const LandingPage: React.FC = () => {
           Healthy Communication Practice for Blood Cancer Caregiving
           </h2>
           
-          <p className="text-xl text-white/90 leading-relaxed">
+          <p className="text-lg text-white/90 leading-relaxed">
           Each year nearly 200,000 people will be diagnosed with a leukemia, lymphoma or myeloma 
           (Blood Cancer United, 2025). Blood cancers can be chronic (with no cure) or acute and 
           require immediate life-changing treatment for years.
@@ -1227,7 +1226,7 @@ const LandingPage: React.FC = () => {
                   Healthy Communication Practice for Dementia Caregiving
                 </h2>
                 
-                <p className="text-xl text-white/90 leading-relaxed">
+                <p className="text-lg text-white/90 leading-relaxed">
                   Alzheimer's disease and related dementias affect nearly 7 million people over the age of 65—a number expected to double over the next 40 years (Alzheimer's Association, 2025).
                 </p>
                 
@@ -1335,7 +1334,7 @@ const LandingPage: React.FC = () => {
                   Healthy Communication Practice for Breast Cancer Caregiving
                 </h2>
                 
-                <p className="text-xl text-white/90 leading-relaxed">
+                <p className="text-lg text-white/90 leading-relaxed">
                   Today more than 4 million women are living with breast cancer (National Cancer Institute, 2025). Daughters often provide caregiving to their mothers and they are increasingly young adults (aged 18-39)  who are the most at risk for
                   distress.
                 </p>

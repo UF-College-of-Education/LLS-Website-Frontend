@@ -9,7 +9,6 @@ import Module1 from './Pages/Module1';
 import Register from './Pages/Register';
 import { AuthProvider } from './auth/AuthContext'; 
 import Dashboard from './Pages/Dashboard';
-import LandngPage from './Pages/LandngPage';
 import Module2 from './Pages/Module2';
 import ReactGA from "react-ga4";
 import { useEffect } from 'react';
@@ -37,7 +36,6 @@ function App() {
     <div className="bg-white w-screen min-h-screen flex flex-col m-0">
       <AuthProvider>
         <Routes>
-          <Route path="/home" element={<LandngPage />} />
           <Route path='/' element={<LandingPage />} />
           <Route path="/team" element={<Team />} />
             <Route element={<MainLayout />}>
