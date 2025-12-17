@@ -24,9 +24,6 @@ function Team() {
                 <a href="#sponsors" className="text-white hover:text-gray-900 font-bold">
                   Sponsors
                 </a>
-                <button className="bg-[#F1685E] text-[#8C2B1D] px-4 py-2 rounded-full font-bold text-sm">
-                  Donate
-                </button>
               </div>
               <div className="md:hidden flex items-center">
                 <button
@@ -64,15 +61,17 @@ function Team() {
                 <a href="#sponsors" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
               Sponsors
                 </a>
-                <button className="block w-full text-left px-4 py-2 bg-[#F1685E] text-white rounded font-bold">
-              Donate
-                </button>
+               
               </div>
       </nav>
             <div className="flex flex-col gap-6 mt-20 p-20 md:px-40">
               <h1 className="text-center font-(family-name:--font-bree) font-bold capitalize text-[#CE2C37]">Meet the Team</h1>
               <div> 
-                <span className="italic font-semibold text-gray-800">With support from Blood Cancer United, Drs. Carla L. Fisher and Carma L. Bylund lead one of the nation's only family caregiver research programs dedicated to understanding the distinct needs of different types of blood cancer caregivers. Drs. Fisher and Bylund have worked together for nearly 20 years on caregiver and healthcare communication research. Through interdisciplinary research with leading scientists in caregiving and health communication, they have created the Healthy Communication PracticeTM to better support you in the important role you play as a caregiver for a spouse with blood cancer.</span>
+                <span className=" text-sm italic font-semibold text-gray-800">
+                 Drs. Carla L. Fisher and Carma L. Bylund lead one of the nation's only research programs dedicated to understanding family caregivers’ supportive care needs.
+                  Their work centers on understanding the distinct needs of different types of family caregivers and providing them with supportive care to enhance their caregiving ability, mental health, and family relationships.
+                   Drs. Fisher and Bylund have worked together for nearly 20 years on caregiver and healthcare communication research and interventions. They led the development of
+                  the <b>Healthy Communication Practice</b><sup>TM</sup>to better support you in the important role you play as a family caregiver.</span>
               </div>
 
               <div>
