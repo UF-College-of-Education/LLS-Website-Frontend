@@ -13,6 +13,8 @@ import Module2 from './Pages/Module2';
 import ReactGA from "react-ga4";
 import { useEffect } from 'react';
 import LandingPage from './Pages/LandingPage';
+import Evidence from './Pages/Evidence';
+import SponsorsPage from './Pages/SponsorsPage';
 
 
 const MainLayout: React.FC = () => (
@@ -38,6 +40,8 @@ function App() {
         <Routes>
           <Route path='/' element={<LandingPage />} />
           <Route path="/team" element={<Team />} />
+          <Route path="/evidence" element={<Evidence />} />
+          <Route path="/sponsors" element={<SponsorsPage />} />
             <Route element={<MainLayout />}>
             <Route path="/course" element={<Homepage />} />
             <Route path="/parts" element={<Courses />} />

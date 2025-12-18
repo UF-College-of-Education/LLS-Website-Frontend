@@ -22,7 +22,7 @@ import Resources from '../Module1/Part2/Resources';
 import Acknowledgements from '../Module1/Part2/Acknowledgements';
 
 
-//Part 1 Modules
+//Part 2 Modules
 
 
 const Module2 = () => {

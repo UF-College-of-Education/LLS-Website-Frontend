@@ -4,9 +4,7 @@ import {  CircleCheckBig, Monitor, Stethoscope,  Award, Brain, ArrowRight, Play,
 import heart from "../assets/icons/Header_Heart.png";
 import hero1 from "../assets/sam.png";
 import hero2 from "../assets/LLS Screenshots/caa.jpg";
-import hero21 from "../assets/LLS Screenshots/aab.jpg"
-import hero22 from "../assets/LLS Screenshots/bba.jpg"
-import hero23 from "../assets/LLS Screenshots/baa.jpg"
+import hero22 from "../assets/LLS Screenshots/bba.jpg";
 import hero24 from "../assets/LLS Screenshots/abb.jpg"
 import hero14 from "../assets/carma1.png"
 import hero15 from "../assets/carla.png"
@@ -14,20 +12,15 @@ import hero16 from "../assets/hopemodel.jpg"
 import hero33 from "../assets/LLS Screenshots/bab.jpg";
 import hero3 from "../assets/bloodcancer.png";
 import hero43 from "../assets/interactiveactivites.jpg"
-// import hero4 from "../assets/LLS Screenshots/aaa.jpg";
 import hero4 from "../assets/dementiastill.png"
 import hero5 from "../assets/LLS Screenshots/abc.jpg";
 import hero55 from "../assets/breastcancerstill.png"
 import hero66 from "../assets/LLS Screenshots/abb.jpg"
 import HeroCarousel from '../Components/HeroCarousel';
-// import Slider from 'react-infinite-logo-slider'
-import logo1 from "../assets/logos/bloodcancerunitedlogo.jpg";
 import logo2 from "../assets/logos/FDOH.png"
 import logo3 from "../assets/logos/NIAlogo.png"
-// import logo4 from "../assets/logos/ufhealth-full.svg"
 import logo5 from "../assets/logos/BloodCancerUnited2025.svg"
 import logo6 from "../assets/logos/UFhealthlogo.png"
-import Button from '../Components/Button';
 
 
 
@@ -141,7 +134,7 @@ const LandingPage: React.FC = () => {
   const caregiverTypesDementia = [
     {
       id: 1,
-      title: "Spouse Caregiver",
+      title: "Spousal Caregiver",
       icon: Users,
       image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
       delay: "500ms",
@@ -167,7 +160,7 @@ const LandingPage: React.FC = () => {
     },
     {
       id: 2,
-      title: "Spouse Caregiver",
+      title: "Spousal Caregiver",
       icon: Users,
       image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
       delay: "900ms",
@@ -187,19 +180,11 @@ const LandingPage: React.FC = () => {
     'Blood Cancer',
     'Dementia', 
     'Breast Cancer',
-    'About'
   ];
 
   const location = useLocation();
   const navigate = useNavigate();
-  const renderStars = () => {
-    return Array(5).fill(0).map((_, index) => (
-      <Star 
-        key={index}
-        className="w-5 h-5 text-yellow-400 fill-current"
-      />
-    ));
-  };
+  
 
   useEffect(() => {
     setIsVisible(true);
@@ -226,20 +211,23 @@ const LandingPage: React.FC = () => {
   return(
     <div className="font-sans text-black">
     {/* Navigation Bar */}
-    <nav className="bg-[#8C2B1D] shadow-md fixed w-full z-15">
+    <nav className="bg-[#8C2B1D] shadow-md fixed w-full z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
         <div className="flex-shrink-0">
           <img src={heart} alt="Logo" className="h-8" />
         </div>
         <div className="hidden md:flex space-x-6 items-center">
+          <a href="/" className="text-white hover:text-gray-900 font-bold">
+            Home
+          </a>
           <a href="/team" className="text-white hover:text-gray-900 font-bold">
             Team
           </a>
-          <a href="#evidence" className="text-white hover:text-gray-900 font-bold">
+          <a href="/evidence" className="text-white hover:text-gray-900 font-bold">
             Evidence
           </a>
-          <a href="#sponsors" className="text-white hover:text-gray-900 font-bold">
+          <a href="/sponsors" className="text-white hover:text-gray-900 font-bold">
             Sponsors
           </a>
           {/* <button className="bg-[#F1685E] text-[#8C2B1D] px-4 py-2 rounded-full font-bold text-sm">
@@ -289,18 +277,18 @@ const LandingPage: React.FC = () => {
       </nav>
 
     {/* Hero Section */}
-    <section className=" mt-48 mb-24 flex items-center justify-center overflow-hidden bg-[#FFFFFF]">
+    <section className=" mt-32 mb-16 flex items-center justify-center overflow-hidden bg-[#FFFFFF]">
             {/* Main content */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                 {/* Left column - Text content */}
                 <div className="space-y-8 transform transition-all duration-1000 translate-x-0 opacity-100">
                     <div className="space-y-6">
-                    {/* Badge */}
+                    {/* Badge
                     <div className="inline-flex items-center px-4 py-2 bg-[#FFF6F6] backdrop-blur-sm rounded-full text-[#C5026D] text-sm font-medium">
                         <Heart className="w-4 h-4 mr-2 text-[#C5026D]" />
                         Evidence-Based Caregiver Support
-                    </div>
+                    </div> */}
 
                     {/* Main heading */}
                     <h1 className=" text-6xl md:text-8xl font-bold leading-tight">
@@ -320,32 +308,17 @@ const LandingPage: React.FC = () => {
                     </div>
 
                     {/* CTA buttons */}
-                    <div className="flex flex-col sm:flex-row gap-4">
                     <button
                       onClick={handleScrollToResources}
                       aria-controls="resources"
-                      className="group cursor-pointer select-none rounded-full bg-[#8C2B1D] px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-300 transform hover:scale-105 hover:bg-blue-50 hover:text-[#8C2B1D] hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#8C2B1D]"
+                      className="relative z-50 group flex items-center justify-center cursor-pointer select-none rounded-full bg-[#8C2B1D] px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-300 transform hover:scale-105 hover:bg-blue-50 hover:text-[#8C2B1D] hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
                     >
-                      <div className="inline-flex items-center">
-                        Explore Resources
-                        <ArrowRight
-                          aria-hidden="true"
-                          className="ml-2 h-5 w-5 transform transition-transform duration-300 group-hover:translate-x-1 "
-                        />
-                      </div>
-                    </button>
-
-                    {/* <button
-                      type="button"
-                      className="group flex items-center cursor-pointer select-none rounded-full border-2 border-white/30 bg-[#8C2B1D] px-8 py-4 text-lg font-semibold text-white hover:text-[#8C2B1D]  shadow-lg transition-all duration-300 hover:bg-blue-50 hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#8C2B1D]"
-                    >
-                      <Play
+                      <span>Explore Resources</span>
+                      <ArrowRight
                         aria-hidden="true"
-                        className="mr-2 h-5 w-5 transform transition-transform duration-300 group-hover:scale-110"
+                        className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
                       />
-                      Watch Demo
-                    </button> */}
-                    </div>
+                    </button>
 
                     {/* Stats */}
                     {/* <div className="grid grid-cols-3 gap-6 pt-8">
@@ -388,18 +361,13 @@ const LandingPage: React.FC = () => {
             </div>
       </section>
 
-    {/* Why Section*/}
+    {/* Caregivers needs Section*/}
     <section className="bg-[#FFF6F6] py-8 px-8 md:px-16 flex flex-col justify-center items-center">
             <div className="z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* <div className="inline-flex items-center px-4 py-2 mb-6 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
-          <Heart className="w-4 h-4 mr-2" />
-          Why It Matters
-        </div> */}
+            
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
           Caregivers Need{" "} Healthy Communication Practice
-          {/* <span className="bg-gradient-to-r from-[#8C2B1D] via-[#992A2C] via-50% via-[#EC4899] to-[#F1685E] bg-clip-text text-transparent">
-            Healthy Communication Practice
-          </span> */}
+          
         </h2>
         <p className="my-8 text-lg text-black">
         Caregiving communication skills promote better care and health outcomes for family caregivers and for the loved ones they care for. Healthy Communication Practice is the only supportive program available to caregivers that is...</p>
@@ -414,7 +382,7 @@ const LandingPage: React.FC = () => {
               return (
                 <div
                   key={index}
-                  className="relative group cursor-pointer transform transition-all duration-500 hover:scale-110 translate-y-0 opacity-100 sm:col-span-2 md:col-span-1 flex justify-center"
+                  className="relative group transform transition-all duration-500 hover:scale-110 translate-y-0 opacity-100 sm:col-span-2 md:col-span-1 flex justify-center"
                   style={{ transitionDelay: benefit.delay }}
                 >
                     <div className={`w-40 h-40 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-2xl transition-all duration-300 relative overflow-hidden bg-[#8c2b1d]`}>
@@ -424,7 +392,7 @@ const LandingPage: React.FC = () => {
                     {/* Content */}
                     <div className="relative text-center p-2">
                       <IconComponent className="w-8 h-8 text-white mx-auto mb-2 group-hover:scale-110 transition-transform duration-300" />
-                      <div className="text-xs font-semibold leading-tight px-2 text-white" >
+                      <div className="text-sm font-semibold leading-tight px-2 text-white" >
                       {benefit.text}
                       </div>
                     </div>
@@ -437,33 +405,6 @@ const LandingPage: React.FC = () => {
             })}
           </div>
           
-          {/* Decorative SVG lines */}
-          {/* <svg 
-            className="absolute inset-0 w-full h-full pointer-events-none" 
-            style={{ zIndex: -1 }}
-          >
-            <defs>
-              <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#3B82F6" stopOpacity="0.3" />
-                <stop offset="100%" stopColor="#EC4899" stopOpacity="0.3" />
-              </linearGradient>
-            </defs>
-            <path 
-              d="M 80 80 Q 200 120 320 80" 
-              stroke="url(#lineGradient)" 
-              strokeWidth="2" 
-              fill="none" 
-              className="animate-pulse"
-            />
-            <path 
-              d="M 80 240 Q 200 200 320 240" 
-              stroke="url(#lineGradient)" 
-              strokeWidth="2" 
-              fill="none" 
-              className="animate-pulse"
-              style={{ animationDelay: '0.5s' }}
-            />
-          </svg> */}
         </div>
       </section>
 
@@ -566,7 +507,7 @@ const LandingPage: React.FC = () => {
                     return (
                       <div
                         key={index}
-                        className={`relative group cursor-pointer transform transition-all duration-500 translate-y-0 opacity-100 ${
+                        className={`relative group  transform transition-all duration-500 translate-y-0 opacity-100 ${
                           isFeatured ? 'scale-105 z-10' : 'hover:scale-105'
                         }`}
                         style={{ transitionDelay: feature.delay }}
@@ -658,10 +599,10 @@ const LandingPage: React.FC = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header section */}
         <div className="text-center mb-16 transform transition-all duration-1000 translate-y-0 opacity-100">
-          <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800  rounded-full text-sm font-medium mb-6">
+          {/* <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800  rounded-full text-sm font-medium mb-6">
             <CircleCheckBig className="w-4 h-4 mr-2" />
             Key Caregiving Contexts
-          </div>
+          </div> */}
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
             Communication Skills in{" "} Three Caregiving Contexts
             {/* <span className="bg-gradient-to-r from-[#8C2B1D] via-[#992A2C] via-50% via-[#EC4899] to-[#F1685E]  bg-clip-text text-transparent" >
@@ -736,98 +677,6 @@ const LandingPage: React.FC = () => {
               The program is divided into two parts, with each part taking about 45 minutes to complete.
             </p>
           </div>
-            
-
-            {/* without images parts strictuces*/}
-          {/* <div className="grid md:grid-cols-2 gap-8"> */}
-            {/* Part I */}
-            {/* <div onClick={()=> {window.location.href = "https://healthycommunicationpractice.com/"}} className="group relative cursor-pointer transform transition-all duration-500 hover:scale-102">
-              <div className="bg-white p-8 group-hover:shadow-2xl transition-all duration-300 border-2 border-[#F1685E] rounded-3xl">
-                <div className="flex items-center justify-between mb-6">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 rounded-2xl bg-[#D3412C] flex items-center justify-center text-white font-bold text-lg">
-                      1
-                    </div>
-                    <div>
-                      <h4 className="text-2xl font-bold text-gray-900">Part I</h4>
-                      <div className="flex items-center text-gray-500 text-sm">
-                        <Clock className="w-4 h-4 mr-1" />
-                        45 minutes
-                      </div>
-                    </div>
-                  </div>
-                  <ArrowRight className="w-6 h-6 text-gray-400 transform transition-transform duration-300 group-hover:translate-x-1" />
-                </div>
-                
-                <p className="text-gray-700 leading-relaxed mb-6">
-                  Foundation communication skills and online information sharing
-                </p>
-
-                <div className="grid grid-cols-2 gap-3 transition-all duration-500 opacity-70 max-h-20 overflow-hidden">
-                  {[
-                    { text: "Communication Models", delay: "0ms" },
-                    { text: "Online Information Skills", delay: "100ms" },
-                    { text: "Expert Guidance", delay: "200ms" },
-                    { text: "Interactive Exercises", delay: "300ms" }
-                  ].map((item, index) => (
-                    <div 
-                      key={index}
-                      className="flex items-center space-x-2 text-sm text-gray-600 transform transition-all duration-300 translate-x-2 opacity-70"
-                      style={{ transitionDelay: item.delay }}
-                    >
-                      <CircleCheckBig className="w-4 h-4 text-green-500 flex-shrink-0" />
-                      <span className='font-bold'>{item.text}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div> */}
-
-            {/* Part II */}
-            {/* <div onClick={()=> {navigate("/course")}} id='part2' className="group relative cursor-pointer transform transition-all duration-500 hover:scale-102">
-              <div className="bg-white p-8 group-hover:shadow-2xl transition-all duration-300 border-2 border-[#F1685E] rounded-3xl">
-                <div className="flex items-center justify-between mb-6">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 rounded-2xl bg-[#D3412C] flex items-center justify-center text-white font-bold text-lg">
-                      2
-                    </div>
-                    <div>
-                      <h4 className="text-2xl font-bold text-gray-900">Part II</h4>
-                      <div className="flex items-center text-gray-500 text-sm">
-                        <Clock className="w-4 h-4 mr-1" />
-                        45 minutes
-                      </div>
-                    </div>
-                  </div>
-                  <ArrowRight className="w-6 h-6 text-gray-400 transform transition-transform duration-300 group-hover:translate-x-1" />
-                </div>
-                
-                <p className="text-gray-700 leading-relaxed mb-6">
-                  Advanced skills for clinical and family conversations
-                </p>
-
-                <div className="grid grid-cols-2 gap-3 transition-all duration-500 opacity-70 max-h-20 overflow-hidden">
-                  {[
-                    { text: "Clinical Communication", delay: "0ms" },
-                    { text: "Family Conversations", delay: "100ms" },
-                    { text: "Challenging Situations", delay: "200ms" },
-                    { text: "Practice Scenarios", delay: "300ms" }
-                  ].map((item, index) => (
-                    <div 
-                      key={index}
-                      className="flex items-center space-x-2 text-sm text-gray-600 transform transition-all duration-300 translate-x-2 opacity-70"
-                      style={{ transitionDelay: item.delay }}
-                    >
-                      <CircleCheckBig className="w-4 h-4 text-green-500 flex-shrink-0" />
-                      <span className='font-bold'>{item.text}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div> */}
-
-
           {/*Duplicating it*/}
           <div className="grid md:grid-cols-2 gap-8 mt-4">
             {/* Part I */}
@@ -870,15 +719,15 @@ const LandingPage: React.FC = () => {
             
           </div>
         </div>
-
+        <hr className="mt-8 border-t border-gray-200 w-full" />
         {/* Collaboration logos */}
-        <div className="text-center mt-15">
+        <div className="text-center mt-10">
           <h3 className="text-3xl font-bold text-gray-900 mb-4">In Collaboration With</h3>
 
           <div className="overflow-hidden mt-4">
             <div
               className="flex items-center"
-              style={{ width: '200%', willChange: 'transform', animation: 'marquee 20s linear infinite' }}
+              style={{ width: '100%', willChange: 'transform', animation: 'marquee 20s linear infinite' }}
               aria-hidden={false}
               role="list"
             >
@@ -895,7 +744,7 @@ const LandingPage: React.FC = () => {
           <style>{`
             @keyframes marquee {
               0% { transform: translateX(0); }
-              100% { transform: translateX(-50%); }
+              100% { transform: translateX(-100%); }
             }
             /* reduce motion preference respect */
             @media (prefers-reduced-motion: reduce) {
@@ -905,7 +754,7 @@ const LandingPage: React.FC = () => {
         </div>
       </div>
      </section>
-    
+
     {/*HCP Section */}
     <section
     id="HCP"
@@ -955,12 +804,12 @@ const LandingPage: React.FC = () => {
 
           <div className="text-lg text-white/80 leading-relaxed">
           Blood cancer can occur across the lifespan, requiring families to care 
-          for a child, spouse, or aging parent. With support from <u>Blood Cancer United</u>, we offer three options to support family caregivers affected by blood cancer.
+          for a child, spouse, or aging parent. With support from <u><a href='https://bloodcancerunited.org/ '>Blood Cancer United</a></u>, we offer three options to support family caregivers affected by blood cancer.
           </div>
         </div>
 
         <div className="flex items-center justify-center w-full">
-          <button onClick={() => window.open('https://healthycommunicationpractice.org', '_blank')} className="bg-white w-full text-gray-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+          <button onClick={() => navigate('/evidence#blood-cancer')} className="bg-white w-full text-gray-900 px-8 py-4 rounded-full cursor-pointer font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
           View Research
           <ArrowRight className="inline-block ml-2 w-5 h-5" />
           </button>
@@ -980,7 +829,7 @@ const LandingPage: React.FC = () => {
           return (
             <div 
             key={caregiver.id}
-            className={`relative group cursor-pointer transform transition-all duration-500 translate-y-0 opacity-100 hover:scale-110 ${
+            className={`relative group transform transition-all duration-500 translate-y-0 opacity-100 hover:scale-110 ${
               isThirdItem ? 'col-span-2 justify-self-center' : ''
             }`}
             style={{ transitionDelay: caregiver.delay }}
@@ -1018,40 +867,6 @@ const LandingPage: React.FC = () => {
           );
           })}
         </div>
-
-        {/* Decorative SVG lines */}
-        {/* <svg 
-          className="absolute inset-0 w-full h-full pointer-events-none" 
-          style={{ zIndex: -1 }}
-        >
-          <defs>
-          <linearGradient 
-            id="lineGradient" 
-            x1="0%" 
-            y1="0%" 
-            x2="100%" 
-            y2="100%"
-          >
-            <stop offset="0%" stopColor="white" stopOpacity="0.3" />
-            <stop offset="100%" stopColor="white" stopOpacity="0.1" />
-          </linearGradient>
-          </defs>
-          <path 
-          d="M 80 80 Q 200 120 320 80" 
-          stroke="url(#lineGradient)" 
-          strokeWidth="2" 
-          fill="none" 
-          className="animate-draw-line"
-          />
-          <path 
-          d="M 80 240 Q 200 200 320 240" 
-          stroke="url(#lineGradient)" 
-          strokeWidth="2" 
-          fill="none" 
-          className="animate-draw-line"
-          style={{ animationDelay: '0.5s' }}
-          />
-        </svg> */}
         </div>
       </div>
       </div>
@@ -1135,7 +950,7 @@ const LandingPage: React.FC = () => {
                 return (
                   <div 
                     key={caregiver.id}
-                    className={`relative group cursor-pointer transform transition-all duration-500 translate-y-0 opacity-100 hover:scale-110 ${
+                    className={`relative group transform transition-all duration-500 translate-y-0 opacity-100 hover:scale-110 ${
                       isThirdItem ? 'col-span-2 justify-self-center' : ''
                     }`}
                     style={{ transitionDelay: caregiver.delay }}
@@ -1213,19 +1028,16 @@ const LandingPage: React.FC = () => {
           <div 
                 className="space-y-8 transform transition-all duration-1000 translate-x-0 opacity-100 bg-[#4A0D66]/35 backdrop-blur-md rounded-3xl p-6"
                 >
-              
               {/* Partnership Badge */}
               <div className="inline-flex items-center px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full text-white font-medium">
                 <Heart className="w-5 h-5 mr-2" />
-                FDOH Partnership
+                Florida Department of Health Partnerhip
               </div>
-
               {/* Main Content */}
               <div className="space-y-6">
                 <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
                   Healthy Communication Practice for Dementia Caregiving
-                </h2>
-                
+                </h2> 
                 <p className="text-lg text-white/90 leading-relaxed">
                   Alzheimer's disease and related dementias affect nearly 7 million people over the age of 65—a number expected to double over the next 40 years (Alzheimer's Association, 2025).
                 </p>
@@ -1234,10 +1046,9 @@ const LandingPage: React.FC = () => {
                   Dementia caregiving increases as the disease progresses, and caregivers are increasingly relied on during medical appointments. With support from the <u><a href='https://www.floridahealth.gov/provider-and-partner-resources/research/funding-opportunity-announcements/alzheimersfoa.html'>Florida Department of Health (FDOH) Ed & Ethel Moore Alzheimer's Disease Research Grant Program</a></u>, we offer two options to support family caregivers of a loved one with dementia.
                 </div>
               </div>
-
               {/* Action Buttons */}
               <div className="flex items-center justify-center w-full">
-                <a href='https://www.floridahealth.gov/provider-and-partner-resources/research/funding-opportunity-announcements/alzheimersfoa.html'  className=" w-full bg-white text-gray-900 px-8 py-4 rounded-full font-semibold text-lg text-center hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                <a href='/evidence#alzheimers-disease-and-related-dementias'  className=" w-full bg-white text-gray-900 px-8 py-4 rounded-full font-semibold text-lg text-center hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                   View Research
                   <ArrowRight className="inline-block ml-2 w-5 h-5" />
                 </a>
@@ -1246,7 +1057,6 @@ const LandingPage: React.FC = () => {
                 </button> */}
               </div>
             </div>
-            
           </div>
         </div>
 
@@ -1304,49 +1114,35 @@ const LandingPage: React.FC = () => {
           opacity: 0.8,
         }}
       ></div>
-        {/* Background Pattern */}
-        {/* <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_1px_1px,_white_1px,_transparent_0)] bg-[size:40px_40px]"></div>
-        </div> */}
-
-        {/* Animated Background Elements */}
-        {/* <div className="absolute top-20 right-10 w-32 h-32 bg-white/20 rounded-full blur-2xl animate-pulse"></div>
-        <div className="absolute bottom-20 left-10 w-40 h-40 bg-white/15 rounded-full blur-3xl animate-pulse delay-1000"></div> */}
-
+        
         {/* Main Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            
             {/* Left Column - Text Content */}
             <div 
                 className="space-y-8 transform transition-all duration-1000 translate-x-0 opacity-100 bg-[#E52D87]/40 backdrop-blur-md rounded-3xl p-6"
                 >
-              
               {/* Partnership Badge */}
               <div className="inline-flex items-center px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full text-white font-medium">
                 <Heart className="w-5 h-5 mr-2" />
                 UF Health & NIA Partnership
               </div>
-
               {/* Main Content */}
               <div className="space-y-6">
                 <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
                   Healthy Communication Practice for Breast Cancer Caregiving
-                </h2>
-                
+                </h2>  
                 <p className="text-lg text-white/90 leading-relaxed">
                   Today more than 4 million women are living with breast cancer (National Cancer Institute, 2025). Daughters often provide caregiving to their mothers and they are increasingly young adults (aged 18-39)  who are the most at risk for
                   distress.
                 </p>
-                
                 <div className="text-lg text-white/80 leading-relaxed">
                   With support from the <u><a href='https://cancer.ufl.edu/'>University of Florida Health Cancer Center</a></u> and <u><a href='https://nia.gov/'>National Institute on Aging (NIA)</a></u> we offer three options to support both caregiving mothers and daughters across the lifespan.
                 </div>
               </div>
-
               {/* Action Buttons */}
               <div className="flex items-center justify-center w-full">
-                <button className="bg-white w-full text-gray-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                <button onClick={() => navigate('/evidence#breast-cancer')} className="bg-white w-full cursor-pointer text-gray-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                   View Research
                   <ArrowRight className="inline-block ml-2 w-5 h-5" />
                 </button>
@@ -1363,20 +1159,12 @@ const LandingPage: React.FC = () => {
                 return (
                   <div 
                     key={caregiver.id}
-                    className={`relative group cursor-pointer transform transition-all duration-500 translate-y-0 opacity-100 hover:scale-110 ${
+                    className={`relative group transform transition-all duration-500 translate-y-0 opacity-100 hover:scale-110 ${
                       isThirdItem ? 'col-span-2 justify-self-center' : ''
                     }`}
                     style={{ transitionDelay: caregiver.delay }}
                   >
                     <div className="relative w-40 h-40 rounded-full bg-white/95 backdrop-blur-sm flex items-center justify-center shadow-2xl group-hover:shadow-3xl transition-all duration-300 overflow-hidden">
-                      {/* Background image */}
-                      {/* <div className="absolute inset-0 rounded-full overflow-hidden">
-                        <img 
-                          src={caregiver.image}
-                          alt={caregiver.title}
-                          className="w-full h-full object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-300"
-                        />
-                      </div> */}
 
                       {/* Gradient overlay */}
                       <div className="absolute inset-0 bg-gradient-to-br from-red-500 to-red-600 opacity-10 group-hover:opacity-20 transition-opacity duration-300 rounded-full"></div>
@@ -1401,48 +1189,6 @@ const LandingPage: React.FC = () => {
                 );
               })}
             </div>
-
-            {/* Decorative SVG lines */}
-            {/* <svg 
-              className="absolute inset-0 w-full h-full pointer-events-none" 
-              style={{ zIndex: -1 }}
-            >
-              <defs>
-                <linearGradient 
-                  id="lineGradient" 
-                  x1="0%" 
-                  y1="0%" 
-                  x2="100%" 
-                  y2="100%"
-                >
-                  <stop offset="0%" stopColor="white" stopOpacity="0.3" />
-                  <stop offset="100%" stopColor="white" stopOpacity="0.1" />
-                </linearGradient>
-              </defs>
-              <path 
-                d="M 80 80 Q 200 120 320 80" 
-                stroke="url(#lineGradient)" 
-                strokeWidth="2" 
-                fill="none" 
-                className="animate-draw-line"
-              />
-              <path 
-                d="M 80 120 Q 200 200 320 240" 
-                stroke="url(#lineGradient)" 
-                strokeWidth="2" 
-                fill="none" 
-                className="animate-draw-line"
-                style={{ animationDelay: '1.5s' }}
-              />
-              <path 
-                d="M 380 20 Q 350 350 320 240" 
-                stroke="url(#lineGradient)" 
-                strokeWidth="2" 
-                fill="none" 
-                className="animate-draw-line"
-                style={{ animationDelay: '1.5s' }}
-              />
-            </svg> */}
           </div>
           </div>
         </div>
@@ -1466,13 +1212,6 @@ const LandingPage: React.FC = () => {
             <p className="text-gray-400 leading-relaxed mb-6">
               Empowering family caregivers with evidence-based communication skills to enhance their caregiving ability and mental well-being through real caregiver narratives and expert guidance.
             </p>
-            
-            {/* <div className="flex items-center space-x-1">
-              {renderStars()}
-              <span className="text-sm text-gray-400 ml-2">
-                4.9/5 from 10,000+ caregivers
-              </span>
-            </div> */}
           </div>
 
           {/* Programs Section */}
@@ -1485,7 +1224,6 @@ const LandingPage: React.FC = () => {
                   'Blood Cancer': 'HCP',
                   'Dementia': 'dementia',
                   'Breast Cancer': 'BC',
-                  'About': ''
                 };
                 
                 const sectionId = sectionIds[program] || '';
@@ -1517,12 +1255,8 @@ const LandingPage: React.FC = () => {
             <div className="space-y-3 text-gray-400">
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
-                <span>healthy-communication-practice@ufl.edu</span>
+                <a href='mailto:healthy-communication@ufl.edu'>healthy-communication@ufl.edu</a>
               </div>
-              {/* <div className="flex items-center space-x-2">
-                <MapPin className="w-4 h-4" />
-                <span>University Research Center</span>
-              </div> */}
             </div>
           </div>
         </div>
@@ -1530,7 +1264,7 @@ const LandingPage: React.FC = () => {
         {/* Copyright Section */}
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
           <p>
-            © 2024 Healthy Communication Practice. All rights reserved. 
+            © 2025 Healthy Communication Practice. All rights reserved. 
             Developed in partnership with leading health organizations.
           </p>
         </div>
