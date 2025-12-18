@@ -308,7 +308,7 @@ const LandingPage: React.FC = () => {
                     </div>
 
                     {/* CTA buttons */}
-                    <button
+                    {/* <button
                       onClick={handleScrollToResources}
                       aria-controls="resources"
                       className="relative z-50 group flex items-center justify-center cursor-pointer select-none rounded-full bg-[#8C2B1D] px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-300 transform hover:scale-105 hover:bg-blue-50 hover:text-[#8C2B1D] hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
@@ -318,7 +318,7 @@ const LandingPage: React.FC = () => {
                         aria-hidden="true"
                         className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
                       />
-                    </button>
+                    </button> */}
 
                     {/* Stats */}
                     {/* <div className="grid grid-cols-3 gap-6 pt-8">
