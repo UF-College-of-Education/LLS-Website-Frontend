@@ -1,5 +1,6 @@
 import React from 'react'
-import llspdf from "../../assets/LLS2025.pdf"
+// import llspdf from "../../assets/LLS2025.pdf"
+import llspdf from "../../assets/One-Pager_LLS_2021.pdf"
 const Resources = () => {
   return (
     <div className=' w-full flex flex-col mb-3'>
