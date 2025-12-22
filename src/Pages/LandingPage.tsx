@@ -757,9 +757,16 @@ const LandingPage: React.FC = () => {
       background: `linear-gradient(358deg,rgba(28, 28, 28, 0.99) 0%, rgba(26, 26, 26, 0.55) 72%), url(${hero3})`,
       backgroundSize: "auto, cover",
       backgroundPosition: "center, center",
-      backgroundRepeat: "no-repeat"
+      backgroundRepeat: "no-repeat",
+      animation: "zoomBackground 20s ease-in-out infinite alternate"
       }}
     >
+      <style>{`
+    @keyframes zoomBackground {
+      0% { background-size: auto, 100%; }
+      100% { background-size: auto, 120%; }
+    }
+  `}</style>
       {/* Background patterns and effects */}
       <div
       className="absolute inset-0"
@@ -906,9 +913,11 @@ const LandingPage: React.FC = () => {
       <section
       className="py-10 bg-relative overflow-hidden"
       style={{
-        backgroundImage: `linear-gradient(358deg,rgba(28, 28, 28, 0.99) 0%, rgba(26, 26, 26, 0.55) 82%),url(${hero4})`,
+        backgroundImage: `linear-gradient(358deg,rgba(28, 28, 28, 0.99) 0%, rgba(26, 26, 26, 0.55) 72%),url(${hero4})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        animation: "zoomBackground 20s ease-in-out infinite alternate"
       }}
     >
       {/* Background patterns and effects */}
@@ -1025,7 +1034,7 @@ const LandingPage: React.FC = () => {
               {/* Partnership Badge */}
               <div className="inline-flex items-center px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full text-white font-medium">
                 <Heart className="w-5 h-5 mr-2" />
-                Florida Department of Health Partnerhip
+                Florida Department of Health Partnership
               </div>
               {/* Main Content */}
               <div className="space-y-6">
@@ -1098,6 +1107,8 @@ const LandingPage: React.FC = () => {
         backgroundImage: `linear-gradient(358deg,rgba(28, 28, 28, 0.99) 0%, rgba(26, 26, 26, 0.55) 85%),url(${hero55})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        animation: "zoomBackground 20s ease-in-out infinite alternate"
       }}
     >
       {/* Background patterns and effects */}
