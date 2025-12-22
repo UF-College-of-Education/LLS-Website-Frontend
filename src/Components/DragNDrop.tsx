@@ -17,13 +17,13 @@ interface DragItem {
 
 // 'James Message content with highlighted sections
 const letterSections = [
-  { id: 'reflection', text: "..validate your spouse's feelings....", type: 'draggable', color: 'bg-purple-200' },
+  { id: 'reflection', text: "validate their feelings or concerns", type: 'draggable', color: 'bg-purple-200' },
   { id: 'separator1', text: '', type: 'separator' },
   { id: 'separator2', text: '', type: 'separator' },
-  { id: 'understanding', text: "..express or reaffirm your love for one another verbally or nonverbally....", type: 'draggable', color: 'bg-blue-200' },
+  { id: 'understanding', text: "express affection or love verbally or nonverbally ", type: 'draggable', color: 'bg-blue-200' },
   { id: 'separator3', text: '', type: 'separator' },
   { id: 'separator4', text: '', type: 'separator' },
-  { id: 'verification', text: "..listen responsively and reassure them you are in this together....", type: 'draggable', color: 'bg-red-200' },
+  { id: 'verification', text: "listen responsively ", type: 'draggable', color: 'bg-red-200' },
   { id: 'separator5', text: '', type: 'separator' }, // New separator
   { id: 'separator6', text: '', type: 'separator' },
 ];
@@ -31,21 +31,21 @@ const letterSections = [
 const questions = [
   {
     id: 'understanding',
-    text: "You can _____ to help your spouse feel more comfortable talking about end of life or future uncertainty and show that you are willing to talk about these issues together.",
-    correctAnswer: "Like you, I want to see your mom’s cancer treated in the best way possible.",
-    color: 'border-blue-400'
-  },
-  {
-    id: 'reflection',
-    text: 'It can be helpful to ____ when talking to your spouse about how cancer has affected your relationship to help them feel more comfortable talking openly about intimacy.',
-    correctAnswer: 'I watched the TikTok video you sent about the potential of Ivermectin to cure your mom’s cancer. ',
+    text: " When your loved one shares difficult feelings they are experiencing, like sadness or fear, when you __________ by saying something like 'I can see why you feel that way,' they will feel supported and more comfortable sharing their feelings in the future.",
+    correctAnswer: "validate their feelings or concerns",
     color: 'border-purple-400'
   },
   {
-    id: 'verification',
-    text: 'When you _____ it can encourage your spouse to share their distress and enhance their well-being while making them feel supported.',
-    correctAnswer: "I will share this with your mom, and we can talk to her doctor about it at our next appointment.",
+    id: 'reflection',
+    text: 'When your loved one states why they do not want to talk about an issue, they will feel more understood and supported when you __________ by responding with a question or reflecting on what they said to better understand their concern.',
+    correctAnswer: 'listen responsively ',
     color: 'border-red-400'
+  },
+  {
+    id: 'verification',
+    text: 'When your loved one is struggling to be honest or resistant to dialoguing about a topic, you can ______ with a kind word or gentle touch to foster their sense of togetherness, which can help them feel more willing to talk openly. ',
+    correctAnswer: "express affection or love verbally or nonverbally ",
+    color: 'border-blue-400'
   }
 ];
 
@@ -178,7 +178,7 @@ export default function MarcoLetterActivity() {
         const results: Record<string, boolean> = {};
         questions.forEach(question => {
             const userAnswer = droppedAnswers[question.id];
-            results[question.id] = true;
+            results[question.id] = userAnswer === question.correctAnswer;
         });
         setCheckedAnswers(results);
         setShowResults(true);

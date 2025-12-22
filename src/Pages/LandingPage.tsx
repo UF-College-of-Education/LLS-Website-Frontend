@@ -590,7 +590,7 @@ const LandingPage: React.FC = () => {
       </section>
 
     {/* COntext Section */}
-    <section className="py-10 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+    <section className="pt-10 pb-2 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_2px_2px,_theme(colors.blue.500)_2px,_transparent_0)] bg-[size:60px_60px]"></div>
@@ -719,41 +719,35 @@ const LandingPage: React.FC = () => {
             
           </div>
         </div>
-        <hr className="mt-8 border-t border-gray-200 w-full" />
-        {/* Collaboration logos */}
+        {/* <hr className="mt-8 border-t border-gray-200 w-full" /> */}
+        
+      </div>
+     </section>
+
+    {/* Sponsors Section */}
+    <section className='bg-[#FFF6F6] pb-2'>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mt-10">
           <h3 className="text-3xl font-bold text-gray-900 mb-4">In Collaboration With</h3>
 
-          <div className="overflow-hidden mt-4">
-            <div
-              className="flex items-center"
-              style={{ width: '100%', willChange: 'transform', animation: 'marquee 20s linear infinite' }}
-              aria-hidden={false}
-              role="list"
-            >
-              {[
-                 logo2, logo3,  logo5, logo6
-              ].concat([ logo2, logo3,  logo5, logo6]).map((logoSrc, idx) => (
-                <div key={idx} className="flex-shrink-0 flex items-center justify-center mx-6" role="listitem">
-                  <img src={logoSrc} alt={`partner-${idx}`} className="h-20 w-40 object-contain" />
-                </div>
-              ))}
-            </div>
+          <div className="flex items-center justify-center gap-8 mt-8 flex-wrap">
+            {[logo2, logo3, logo5, logo6].map((logoSrc, idx) => (
+              <div 
+                key={idx} 
+                className="flex items-center justify-center p-4 transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-lg rounded-lg"
+                role="listitem"
+              >
+                <img 
+                  src={logoSrc} 
+                  alt={`partner-${idx}`} 
+                  className="h-20 w-40 object-contain transition-all duration-300" 
+                />
+              </div>
+            ))}
           </div>
-
-          <style>{`
-            @keyframes marquee {
-              0% { transform: translateX(0); }
-              100% { transform: translateX(-100%); }
-            }
-            /* reduce motion preference respect */
-            @media (prefers-reduced-motion: reduce) {
-              .animate-marquee, .flex[style*="animation"] { animation: none !important; }
-            }
-          `}</style>
         </div>
       </div>
-     </section>
+    </section>
 
     {/*HCP Section */}
     <section
@@ -808,14 +802,14 @@ const LandingPage: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex items-center justify-center w-full">
-          <button onClick={() => navigate('/evidence#blood-cancer')} className="bg-white w-full text-gray-900 px-8 py-4 rounded-full cursor-pointer font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+        <div className="flex flex-col sm:flex-row gap-4 ">
+          <button onClick={() => navigate('/evidence#blood-cancer')} className="bg-white text-gray-900 px-8 py-4 rounded-full cursor-pointer font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
           View Research
           <ArrowRight className="inline-block ml-2 w-5 h-5" />
           </button>
-          {/* <button className="text-white border-2 border-white/30 px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300">
-          View Research
-          </button> */}
+          <button onClick={()=> {navigate("/parts")}} className="text-white border-2 border-white/30 px-8 py-4 rounded-full cursor-pointer font-semibold text-lg hover:bg-white/10 transition-all duration-300">
+          Go to Course
+          </button>
         </div>
         </div>
 
@@ -1255,7 +1249,7 @@ const LandingPage: React.FC = () => {
             <div className="space-y-3 text-gray-400">
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
-                <a href='mailto:healthy-communication@ufl.edu'>healthy-communication@ufl.edu</a>
+                <a href='mailto:healthy-communication-practice@ufl.edu'>healthy-communication-practice@ufl.edu</a>
               </div>
             </div>
           </div>
