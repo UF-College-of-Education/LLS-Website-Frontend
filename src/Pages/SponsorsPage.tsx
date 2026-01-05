@@ -138,26 +138,27 @@ const SponsorsPage: React.FC = () => {
                
               </div>
       </nav>
-      <header className="my-20 text-center">
-        <h1 className="text-4xl font-bold text-[#CE2C37] uppercase tracking-wide">
+      <header className="my-20 pt-10 text-center">
+        <h1 className="text-4xl font-bold text-[#CE2C37]  tracking-wide">
           Our Sponsors & Funding Partners
         </h1>
         <div className="h-1 w-24 bg-[#CE2C37] mx-auto mt-4" />
       </header>
 
-      <div className="flex flex-col gap-24 p-20">
-        {sponsorsData.map((sponsor) => (
+      <div className="p-16 md:p-20 max-w-[85vw] mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-x-16 md:gap-y-12">
+            {sponsorsData.map((sponsor) => (
           <section 
             key={sponsor.slug} 
             id={sponsor.slug} 
-            className="flex flex-col md:flex-row gap-8 items-center md:items-start scroll-mt-32"
-          >
+            className="flex flex-col gap-6 scroll-mt-32 bg-white shadow-[0px_8px_24px_rgba(149,157,165,0.2)] rounded-lg p-6 md:p-8"
+            >
             {/* Logo Container */}
-            <div className="w-full md:w-1/3 flex flex-col items-center gap-4">
+            <div className="flex flex-col items-start gap-4">
               <img 
                 src={sponsor.logo} 
                 alt={`${sponsor.name} logo`} 
-                className="max-h-32 object-contain"
+                className="max-h-24 object-contain"
               />
               <a 
                 href={sponsor.url} 
@@ -180,6 +181,7 @@ const SponsorsPage: React.FC = () => {
             </div>
           </section>
         ))}
+      </div>
       </div>
     </main>
   );

@@ -1,7 +1,7 @@
-import carma from "../assets/teams/Carma.png";
-import carla from "../assets/teams/carla.png";
-import samantha from "../assets/teams/samantha.png";
-import allison from "../assets/teams/allison.png";
+import carma from "../assets/teams/carma-round.png";
+import carla from "../assets/teams/carla-round.png";
+import samantha from "../assets/teams/samantha-round.png";
+import allison from "../assets/teams/allison-round.png";
 import heart from "../assets/icons/Header_Heart.png";
 
 function Team() {
@@ -18,7 +18,7 @@ function Team() {
                 <a href="/" className="text-white hover:underline font-bold">
                   Home
                 </a>
-                <a href="/team" className="text-white hover:underline font-bold">
+                <a href="/team" className="text-white  hover:underline font-bold">
                   Team
                 </a>
                 <a href="/evidence" className="text-white hover:underline font-bold">
@@ -68,8 +68,8 @@ function Team() {
               </div>
       </nav>
             <div className="flex flex-col gap-6 mt-20 p-20 md:px-40">
-              <h1 className="text-center font-(family-name:--font-bree) font-bold capitalize text-[#CE2C37]">Meet the Team</h1>
-              <div> 
+              <h1 className="text-center font-bold capitalize text-[#CE2C37]">Meet the Team</h1>
+              <div className="max-w-[70vw] mx-auto mb-16"> 
                 <span className=" text-sm italic font-semibold text-gray-800">
                  Drs. Carla L. Fisher and Carma L. Bylund lead one of the nation's only research programs dedicated to understanding family caregivers’ supportive care needs.
                   Their work centers on understanding the distinct needs of different types of family caregivers and providing them with supportive care to enhance their caregiving ability, mental health, and family relationships.
@@ -77,17 +77,21 @@ function Team() {
                   the <b>Healthy Communication Practice</b><sup>TM</sup>to better support you in the important role you play as a family caregiver.</span>
               </div>
 
-              <div>
-                <h2 className="text-3xl md:text-4xl font-(family-name:--font-bree) font-bold text-black mb-4">Meet the Developers - Principal Investigators</h2>
-                <div className="flex flex-col mt-3 md:flex-row shadow-lg">
-                    <div className="w-[45%] md:w-[20%]">
+              <div className="mb-16">
+                
+                <h2 className="text-center text-3xl md:text-4xl font-(family-name:--font-bree) font-bold text-black mb-16">Meet the Developers - Principal Investigators</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-x-16 md:gap-y-12">
+
+                
+                <div className="flex flex-col gap-6 scroll-mt-32 bg-white shadow-[0px_8px_24px_rgba(149,157,165,0.2)] rounded-lg p-6 md:p-8">
+                    <div className="w-[100%] md:w-[60%]">
                       <img
                         src={carma}
                         alt="Carma Bylund Image"
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div className="w-full md:w-[70%] flex flex-col items-start p-4 m-auto">
+                    <div className="w-full flex flex-col items-start p-4 m-auto">
                         <span className="text-left my-1 text-xl md:text-2xl text-black font-(family-name:--font-bree)">
                             Carma L. Bylund, PhD
                         </span>
@@ -107,15 +111,15 @@ function Team() {
                         </p>
                     </div>
                 </div>
-                <div className="flex flex-col mt-3 md:flex-row shadow-lg">
-                    <div className="w-[45%] md:w-[20%]">
+                <div className="flex flex-col gap-6 scroll-mt-32 bg-white shadow-[0px_8px_24px_rgba(149,157,165,0.2)] rounded-lg p-6 md:p-8">
+                <div className="w-[100%] md:w-[60%]">
                         <img
                             src={carla}
                             alt="Carla Fisher Image"
                             className="w-full h-fullobject-cover"
                         />
                     </div>
-                    <div className="w-full md:w-[70%] flex flex-col items-start p-4 m-auto">
+                    <div className="w-full flex flex-col items-start p-4 m-auto">
                         <span className="text-left my-1 text-xl md:text-2xl text-black font-(family-name:--font-bree)">
                             Carla L. Fisher, PhD, MSW
                         </span>
@@ -135,18 +139,21 @@ function Team() {
                         </p>
                     </div>
                 </div>
+                </div>
               </div>
               <div>
-                <h2 className="text-3xl md:text-4xl font-(family-name:--font-bree) font-bold text-black mb-4">Meet the Collaborating Experts</h2>
-                <div className="flex flex-col mt-3 md:flex-row shadow-lg">
-                    <div className="w-[45%] md:w-[20%]">
+                <h2 className="text-center text-3xl md:text-4xl font-(family-name:--font-bree) font-bold text-black mb-16">Meet the Collaborating Experts</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-x-16 md:gap-y-12">
+
+                <div className="flex flex-col gap-6 scroll-mt-32 bg-white shadow-[0px_8px_24px_rgba(149,157,165,0.2)] rounded-lg p-6 md:p-8">
+                    <div className="w-[100%] md:w-[60%]">
                         <img
                             src={samantha}
                             alt="Samantha Paige Image"
                             className="w-full h-full object-cover"
                         />
                     </div>
-                    <div className="w-full md:w-[70%] flex flex-col items-start p-4 m-auto">
+                    <div className="w-full flex flex-col items-start p-4">
                         <span className="text-left my-1 text-xl md:text-2xl text-black font-(family-name:--font-bree)">
                         Samantha Paige, PhD, MPH
                         </span>
@@ -158,15 +165,15 @@ function Team() {
                         </p>
                     </div>
                 </div>
-                <div className="flex flex-col mt-3 md:flex-row shadow-lg">
-                    <div className="w-[45%] md:w-[20%]">
+                <div className="flex flex-col gap-6 scroll-mt-32 bg-white shadow-[0px_8px_24px_rgba(149,157,165,0.2)] rounded-lg p-6 md:p-8">
+                    <div className="w-[100%] md:w-[60%]">
                         <img
                             src={allison}
                             alt="Allison Applebaum Image"
                             className="w-full h-full object-cover"
                         />
                     </div>
-                    <div className="w-full md:w-[70%] flex flex-col items-start p-4">
+                    <div className="w-full flex flex-col items-start p-4 m-auto">
                         <span className="text-left my-1 text-xl md:text-2xl text-black font-(family-name:--font-bree)">
                         Allison J. Applebaum, PhD
                         </span>
@@ -182,6 +189,7 @@ function Team() {
                         she has over 100 publications, and is the editor of the renowned book, Cancer Caregivers (Oxford University, 2019). 
                         </p>
                     </div>
+                </div>
                 </div>
               </div>
                 
