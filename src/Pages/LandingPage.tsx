@@ -7,7 +7,7 @@ import hero2 from "../assets/LLS Screenshots/caa.jpg";
 import hero22 from "../assets/LLS Screenshots/bba.jpg";
 import hero24 from "../assets/LLS Screenshots/abb.jpg"
 import hero14 from "../assets/carma1.png"
-import hero15 from "../assets/carla.png"
+import hero15 from "../assets/LLS Screenshots/carla-hero-section-screenshot.png"
 import hero16 from "../assets/hopemodel.jpg"
 import hero33 from "../assets/LLS Screenshots/bab.jpg";
 import hero3 from "../assets/bloodcancer.png";
@@ -218,16 +218,16 @@ const LandingPage: React.FC = () => {
           <img src={heart} alt="Logo" className="h-8" />
         </div>
         <div className="hidden md:flex space-x-6 items-center">
-          <a href="/" className="text-white hover:text-gray-900 font-bold">
+          <a href="/" className="text-white hover:underline font-bold">
             Home
           </a>
-          <a href="/team" className="text-white hover:text-gray-900 font-bold">
+          <a href="/team" className="text-white hover:underline font-bold">
             Team
           </a>
-          <a href="/evidence" className="text-white hover:text-gray-900 font-bold">
+          <a href="/evidence" className="text-white hover:underline font-bold">
             Evidence
           </a>
-          <a href="/sponsors" className="text-white hover:text-gray-900 font-bold">
+          <a href="/sponsors" className="text-white hover:underline font-bold">
             Sponsors
           </a>
           {/* <button className="bg-[#F1685E] text-[#8C2B1D] px-4 py-2 rounded-full font-bold text-sm">

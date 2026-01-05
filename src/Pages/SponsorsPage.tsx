@@ -86,16 +86,16 @@ const SponsorsPage: React.FC = () => {
                 <a href="/"><img src={heart}  alt="Logo" className="h-8" /></a>
               </div>
               <div className="hidden md:flex space-x-6 items-center">
-                <a href="/" className="text-white hover:text-gray-900 font-bold">
+                <a href="/" className="text-white hover:underline font-bold">
                   Home
                 </a>
-                <a href="/team" className="text-white hover:text-gray-900 font-bold">
+                <a href="/team" className="text-white hover:underline font-bold">
                   Team
                 </a>
-                <a href="/evidence" className="text-white hover:text-gray-900 font-bold">
+                <a href="/evidence" className="text-white hover:underline font-bold">
                   Evidence
                 </a>
-                <a href="/sponsors" className="text-white hover:text-gray-900 font-bold">
+                <a href="/sponsors" className="text-white hover:underline font-bold">
                   Sponsors
                 </a>
               </div>
