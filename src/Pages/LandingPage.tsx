@@ -362,7 +362,7 @@ const LandingPage: React.FC = () => {
       </section>
 
     {/* Caregivers needs Section*/}
-    <section className="bg-[#FFF6F6] py-8 px-8 md:px-16 flex flex-col justify-center items-center">
+    <section className="bg-[#FFF6F6] py-16 px-8 md:px-16 flex flex-col justify-center items-center">
             <div className="z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
@@ -727,7 +727,7 @@ const LandingPage: React.FC = () => {
     {/* Sponsors Section */}
     <section className='bg-[#FFF6F6] pb-2'>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mt-10">
+        <div className="text-center mt-10 py-10">
           <h3 className="text-3xl font-bold text-gray-900 mb-4">In Collaboration With</h3>
 
           <div className="flex items-center justify-center gap-8 mt-8 flex-wrap">
